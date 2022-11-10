@@ -9,7 +9,7 @@ namespace SwampAttack.Weapons
         public int Bullets { get; private set; }
         public bool CanShoot => Bullets > 0;
 
-        private IFactory<IBullet> _factory;
+        private readonly IFactory<IBullet> _factory;
 
         public Weapon(IFactory<IBullet> factory, int bullets)
         {

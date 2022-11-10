@@ -1,34 +1,29 @@
-using UnityEngine;
-using SwampAttack.Input;
+using SwampAttack.Root.Interfaces;
+using Update = SwampAttack.Root.SystemUpdate;
 using SwampAttack.Weapons;
-using SwampAttack.Root.Update;
-using SwampAttack.PlayerComponents;
+using UnityEngine;
 
 namespace SwampAttack.Root
 {
     public sealed class PlayerRoot : MonoBehaviour, IPlayerRoot
     {
-        private Player _player;
-        private ISystemUpdate _systemUpdate;
+        private Player.Player _player;
+        private Update.ISystemUpdate _systemUpdate;
 
-        public void Compose((IWeaponInput, IWeapon) weapon)
+        public void Compose(WeaponData weaponData)
         {
             if (_player == null)
             {
-                _systemUpdate = new SystemUpdate();
-                _player = new Player(weapon);
+                _systemUpdate = new Update.SystemUpdate();
+                _player = new Player.Player(weaponData);
 
                 _systemUpdate.Add(_player);
                 return;
             }
 
-            _player.SwitchWeapon(weapon);
+            _player.SwitchWeapon(weaponData);
         }
 
-        private void Update()
-        {
-            if (_systemUpdate != null)
-                _systemUpdate.TryUpdateAll();
-        } 
+        private void Update() =>  _systemUpdate?.UpdateAll();
     }
 }

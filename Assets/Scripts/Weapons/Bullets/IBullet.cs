@@ -1,7 +1,9 @@
+using SwampAttack.Attacks;
+
 namespace SwampAttack.Weapons.Bullets
 {
-    public interface IBullet
+    public interface IBullet : IAttack
     {
-        void Laucnh();
+        void Launch();
     }
 }

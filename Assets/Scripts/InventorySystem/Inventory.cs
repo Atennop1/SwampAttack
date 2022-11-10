@@ -8,8 +8,8 @@ namespace SwampAttack.InventorySystem
         public bool IsFull => _items.Count == _capacity;
         public IReadOnlyList<T> Items => _items;
 
-        private int _capacity;
-        private List<T> _items;
+        private readonly int _capacity;
+        private readonly List<T> _items;
 
         public Inventory(int capacity)
         {
@@ -25,7 +25,7 @@ namespace SwampAttack.InventorySystem
             if (IsFull && (count += Items.Count) > _capacity)
                 throw new ArgumentException($"Can't add {count} items in inventory");
 
-            for (int i = 0; i < count; i++)
+            for (var i = 0; i < count; i++)
                 _items.Add(item);
         }
     }

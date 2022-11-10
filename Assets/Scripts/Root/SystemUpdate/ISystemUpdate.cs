@@ -1,12 +1,9 @@
-using System;
-using System.Collections.Generic;
-
-namespace SwampAttack.Root.Update
+namespace SwampAttack.Root.SystemUpdate
 {
     public interface ISystemUpdate
     {
         public void Add(params IUpdatable[] updatables);
         public void Remove(IUpdatable updatable);
-        public void TryUpdateAll();
+        public void UpdateAll();
     }
 }

@@ -1,11 +1,9 @@
-using SwampAttack.Input;
 using SwampAttack.Weapons;
-using SwampAttack.HealthSystem;
 
-namespace SwampAttack.Root
+namespace SwampAttack.Root.Interfaces
 {
     public interface IPlayerRoot
     {
-        void Compose((IWeaponInput, IWeapon) weapon);
+        void Compose(WeaponData weapon);
     }
 }

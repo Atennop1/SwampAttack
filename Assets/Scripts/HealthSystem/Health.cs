@@ -4,9 +4,10 @@ namespace SwampAttack.HealthSystem
 {
     public sealed class Health : IHealth
     {
-        private int _value = 0;
-
+        public bool IsDead => _value <= 0;
         public bool CanTakeDamage => _value > 0;
+        
+        private int _value;
 
         public Health(int value)
         {
@@ -19,12 +20,13 @@ namespace SwampAttack.HealthSystem
         public void TakeDamage(int count)
         {
             if (!CanTakeDamage)
-                throw new Exception($"Can't take damage to {this.GetType()}");
+                throw new Exception($"Can't take damage to {GetType()}");
 
             if (_value <= 0)
                 throw new ArgumentException($"Can't take {count} damage");
 
             _value -= count;
+            UnityEngine.Debug.Log(_value);
         }
     }
 }

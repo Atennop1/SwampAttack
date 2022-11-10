@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
 
-namespace SwampAttack.Root.Update
+namespace SwampAttack.Root.SystemUpdate
 {
     public sealed class SystemUpdate : ISystemUpdate
     {
-        private List<IUpdatable> _updatables;
+        private readonly List<IUpdatable> _updatables;
 
         public SystemUpdate() => _updatables = new List<IUpdatable>();
 
@@ -28,6 +28,6 @@ namespace SwampAttack.Root.Update
             _updatables.Remove(updatable);
         }
 
-        public void TryUpdateAll() => _updatables.ForEach(updatable => updatable.Update());
+        public void UpdateAll() => _updatables.ForEach(updatable => updatable.Update());
     }
 }

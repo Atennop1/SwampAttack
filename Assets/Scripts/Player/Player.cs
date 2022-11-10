@@ -1,28 +1,21 @@
 using System;
 using SwampAttack.Input;
+using SwampAttack.Root.SystemUpdate;
 using SwampAttack.Weapons;
-using SwampAttack.Root.Update;
 
-namespace SwampAttack.PlayerComponents
+namespace SwampAttack.Player
 {
     public sealed class Player : IUpdatable
     {
         private IWeapon _weapon;
         private IWeaponInput _weaponInput;
 
-        public Player((IWeaponInput, IWeapon) weapon)
-        {
-            _weaponInput = weapon.Item1;
-            _weapon = weapon.Item2;
-        }
+        public Player(WeaponData weaponData) => SwitchWeapon(weaponData);
 
-        public void SwitchWeapon((IWeaponInput, IWeapon) newWeapon)
+        public void SwitchWeapon(WeaponData weaponData)
         {
-            if (newWeapon.Item1 == null || newWeapon.Item2 == null)
-                throw new ArgumentException("Can't switch to null weapon");
-
-            _weaponInput = newWeapon.Item1;
-            _weapon = newWeapon.Item2;
+            _weaponInput = weaponData.Input ?? throw new ArgumentException("Can't switch to null weapon input");
+            _weapon = weaponData.Weapon ?? throw new ArgumentException("Can't switch to null weapon");
         }
 
         public void Update()

@@ -4,10 +4,10 @@ using SwampAttack.Weapons;
 using SwampAttack.Factories;
 using SwampAttack.HealthSystem;
 using SwampAttack.InventorySystem;
+using SwampAttack.Root.Interfaces;
 
 namespace SwampAttack.Root
 {
-    
     public sealed class CharacterRoot : CompositeRoot
     {
         [SerializeField] private BulletsFactory _bulletsFactory;
@@ -23,8 +23,8 @@ namespace SwampAttack.Root
             weaponInventory.Add(new Weapon(_bulletsFactory, 5));
             _healthTransformView.Init(new Health(5));
 
-            IWeapon weapon = weaponInventory.Items[0];
-            _playerRoot.Compose((_weaponInput, weapon));
+            var weapon = weaponInventory.Items[0];
+            _playerRoot.Compose(new WeaponData(_weaponInput, weapon));
         }
     }
 }
