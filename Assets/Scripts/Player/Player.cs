@@ -1,6 +1,6 @@
 using System;
 using SwampAttack.Input;
-using SwampAttack.Root.SystemUpdate;
+using SwampAttack.Root.SystemUpdates;
 using SwampAttack.Weapons;
 
 namespace SwampAttack.Player

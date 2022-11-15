@@ -1,6 +1,6 @@
 using System;
 using SwampAttack.AI.Enemies.Interfaces;
-using SwampAttack.Root.SystemUpdate;
+using SwampAttack.Root.SystemUpdates;
 using UnityEngine;
 
 namespace SwampAttack.AI.Enemies.Minotaur.Attacks

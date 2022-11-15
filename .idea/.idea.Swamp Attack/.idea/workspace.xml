@@ -2,98 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f65dff0-dc7f-4b3e-b613-fed6e8445b84" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Enemies.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Enemies/Components.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Enemies/Components/DefaultEnemyTransformView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Enemies/Components/DefaultEnemyTransformView.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Enemies/Interfaces.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Enemies/Interfaces/IEnemy.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Enemies/Interfaces/IEnemy.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Enemies/Interfaces/IEnemyAttack.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Enemies/Interfaces/IEnemyAttack.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Enemies/Interfaces/IEnemyTargetData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Enemies/Interfaces/IEnemyTargetData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Enemies/Interfaces/IEnemyTransformView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Enemies/Interfaces/IEnemyTransformView.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Enemies/Interfaces/IEnemyWithAttacks.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Enemies/Interfaces/IEnemyWithAttacks.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Enemies/Interfaces/IEnemyWithTarget.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Enemies/Interfaces/IEnemyWithTarget.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Enemies/Interfaces/IStateMachineSetup.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Enemies/Interfaces/IStateMachineSetup.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Enemies/Minotaur.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Enemies/Minotaur/Attacks.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Enemies/Minotaur/Attacks/DefaultAttack.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Enemies/Minotaur/Attacks/DefaultAttack.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Enemies/Minotaur/MinotaurEnemy.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Enemies/Minotaur/MinotaurTargetData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Enemies/Minotaur/MinotaurTargetData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Enemies/Minotaur/StateMachineSetup.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Enemies/Minotaur/StateMachineSetup.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Enemies/Minotaur/States.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Enemies/Minotaur/States/AttackState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Enemies/Minotaur/States/AttackState.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Enemies/Minotaur/States/DeathState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Enemies/Minotaur/States/DeathState.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Enemies/Minotaur/States/PlayerTooFarState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Enemies/Minotaur/States/PlayerTooFarState.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Enemies/Minotaur/States/VictoryState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Enemies/Minotaur/States/VictoryState.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Enemies/Movement.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Enemies/Movement/DefaultEnemyMovement.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Enemies/Movement/DefaultEnemyMovement.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Enemies/Movement/IEnemyMovement.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Enemies/Movement/IEnemyMovement.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/StateMachine/IState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/StateMachine/StateMachine.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AI/StateMachine/Transition.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Attacks.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Attacks/Attack.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Attacks/Attack.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Attacks/AttackTransformView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Attacks/AttackTransformView.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Attacks/IAttack.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Attacks/IAttack.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Root/EnemyRoot.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Root/EnemyRoot.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/Bullets/Bullet.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/Bullets/Bullet.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/Bullets/BulletView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/WeaponData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/WeaponData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyWavesSystem.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyWavesSystem/Cycles.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyWavesSystem/Cycles/IWavesCycle.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyWavesSystem/Cycles/IWavesCycle.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyWavesSystem/Cycles/WavesCycle.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyWavesSystem/Cycles/WavesCycle.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyWavesSystem/Waves.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyWavesSystem/Waves/IWave.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyWavesSystem/Waves/IWave.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyWavesSystem/Waves/Wave.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyWavesSystem/Waves/Wave.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyWavesSystem/Waves/WaveInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyWavesSystem/Waves/WaveInfo.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Factories/EnemyFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Factories/EnemyFactory.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Root/EnemyWavesRoot.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Root/EnemyWavesRoot.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Swamp Attack/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Swamp Attack/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Minotaur/Attack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Minotaur/Attack.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Minotaur/Minotaur.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Minotaur/Minotaur.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj.DotSettings" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj.DotSettings" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Odin Inspector/Config/Resources/Sirenix/GlobalSerializationConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Odin Inspector/Config/Resources/Sirenix/GlobalSerializationConfig.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bullet.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Enemies/Minotaur/Attacks/DefaultAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Enemies/Minotaur/Attacks/DefaultAttack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Enemies/Minotaur/MinotaurEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Enemies/Minotaur/MinotaurEnemy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Factories/BulletsFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Factories/BulletsFactory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/HealthSystem/Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HealthSystem/Health.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HealthSystem/HealthTransformView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HealthSystem/HealthTransformView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HealthSystem/IHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HealthSystem/IHealth.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InventorySystem/Inventory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Root/CharacterRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Root/CharacterRoot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Root/EnemyRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Root/EnemyRoot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Root/EntryPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Root/EntryPoint.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Root/Interfaces/IPlayerRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Root/Interfaces/IPlayerRoot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Root/Interfaces/IRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Root/Interfaces/CompositeRoot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Root/Interfaces/IRoot.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Root/Interfaces/CompositeRoot.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Root/Interfaces/CompositeRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Root/Interfaces/CompositeRoot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Root/PlayerRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Root/PlayerRoot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Root/System Update.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Root/SystemUpdate.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Root/System Update/ISystemUpdate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Root/SystemUpdate/ISystemUpdate.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Root/System Update/ISystemUpdate.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Root/SystemUpdate/ISystemUpdate.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Root/System Update/IUpdatable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Root/SystemUpdate/IUpdatable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Root/System Update/IUpdatable.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Root/SystemUpdate/IUpdatable.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Root/System Update/SystemUpdate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Root/SystemUpdate/SystemUpdate.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Root/System Update/SystemUpdate.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Root/SystemUpdate/SystemUpdate.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/Bullets/BulletMovement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/Bullets/BulletMovement.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/Bullets/BulletView.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/Bullets/IBullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/Bullets/IBullet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/Weapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/Weapon.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Minotaur/Minotaur - Sprite Sheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Minotaur/Minotaur - Sprite Sheet.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Root/SystemUpdate.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Root/SystemUpdates.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Root/SystemUpdate/ISystemUpdate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Root/SystemUpdates/ISystemUpdate.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Root/SystemUpdate/ISystemUpdate.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Root/SystemUpdates/ISystemUpdate.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Root/SystemUpdate/IUpdatable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Root/SystemUpdates/IUpdatable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Root/SystemUpdate/IUpdatable.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Root/SystemUpdates/IUpdatable.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Root/SystemUpdate/SystemUpdate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Root/SystemUpdates/SystemUpdate.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Root/SystemUpdate/SystemUpdate.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Root/SystemUpdates/SystemUpdate.cs.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,6 +52,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AI/StateMachine/IState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AI/StateMachine/StateMachine.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AI/StateMachine/Transition.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyWavesSystem/Waves/WaveInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5747309d01554f1a88437e220c6495b95c600/02/1da2d7ba/SerializedMonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f1212ad1dec44ce7b7147976b91869c3157800/43/58250413/Behaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f1212ad1dec44ce7b7147976b91869c3157800/4d/2e53ff8f/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
@@ -180,8 +128,19 @@
       <workItem from="1667844549855" duration="5724000" />
       <workItem from="1667853255994" duration="125000" />
       <workItem from="1668027234271" duration="1220000" />
-      <workItem from="1668112291925" duration="1449000" />
+      <workItem from="1668112291925" duration="1832000" />
+      <workItem from="1668449865592" duration="8000" />
+      <workItem from="1668449887244" duration="4669000" />
+      <workItem from="1668535920741" duration="4680000" />
     </task>
+    <task id="LOCAL-00001" summary="Added enemy StateMachine and IAttack interface">
+      <created>1668113832992</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1668113832992</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,5 +162,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Added enemy StateMachine and IAttack interface" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added enemy StateMachine and IAttack interface" />
   </component>
 </project>

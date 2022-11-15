@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using UnityEngine;
 using SwampAttack.Input;
 using SwampAttack.Weapons;
@@ -20,7 +21,7 @@ namespace SwampAttack.Root
         public override void Compose()
         {
             IInventory<IWeapon> weaponInventory = new Inventory<IWeapon>(3);
-            weaponInventory.Add(new Weapon(_bulletsFactory, 5));
+            weaponInventory.Add(new Weapon(_bulletsFactory, 18));
             _healthTransformView.Init(new Health(5));
 
             var weapon = weaponInventory.Items[0];

@@ -4,7 +4,7 @@ using SwampAttack.AI.Enemies.Interfaces;
 using SwampAttack.AI.Enemies.Movement;
 using SM = SwampAttack.AI.StateMachine;
 using SwampAttack.HealthSystem;
-using SwampAttack.Root.SystemUpdate;
+using SwampAttack.Root.SystemUpdates;
 
 namespace SwampAttack.AI.Enemies.Minotaur
 {

@@ -26,7 +26,6 @@ namespace SwampAttack.HealthSystem
                 throw new ArgumentException($"Can't take {count} damage");
 
             _value -= count;
-            UnityEngine.Debug.Log(_value);
         }
     }
 }
