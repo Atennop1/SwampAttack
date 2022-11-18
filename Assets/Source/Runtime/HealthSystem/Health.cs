@@ -4,28 +4,45 @@ namespace SwampAttack.Runtime.HealthSystem
 {
     public sealed class Health : IHealth
     {
-        public bool IsDead => _value <= 0;
-        public bool CanTakeDamage => _value > 0;
+        public int Value { get; private set; }
+        public int MaxValue { get; }
         
-        private int _value;
+        public bool IsDead => Value <= 0;
+        public bool CanTakeDamage => !IsDead;
 
         public Health(int value)
         {
             if (value <= 0)
                 throw new ArgumentException($"Can't create health with {value} hp");
 
-            _value = value;
+            MaxValue = Value = value;
         }
 
         public void TakeDamage(int count)
         {
-            if (!CanTakeDamage)
-                throw new Exception($"Can't take damage to {GetType()}");
+            if (IsDead)
+                throw new Exception("Can't take damage to dead health");
 
-            if (_value <= 0)
-                throw new ArgumentException($"Can't take {count} damage");
+            if (count < 0)
+                throw new ArgumentException("Damage can't be a negative number");
 
-            _value -= count;
+            Value -= count;
         }
+
+        public void Heal(int count)
+        {
+            if (count < 0)
+                throw new ArgumentException("Healing number can't be a negative number");
+            
+            if (!CanHeal(count))
+                throw new InvalidOperationException($"Can't heal {count} hp. This is too much");
+            
+            if (IsDead)
+                throw new ArgumentException("Can't heal a dead health!");
+
+            Value += count;
+        }
+        
+        public bool CanHeal(int count) => count + Value <= MaxValue;
     }
 }
