@@ -1,9 +1,11 @@
 using SwampAttack.Runtime.Factories;
 using SwampAttack.Runtime.HealthSystem;
-using SwampAttack.Runtime.Input;
-using SwampAttack.Runtime.InventorySystem;
+using SwampAttack.Runtime.Model.HealthSystem;
+using SwampAttack.Runtime.Model.Input;
+using SwampAttack.Runtime.Model.InventorySystem;
+using SwampAttack.Runtime.Model.Weapons;
 using SwampAttack.Runtime.Root.Interfaces;
-using SwampAttack.Runtime.Weapons;
+using SwampAttack.Runtime.View.Health;
 using UnityEngine;
 
 namespace SwampAttack.Runtime.Root

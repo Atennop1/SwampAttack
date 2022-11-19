@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using SwampAttack.Runtime.EnemyWavesSystem.Cycles;
-using SwampAttack.Runtime.EnemyWavesSystem.Waves;
 using SwampAttack.Runtime.Factories;
+using SwampAttack.Runtime.Model.EnemyWavesSystem.Cycles;
+using SwampAttack.Runtime.Model.EnemyWavesSystem.Waves;
 using SwampAttack.Runtime.Root.Interfaces;
 using SwampAttack.Runtime.Root.SystemUpdates;
 using UnityEngine;

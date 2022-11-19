@@ -8,7 +8,7 @@ namespace SwampAttack.Tests.Health
         [Test]
         public void CantCreateIncorrectHealth()
         {
-            Assert.Throws<ArgumentException>(() => { var health = new Runtime.HealthSystem.Health(-1); });
+            Assert.Throws<ArgumentException>(() => { var health = new Runtime.Model.HealthSystem.Health(-1); });
         }
     }
 }

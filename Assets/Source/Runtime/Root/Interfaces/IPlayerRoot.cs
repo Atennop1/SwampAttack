@@ -1,4 +1,4 @@
-using SwampAttack.Runtime.Weapons;
+using SwampAttack.Runtime.Model.Weapons;
 
 namespace SwampAttack.Runtime.Root.Interfaces
 {

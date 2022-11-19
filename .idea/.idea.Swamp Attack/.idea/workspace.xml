@@ -2,17 +2,125 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f65dff0-dc7f-4b3e-b613-fed6e8445b84" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/App.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/Health/CreateHealthTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/Health/CreateHealthTests.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/Health/HealthOperationsTest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/Health/HealthOperationsTest.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Runtime.csproj.DotSettings" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests.csproj.DotSettings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Attacks.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Enemies.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Health.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Swamp Attack/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Swamp Attack/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/HealthSystem/Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/HealthSystem/Health.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/HealthSystem/IHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/HealthSystem/IHealth.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/Enemies.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/Enemies/Components.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/Enemies/Components/DefaultEnemyTransformView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Enemies/DefaultEnemyTransformView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/Enemies/Components/DefaultEnemyTransformView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Enemies/DefaultEnemyTransformView.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/Enemies/Interfaces.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Interfaces.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/Enemies/Interfaces/IEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Interfaces/IEnemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/Enemies/Interfaces/IEnemy.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Interfaces/IEnemy.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/Enemies/Interfaces/IEnemyAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Interfaces/IEnemyAttack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/Enemies/Interfaces/IEnemyAttack.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Interfaces/IEnemyAttack.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/Enemies/Interfaces/IEnemyTargetData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Interfaces/IEnemyTargetData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/Enemies/Interfaces/IEnemyTargetData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Interfaces/IEnemyTargetData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/Enemies/Interfaces/IEnemyTransformView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Enemies/IEnemyTransformView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/Enemies/Interfaces/IEnemyTransformView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Enemies/IEnemyTransformView.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/Enemies/Interfaces/IEnemyWithAttacks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Interfaces/IEnemyWithAttacks.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/Enemies/Interfaces/IEnemyWithAttacks.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Interfaces/IEnemyWithAttacks.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/Enemies/Interfaces/IEnemyWithTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Interfaces/IEnemyWithTarget.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/Enemies/Interfaces/IEnemyWithTarget.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Interfaces/IEnemyWithTarget.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/Enemies/Interfaces/IStateMachineSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Interfaces/IStateMachineSetup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/Enemies/Interfaces/IStateMachineSetup.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Interfaces/IStateMachineSetup.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/Enemies/Minotaur.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/Enemies/Minotaur/Attacks.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/Attacks.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/Enemies/Minotaur/Attacks/DefaultAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/Attacks/DefaultAttack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/Enemies/Minotaur/Attacks/DefaultAttack.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/Attacks/DefaultAttack.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/Enemies/Minotaur/MinotaurEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/MinotaurEnemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/Enemies/Minotaur/MinotaurEnemy.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/MinotaurEnemy.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/Enemies/Minotaur/MinotaurTargetData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/MinotaurTargetData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/Enemies/Minotaur/MinotaurTargetData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/MinotaurTargetData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/Enemies/Minotaur/StateMachineSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/StateMachineSetup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/Enemies/Minotaur/StateMachineSetup.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/StateMachineSetup.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/Enemies/Minotaur/States.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/States.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/Enemies/Minotaur/States/AttackState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/States/AttackState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/Enemies/Minotaur/States/AttackState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/States/AttackState.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/Enemies/Minotaur/States/DeathState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/States/DeathState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/Enemies/Minotaur/States/DeathState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/States/DeathState.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/Enemies/Minotaur/States/PlayerTooFarState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/States/PlayerTooFarState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/Enemies/Minotaur/States/PlayerTooFarState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/States/PlayerTooFarState.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/Enemies/Minotaur/States/VictoryState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/States/VictoryState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/Enemies/Minotaur/States/VictoryState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/States/VictoryState.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/Enemies/Movement.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Movement.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/Enemies/Movement/DefaultEnemyMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Movement/DefaultEnemyMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/Enemies/Movement/DefaultEnemyMovement.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Movement/DefaultEnemyMovement.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/Enemies/Movement/IEnemyMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Movement/IEnemyMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/Enemies/Movement/IEnemyMovement.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Movement/IEnemyMovement.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/StateMachine.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/StateMachine.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/StateMachine/IState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/StateMachine/IState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/StateMachine/IState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/StateMachine/IState.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/StateMachine/StateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/StateMachine/StateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/StateMachine/StateMachine.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/StateMachine/StateMachine.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/StateMachine/Transition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/StateMachine/Transition.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/AI/StateMachine/Transition.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/StateMachine/Transition.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Attacks.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Attacks.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Attacks/Attack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Attacks/Attack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Attacks/Attack.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Attacks/Attack.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Attacks/AttackTransformView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Attacks/AttackTransformView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Attacks/AttackTransformView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Attacks/AttackTransformView.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Attacks/IAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Attacks/IAttack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Attacks/IAttack.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Attacks/IAttack.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/EnemyWavesSystem.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/EnemyWavesSystem.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/EnemyWavesSystem/Cycles.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/EnemyWavesSystem/Cycles.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/EnemyWavesSystem/Cycles/IWavesCycle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/EnemyWavesSystem/Cycles/IWavesCycle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/EnemyWavesSystem/Cycles/IWavesCycle.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/EnemyWavesSystem/Cycles/IWavesCycle.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/EnemyWavesSystem/Cycles/WavesCycle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/EnemyWavesSystem/Cycles/WavesCycle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/EnemyWavesSystem/Cycles/WavesCycle.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/EnemyWavesSystem/Cycles/WavesCycle.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/EnemyWavesSystem/Waves.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/EnemyWavesSystem/Waves.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/EnemyWavesSystem/Waves/IWave.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/EnemyWavesSystem/Waves/IWave.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/EnemyWavesSystem/Waves/IWave.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/EnemyWavesSystem/Waves/IWave.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/EnemyWavesSystem/Waves/Wave.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/EnemyWavesSystem/Waves/Wave.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/EnemyWavesSystem/Waves/Wave.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/EnemyWavesSystem/Waves/Wave.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/EnemyWavesSystem/Waves/WaveInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/EnemyWavesSystem/Waves/WaveInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/EnemyWavesSystem/Waves/WaveInfo.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/EnemyWavesSystem/Waves/WaveInfo.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Factories/BulletsFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Factories/BulletsFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/HealthSystem.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/HealthSystem.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/HealthSystem/Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/HealthSystem/Health.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/HealthSystem/Health.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/HealthSystem/Health.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/HealthSystem/HealthTransformView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Health/HealthTransformView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/HealthSystem/HealthTransformView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Health/HealthTransformView.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/HealthSystem/IHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/HealthSystem/IHealth.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/HealthSystem/IHealth.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/HealthSystem/IHealth.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Input.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Input.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Input/IWeaponInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Input/IWeaponInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Input/IWeaponInput.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Input/IWeaponInput.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Input/PCWeaponInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Input/PCWeaponInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Input/PCWeaponInput.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Input/PCWeaponInput.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/InventorySystem.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/InventorySystem.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/InventorySystem/IInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/InventorySystem/IInventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/InventorySystem/IInventory.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/InventorySystem/IInventory.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/InventorySystem/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/InventorySystem/Inventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/InventorySystem/Inventory.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/InventorySystem/Inventory.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Player.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Player.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Player/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Player/Player.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Player/Player.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Root/CharacterRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Root/CharacterRoot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Root/EnemyRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Root/EnemyRoot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Root/EnemyWavesRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Root/EnemyWavesRoot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Root/Interfaces/IPlayerRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Root/Interfaces/IPlayerRoot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Root/PlayerRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Root/PlayerRoot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Weapons.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Weapons/Bullets.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/Bullets.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Weapons/Bullets/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/Bullets/Bullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Weapons/Bullets/Bullet.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/Bullets/Bullet.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Weapons/Bullets/BulletView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Attacks/BulletTransformView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Weapons/Bullets/BulletView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Attacks/BulletTransformView.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Weapons/Bullets/IBullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/Bullets/IBullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Weapons/Bullets/IBullet.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/Bullets/IBullet.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Weapons/IWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/IWeapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Weapons/IWeapon.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/IWeapon.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Weapons/Weapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/Weapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Weapons/Weapon.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/Weapon.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Weapons/WeaponData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/WeaponData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Weapons/WeaponData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/WeaponData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Tests/Health/CreateHealthTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Tests/Health/CreateHealthTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Tests/Health/HealthOperationsTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Tests/Health/HealthOperationsTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Runtime.csproj.DotSettings" beforeDir="false" afterPath="$PROJECT_DIR$/Runtime.csproj.DotSettings" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +129,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/App.config" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Source/Runtime/AI/Enemies/Components/DefaultEnemyTransformView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Runtime/View/Enemies/DefaultEnemyTransformView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5747309d01554f1a88437e220c6495b95c600/02/1da2d7ba/SerializedMonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f1212ad1dec44ce7b7147976b91869c3157800/43/58250413/Behaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f1212ad1dec44ce7b7147976b91869c3157800/4d/2e53ff8f/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
@@ -107,7 +215,8 @@
       <workItem from="1668786417646" duration="83000" />
       <workItem from="1668786513585" duration="5343000" />
       <workItem from="1668794336698" duration="1123000" />
-      <workItem from="1668804352422" duration="3656000" />
+      <workItem from="1668804352422" duration="4088000" />
+      <workItem from="1668856932909" duration="2133000" />
     </task>
     <task id="LOCAL-00001" summary="Added enemy StateMachine and IAttack interface">
       <created>1668113832992</created>
@@ -137,7 +246,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668719163203</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add Health Tests">
+      <created>1668808452078</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1668808452079</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,6 +294,7 @@
     <MESSAGE value="Add enemy waves" />
     <MESSAGE value="Renamed &quot;Scripts&quot; folder and separated Runtime and Tests" />
     <MESSAGE value="Added Runtime folder" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Runtime folder" />
+    <MESSAGE value="Add Health Tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Health Tests" />
   </component>
 </project>

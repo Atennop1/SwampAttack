@@ -11,7 +11,7 @@ namespace SwampAttack.Tests.Health
         [SetUp]
         public void Setup()
         {
-            _health = new Runtime.HealthSystem.Health(10);
+            _health = new Runtime.Model.HealthSystem.Health(10);
         }
         
         [Test]

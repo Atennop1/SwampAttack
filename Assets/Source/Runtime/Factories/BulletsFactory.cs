@@ -1,6 +1,7 @@
 using System;
-using SwampAttack.Runtime.Attacks;
-using SwampAttack.Runtime.Weapons.Bullets;
+using SwampAttack.Runtime.Model.Attacks;
+using SwampAttack.Runtime.Model.Weapons.Bullets;
+using SwampAttack.Runtime.View.Attacks;
 using UnityEngine;
 
 namespace SwampAttack.Runtime.Factories
