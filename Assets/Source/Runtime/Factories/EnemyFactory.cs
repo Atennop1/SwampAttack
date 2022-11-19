@@ -12,8 +12,12 @@ namespace SwampAttack.Runtime.Factories
         
         public EnemyRoot Create()
         {
+            if (Application.isEditor && !Application.isPlaying)
+                return null;
+
             var createdEnemy = Instantiate(_enemyPrefab, _spawnPoint.position, Quaternion.identity, _spawnPoint);
             createdEnemy.Init(_target);
+            
             createdEnemy.Compose();
             return createdEnemy;
         }

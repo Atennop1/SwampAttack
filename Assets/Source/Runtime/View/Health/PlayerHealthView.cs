@@ -1,17 +1,10 @@
-using Sirenix.OdinInspector;
 using SwampAttack.Runtime.Model.HealthSystem;
-using UnityEngine;
-using UnityEngine.UI;
+using SwampAttack.Runtime.View.SliderValueChangers;
 
 namespace SwampAttack.Runtime.View.Health
 {
-    public class PlayerHealthView : SerializedMonoBehaviour, IHealthView
+    public class PlayerHealthView : ViewWithSmoothSliderValueChanger, IHealthView
     {
-        [SerializeField] private Slider _slider;
-        
-        public void Visualize(IHealth health)
-        {
-            _slider.value = (float)health.Value / (float)health.MaxValue;
-        }
+        public void Visualize(IHealth health) => ChangeSliderValue(health.Value, health.MaxValue);
     }
 }

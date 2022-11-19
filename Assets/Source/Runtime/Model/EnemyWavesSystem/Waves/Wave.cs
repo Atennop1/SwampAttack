@@ -9,7 +9,7 @@ namespace SwampAttack.Runtime.Model.EnemyWavesSystem.Waves
 {
     public sealed class Wave : IWave
     {
-        public bool IsCompleted => _spawnedEnemies.Count != 0 && 
+        public bool IsCompleted => _spawnedEnemies.Count == _waveInfo.EnemyCount && 
                                    _spawnedEnemies.All(enemy => enemy == null || enemy.Health.IsDead);
         public bool IsStarted { get; private set; }
         
