@@ -1,5 +1,4 @@
 using SwampAttack.Runtime.Factories;
-using SwampAttack.Runtime.HealthSystem;
 using SwampAttack.Runtime.Model.HealthSystem;
 using SwampAttack.Runtime.Model.Input;
 using SwampAttack.Runtime.Model.InventorySystem;
@@ -14,6 +13,7 @@ namespace SwampAttack.Runtime.Root
     {
         [SerializeField] private BulletsFactory _bulletsFactory;
         [SerializeField] private HealthTransformView _healthTransformView;
+        [SerializeField] private IHealthView _playerHealthView;
 
         [Space]
         [SerializeField] private PlayerRoot _playerRoot;
@@ -23,7 +23,7 @@ namespace SwampAttack.Runtime.Root
         {
             IInventory<IWeapon> weaponInventory = new Inventory<IWeapon>(3);
             weaponInventory.Add(new Weapon(_bulletsFactory, 18));
-            _healthTransformView.Init(new Health(5));
+            _healthTransformView.Init(new Health(5, _playerHealthView));
 
             var weapon = weaponInventory.Items[0];
             _playerRoot.Compose(new WeaponData(_weaponInput, weapon));

@@ -5,12 +5,14 @@ using SwampAttack.Runtime.Model.EnemyWavesSystem.Cycles;
 using SwampAttack.Runtime.Model.EnemyWavesSystem.Waves;
 using SwampAttack.Runtime.Root.Interfaces;
 using SwampAttack.Runtime.Root.SystemUpdates;
+using SwampAttack.Runtime.View.EnemyWavesSystem;
 using UnityEngine;
 
 namespace SwampAttack.Runtime.Root
 {
     public sealed class EnemyWavesRoot : CompositeRoot
     {
+        [SerializeField] private IWavesCycleProgressView _wavesCycleProgressView;
         [SerializeField] private EnemyFactory _enemyFactory;
         private SystemUpdate _systemUpdate;
         
@@ -24,7 +26,7 @@ namespace SwampAttack.Runtime.Root
             var firstWave = new Wave(waveInfo, _enemyFactory);
             var secondWave = new Wave(waveInfo, _enemyFactory);
 
-            var wavesCycle = new WavesCycle(new List<IWave> { firstWave, secondWave });
+            var wavesCycle = new WavesCycle(new List<IWave> { firstWave, secondWave }, _wavesCycleProgressView);
             _systemUpdate.Add(wavesCycle);
             
             wavesCycle.Start();

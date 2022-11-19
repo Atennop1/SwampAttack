@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using SwampAttack.Runtime.Model.EnemyWavesSystem.Waves;
 using SwampAttack.Runtime.Root.SystemUpdates;
+using SwampAttack.Runtime.View.EnemyWavesSystem;
 
 namespace SwampAttack.Runtime.Model.EnemyWavesSystem.Cycles
 {
@@ -12,11 +13,14 @@ namespace SwampAttack.Runtime.Model.EnemyWavesSystem.Cycles
         
         private int _currentWaveNumber;
         private readonly List<IWave> _waves;
-        private IWave _currentWave => _waves[_currentWaveNumber];
         
-        public WavesCycle(List<IWave> waves)
+        private IWave _currentWave => _waves[_currentWaveNumber];
+        private readonly IWavesCycleProgressView _progressView;
+        
+        public WavesCycle(List<IWave> waves, IWavesCycleProgressView progressView)
         {
             _waves = waves ?? throw new ArgumentException("Waves list can't be null");
+            _progressView = progressView ?? throw new ArgumentException("ProgressView can't be null");
         }
 
         public void Start() => IsStarted = true;
@@ -29,8 +33,11 @@ namespace SwampAttack.Runtime.Model.EnemyWavesSystem.Cycles
             if (!_currentWave.IsStarted)
                 _currentWave.Start();
 
-            if (_currentWave.IsCompleted)
-                _currentWaveNumber++;
+            if (!_currentWave.IsCompleted) 
+                return;
+            
+            _currentWaveNumber++;
+            _progressView.Visualize(_currentWaveNumber, _waves.Count);
         }
     }
 }

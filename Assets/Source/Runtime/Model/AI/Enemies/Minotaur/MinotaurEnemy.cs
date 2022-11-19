@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using SwampAttack.Runtime.HealthSystem;
 using SwampAttack.Runtime.Model.AI.Enemies.Interfaces;
 using SwampAttack.Runtime.Model.AI.Enemies.Movement;
+using SwampAttack.Runtime.Model.HealthSystem;
 using SwampAttack.Runtime.Root.SystemUpdates;
 using SwampAttack.Runtime.View.Enemies;
 

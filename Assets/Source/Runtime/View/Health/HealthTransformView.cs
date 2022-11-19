@@ -1,5 +1,5 @@
 using System;
-using SwampAttack.Runtime.HealthSystem;
+using SwampAttack.Runtime.Model.HealthSystem;
 using UnityEngine;
 
 namespace SwampAttack.Runtime.View.Health
@@ -17,7 +17,8 @@ namespace SwampAttack.Runtime.View.Health
         public void TakeDamage(int damage)
         {
             _health.TakeDamage(damage);
-            if (!_health.IsDead) return;
+            if (!_health.IsDead) 
+                return;
             
             if (_deathEffect != null)
                 Instantiate(_deathEffect, transform.position, Quaternion.identity);

@@ -1,4 +1,3 @@
-using SwampAttack.Runtime.HealthSystem;
 using SwampAttack.Runtime.Model.AI.Enemies.Interfaces;
 using SwampAttack.Runtime.Model.AI.Enemies.Minotaur;
 using SwampAttack.Runtime.Model.AI.Enemies.Movement;
@@ -34,7 +33,7 @@ namespace SwampAttack.Runtime.Root
         {
             _systemUpdate = new SystemUpdate();
 
-            IHealth health = new Health(3);
+            IHealth health = new Health(3, new NullHealthView());
             _healthTransformView.Init(health);
             _attackTransformView.Init(new Attack(1));
             

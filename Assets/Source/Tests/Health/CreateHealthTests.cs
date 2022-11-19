@@ -1,5 +1,6 @@
 using System;
 using NUnit.Framework;
+using SwampAttack.Runtime.View.Health;
 
 namespace SwampAttack.Tests.Health
 {
@@ -8,7 +9,11 @@ namespace SwampAttack.Tests.Health
         [Test]
         public void CantCreateIncorrectHealth()
         {
-            Assert.Throws<ArgumentException>(() => { var health = new Runtime.Model.HealthSystem.Health(-1); });
+            Assert.Throws<ArgumentException>(() =>
+            {
+                var nullViewHealth = new Runtime.Model.HealthSystem.Health(10, null);
+                var negativeHealth = new Runtime.Model.HealthSystem.Health(-1, new NullHealthView());
+            });
         }
     }
 }
