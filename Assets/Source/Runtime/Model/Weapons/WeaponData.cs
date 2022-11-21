@@ -1,3 +1,4 @@
+using System;
 using SwampAttack.Runtime.Model.Input;
 
 namespace SwampAttack.Runtime.Model.Weapons
@@ -9,8 +10,8 @@ namespace SwampAttack.Runtime.Model.Weapons
         
         public WeaponData(IWeaponInput input, IWeapon weapon)
         {
-            Input = input;
-            Weapon = weapon;
+            Input = input ?? throw new ArgumentException("Input can't be null");
+            Weapon = weapon ?? throw new ArgumentException("Weapon can't be null");
         }
     }
 }

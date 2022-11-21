@@ -10,7 +10,7 @@ namespace SwampAttack.Runtime.Model.HealthSystem
         
         public bool IsDead => Value <= 0;
         public bool CanTakeDamage => !IsDead;
-        private IHealthView _healthView;
+        private readonly IHealthView _healthView;
 
         public Health(int value, IHealthView healthView)
         {

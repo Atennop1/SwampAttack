@@ -17,29 +17,43 @@ namespace SwampAttack.Tests.Health
         [Test]
         public void IsTakeDamageWorksCorrectly()
         {
-            try
+            var errors = 0;
+
+            try { _health.TakeDamage(-1); }
+            catch { errors++; }
+
+            try 
             {
-                _health.TakeDamage(-1);
                 _health.TakeDamage(15);
                 _health.TakeDamage(10);
             }
-            catch { Assert.Pass(); }
+            catch { errors++; }
+            
+            if (errors == 2)
+                Assert.Pass();
         }
 
         [Test]
         public void IsHealWorksCorrectly()
         {
+            var errors = 0;
             _health.TakeDamage(2);
+
+            try { _health.Heal(-1); }
+            catch { errors++; }
+
+            try { _health.Heal(3); }
+            catch { errors++; }
 
             try
             {
-                _health.Heal(-1);
-                _health.Heal(3);
-
                 _health.TakeDamage(8);
                 _health.Heal(10);
             }
-            catch { Assert.Pass(); }
+            catch { errors++; }
+            
+            if (errors == 3)
+                Assert.Pass();
         }
 
         [Test]

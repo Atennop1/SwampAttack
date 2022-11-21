@@ -11,6 +11,7 @@ namespace SwampAttack.Runtime.Model.Weapons
         public int Bullets { get; private set; }
         
         public bool CanShoot => Bullets > 0;
+        public bool IsFull => Bullets == MaxBullets;
 
         private readonly IFactory<IBullet> _factory;
         private readonly IWeaponBulletsView _bulletsView;
@@ -18,7 +19,7 @@ namespace SwampAttack.Runtime.Model.Weapons
         public Weapon(IFactory<IBullet> factory, IWeaponBulletsView bulletsView, int bullets)
         {
             if (bullets <= 0)
-                throw new ArgumentException($"Can't create weapon with {bullets} bullets");
+                throw new ArgumentException("BulletsCount can't be negative number");
                 
             Bullets = MaxBullets = bullets;
             _bulletsView = bulletsView ?? throw new ArgumentException("BulletsView can't be null");
@@ -38,7 +39,10 @@ namespace SwampAttack.Runtime.Model.Weapons
         public void AddBullets(int count)
         {
             if (count < 0)
-                throw new ArgumentException($"Can't add {count} bullets");
+                throw new ArgumentException("BulletsCount can't be negative number");
+            
+            if (Bullets + count > MaxBullets)
+                throw new ArgumentException("BulletsCount too big");
 
             Bullets += count;
             _bulletsView.Visualize(this);

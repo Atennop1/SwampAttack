@@ -4,7 +4,9 @@ namespace SwampAttack.Runtime.Model.Weapons
     {
         int MaxBullets { get; }
         int Bullets { get; }
+        
         bool CanShoot { get; }
+        bool IsFull { get; }
 
         void Shoot();
         void AddBullets(int count);

@@ -22,8 +22,11 @@ namespace SwampAttack.Runtime.Model.InventorySystem
 
         public void Add(T item, int count = 1)
         {
-            if (IsFull || (count += Items.Count) > _capacity)
-                throw new ArgumentException($"Can't add {count} items in inventory");
+            if (IsFull)
+                throw new ArgumentException("Inventory is full");
+            
+            if ((count += Items.Count) > _capacity)
+                throw new ArgumentException($"{count} items won't fit in inventory");
 
             for (var i = 0; i < count; i++)
                 _items.Add(item);
