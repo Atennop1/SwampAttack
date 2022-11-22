@@ -8,13 +8,13 @@ using UnityEngine;
 
 namespace SwampAttack.Runtime.Model.AI.Enemies.Minotaur
 {
-    public sealed class StateMachineSetup : IStateMachineSetup
+    public sealed class EnemyStateMachineSetup : IEnemyStateMachineSetup
     {
         private readonly IEnemyWithTarget _enemyWithTarget;
         private readonly IEnemyWithAttacks _enemyWithAttacks;
         private readonly IEnemyTransformView _enemyTransformView;
         
-        public StateMachineSetup(IEnemyWithTarget enemyWithTarget, IEnemyWithAttacks enemyWithAttacks, IEnemyTransformView enemyTransformView)
+        public EnemyStateMachineSetup(IEnemyWithTarget enemyWithTarget, IEnemyWithAttacks enemyWithAttacks, IEnemyTransformView enemyTransformView)
         {
             _enemyWithTarget = enemyWithTarget ?? throw new ArgumentException("EnemyWithTarget can't be null");
             _enemyWithAttacks = enemyWithAttacks ?? throw new ArgumentException("EnemyWithAttacks can't be null");
@@ -37,11 +37,6 @@ namespace SwampAttack.Runtime.Model.AI.Enemies.Minotaur
             stateMachine.AddAnyTransition(new DeathState(), () => _enemyWithTarget.Health.IsDead);
             stateMachine.SwitchState(playerTooFarState);
             return stateMachine;
-        }
-
-        public IEnumerable<IEnemyAttack> BuildEnemyAttacks()
-        {
-            return new List<IEnemyAttack> { new DefaultAttack(_enemyTransformView, 1f) };
         }
 
         private bool PlayerToNear() => _enemyWithTarget.TargetData.Target != null &&

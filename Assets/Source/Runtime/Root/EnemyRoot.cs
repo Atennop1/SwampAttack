@@ -39,10 +39,13 @@ namespace SwampAttack.Runtime.Root
             
             var enemy = new MinotaurEnemy(health, new DefaultEnemyMovement(_rigidbody, 10),
                 new MinotaurTargetData(_target, 1.7f, 0.05f));
-            enemy.Init(new StateMachineSetup(enemy, enemy, _enemyTransformView));
+
+            var attacksSetup = new EnemyAttacksSetup(_enemyTransformView);
+            enemy.Init(new EnemyStateMachineSetup(enemy, enemy, _enemyTransformView), attacksSetup);
             
             Enemy = enemy;
             _systemUpdate.Add(enemy);
+            _systemUpdate.Add(attacksSetup);
         }
 
         private void Update() => _systemUpdate.UpdateAll();

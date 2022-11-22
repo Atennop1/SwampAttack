@@ -23,11 +23,7 @@ namespace SwampAttack.Runtime.Model.AI.Enemies.Minotaur.States
                 _enemyAttack.Use();
         }
 
-        public void OnEnter()
-        {
-            _enemyWithAttacks.Movement.StopMovement();
-        }
-        
+        public void OnEnter() => _enemyWithAttacks.Movement.StopMovement();
         public void OnExit() { }
     }
 }

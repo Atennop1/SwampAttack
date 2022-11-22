@@ -25,25 +25,15 @@ namespace SwampAttack.Runtime.Model.AI.Enemies.Minotaur
             Movement = movement ?? throw new ArgumentException("Movement can't be null");
         }
 
-        public void Init(IStateMachineSetup stateMachineSetup)
+        public void Init(IEnemyStateMachineSetup stateMachineSetup, IEnemyAttacksSetup attacksSetup)
         {
             if (stateMachineSetup == null)
                 throw new ArgumentException("StateMachineSetup can't be null");
             
-            Attacks = stateMachineSetup.BuildEnemyAttacks();
+            Attacks = attacksSetup.BuildEnemyAttacks();
             StateMachine = stateMachineSetup.BuildStateMachine();
         }
 
-        public void Update()
-        {
-            StateMachine.Tick();
-            
-            if (Attacks == null)
-                return;
-
-            foreach (var attack in Attacks)
-                if (attack is IUpdatable updatable)
-                    updatable.Update();
-        }
+        public void Update() => StateMachine.Tick();
     }
 }

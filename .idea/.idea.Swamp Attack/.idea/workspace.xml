@@ -2,30 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f65dff0-dc7f-4b3e-b613-fed6e8445b84" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/Inventory.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/Inventory/AddItemsTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/Inventory/AddItemsTests.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/Inventory/CreateInventoryTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/Inventory/CreateInventoryTests.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Inventory.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Inventory/NullBulletsFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Inventory/NullBulletsFactory.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Inventory/NullWeaponBulletsView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Inventory/NullWeaponBulletsView.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/Weapons.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/Weapons/CreateWeaponTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/Weapons/CreateWeaponTests.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/Weapons/WeaponOperationsTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/Weapons/WeaponOperationsTests.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Interfaces/IEnemyAttacksSetup.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Interfaces/IEnemyAttacksSetup.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/EnemyAttacksSetup.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/EnemyAttacksSetup.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Swamp Attack/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Swamp Attack/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/HealthSystem/Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/HealthSystem/Health.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/InventorySystem/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/InventorySystem/Inventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/IWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/IWeapon.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/Weapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/Weapon.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/WeaponData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/WeaponData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Tests/Health/CreateHealthTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Tests/Health/CreateHealthTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Tests/Health/HealthOperationsTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Tests/Health/HealthOperationsTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Interfaces/IStateMachineSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Interfaces/IEnemyStateMachineSetup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Interfaces/IStateMachineSetup.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Interfaces/IEnemyStateMachineSetup.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/MinotaurEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/MinotaurEnemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/StateMachineSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/EnemyStateMachineSetup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/StateMachineSetup.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/EnemyStateMachineSetup.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/States/AttackState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/States/AttackState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Root/EnemyRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Root/EnemyRoot.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +113,8 @@
       <workItem from="1668804352422" duration="4088000" />
       <workItem from="1668856932909" duration="7580000" />
       <workItem from="1668894066426" duration="5315000" />
-      <workItem from="1669057491998" duration="3763000" />
+      <workItem from="1669057491998" duration="4104000" />
+      <workItem from="1669146576286" duration="786000" />
     </task>
     <task id="LOCAL-00001" summary="Added enemy StateMachine and IAttack interface">
       <created>1668113832992</created>
@@ -183,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668899391821</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Fixed logic in some models and test logic. Added new tests">
+      <created>1669061484509</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1669061484509</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,14 +189,9 @@
     <option name="coveragePercentColumnWidth" value="150" />
     <option name="sortOrder" value="DESCENDING" />
     <option name="sortedColumn" value="1" />
-    <option name="symbolColumnWidth" value="241" />
+    <option name="symbolColumnWidth" value="324" />
     <coverage-tree-state>
-      <expand>
-        <path>
-          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 0% 1171/1171" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-        </path>
-      </expand>
+      <expand />
       <select />
     </coverage-tree-state>
   </component>
@@ -228,6 +219,7 @@
     <MESSAGE value="View and Model are separated into folders" />
     <MESSAGE value="Installed UniTask, added View for Health and Waves Completion Progress" />
     <MESSAGE value="Added View for count of weapon bullets, logic of slider value changing separated. Some bugs fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added View for count of weapon bullets, logic of slider value changing separated. Some bugs fixed" />
+    <MESSAGE value="Fixed logic in some models and test logic. Added new tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed logic in some models and test logic. Added new tests" />
   </component>
 </project>
