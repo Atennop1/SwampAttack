@@ -7,8 +7,8 @@ namespace SwampAttack.Runtime.View.Attacks
     {
         private void OnTriggerEnter2D(Collider2D coll)
         {
-            if (_attack.IsCollisionWithHealth(coll, out _))
-                _attack.Collide(coll);
+            if (Attack.IsCollisionWithHealth(coll, out _))
+                Attack.Collide(coll);
             
             Destroy(gameObject);
         }

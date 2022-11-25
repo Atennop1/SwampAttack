@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f65dff0-dc7f-4b3e-b613-fed6e8445b84" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Interfaces/IEnemyAttacksSetup.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Interfaces/IEnemyAttacksSetup.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/EnemyAttacksSetup.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/EnemyAttacksSetup.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Swamp Attack/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Swamp Attack/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Interfaces/IStateMachineSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Interfaces/IEnemyStateMachineSetup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Interfaces/IStateMachineSetup.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Interfaces/IEnemyStateMachineSetup.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/MinotaurEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/MinotaurEnemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/StateMachineSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/EnemyStateMachineSetup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/StateMachineSetup.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/EnemyStateMachineSetup.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/States/AttackState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/States/AttackState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Root/EnemyRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Root/EnemyRoot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/View/Attacks/AttackTransformView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Attacks/AttackTransformView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/View/Attacks/BulletTransformView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Attacks/BulletTransformView.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +105,8 @@
       <workItem from="1668856932909" duration="7580000" />
       <workItem from="1668894066426" duration="5315000" />
       <workItem from="1669057491998" duration="4104000" />
-      <workItem from="1669146576286" duration="786000" />
+      <workItem from="1669146576286" duration="877000" />
+      <workItem from="1669410765484" duration="66000" />
     </task>
     <task id="LOCAL-00001" summary="Added enemy StateMachine and IAttack interface">
       <created>1668113832992</created>
@@ -179,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669061484509</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Some decomposition of enemy logic">
+      <created>1669147437344</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1669147437344</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,6 +219,7 @@
     <MESSAGE value="Installed UniTask, added View for Health and Waves Completion Progress" />
     <MESSAGE value="Added View for count of weapon bullets, logic of slider value changing separated. Some bugs fixed" />
     <MESSAGE value="Fixed logic in some models and test logic. Added new tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed logic in some models and test logic. Added new tests" />
+    <MESSAGE value="Some decomposition of enemy logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some decomposition of enemy logic" />
   </component>
 </project>
