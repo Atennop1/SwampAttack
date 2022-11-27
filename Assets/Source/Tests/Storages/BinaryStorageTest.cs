@@ -1,18 +1,17 @@
 using NUnit.Framework;
 using SwampAttack.Runtime.Tools.SaveSystem;
-using SwampAttack.Tests.NullComponents.Storages;
 
 namespace SwampAttack.Tests.Storages
 {
-    public class StorageWithNameTest
+    public class BinaryStorageTest
     {
         [Test]
         public void IsWorkingCorrect()
         {
-            var storage = new StorageWithNames<ITestMoney, int>();
-            storage.Save(76);
+            var storage = new BinaryStorage();
+            storage.Save(76, "test");
             
-            if (storage.Load<int>() == 76)
+            if (storage.Load<int>("test") == 76)
                 Assert.Pass();
         }
     }

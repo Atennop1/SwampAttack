@@ -1,47 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8f65dff0-dc7f-4b3e-b613-fed6e8445b84" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Wallet.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Wallet/IMoney.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Wallet/IMoney.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Wallet/IWallet.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Wallet/IWallet.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Wallet/Wallet.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Wallet/Wallet.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/IStorage.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/IStorage.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/JSONStorage.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/JSONStorage.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/StorageWithNames.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/StorageWithNames.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Wallet.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Wallet/DefaultWalletView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Wallet/DefaultWalletView.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Wallet/IWalletView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Wallet/IWalletView.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Storages.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Storages/NullStorage.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Storages/NullStorage.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Wallet.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Wallet/NullWalletView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Wallet/NullWalletView.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/Storages.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/Storages/JSONStorageTest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/Storages/JSONStorageTest.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/Storages/StorageWithNameTest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/Storages/StorageWithNameTest.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/Wallet.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/Wallet/CreateWalletTest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/Wallet/CreateWalletTest.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/Wallet/WalletOperationsTest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/Wallet/WalletOperationsTest.cs.meta" afterDir="false" />
+    <list default="true" id="8f65dff0-dc7f-4b3e-b613-fed6e8445b84" name="Changes" comment="Added Wallet, Storages and tests for their">
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Shop.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Shop/Clients.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Shop/Clients/IClient.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Shop/Clients/IClient.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Shop/Clients/WeaponClient.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Shop/Clients/WeaponClient.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Shop/Products.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Shop/Products/IProduct.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Shop/Products/IProduct.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Shop/Products/WeaponProduct.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Shop/Products/WeaponProduct.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Root/ShopRoot.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Root/ShopRoot.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/SO.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/SO/Products.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/SO/Products/IProductData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/SO/Products/IProductData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/SO/Products/ProductData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/SO/Products/ProductData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/BinaryStorage.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/BinaryStorage.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Products.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Products/NullProductData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Products/NullProductData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Storages/ITestMoney.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Storages/ITestMoney.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Wallet/NullWallet.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Wallet/NullWallet.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/Shop.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/Shop/Client.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/Shop/Client/ClientOperationsTest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/Shop/Client/ClientOperationsTest.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/Shop/Client/CreateClientTest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/Shop/Client/CreateClientTest.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/Shop/Product.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/Shop/Product/CreateProductTest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/Shop/Product/CreateProductTest.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/Storages/BinaryStorageTest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/Storages/BinaryStorageTest.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Swamp Attack/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Swamp Attack/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Minotaur.physicsMaterial2D" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Minotaur.physicsMaterial2D.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Runtime.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Runtime.asmdef" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Wallet/Wallet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Wallet/Wallet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/StorageWithNames.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/StorageWithNames.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Tests/Storages/StorageWithNameTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Tests/Storages/StorageWithNameTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Tests/Wallet/CreateWalletTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Tests/Wallet/CreateWalletTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Tests/Wallet/WalletOperationsTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Tests/Wallet/WalletOperationsTest.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +59,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/App.config" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Runtime/View/Enemies/DefaultEnemyTransformView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Products/NullProductData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Slider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5747309d01554f1a88437e220c6495b95c600/02/1da2d7ba/SerializedMonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/edef46c9b2db4b878c98495bfdc516fa568ba8/8a/2d2e8e45/CancellationTokenSource.cs" root0="SKIP_HIGHLIGHTING" />
@@ -100,10 +109,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="22916">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="22916" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -149,7 +158,7 @@
       <workItem from="1669410765484" duration="5379000" />
       <workItem from="1669464440325" duration="4935000" />
       <workItem from="1669493453009" duration="610000" />
-      <workItem from="1669563719749" duration="614000" />
+      <workItem from="1669563719749" duration="9460000" />
     </task>
     <task id="LOCAL-00001" summary="Added enemy StateMachine and IAttack interface">
       <created>1668113832992</created>
@@ -228,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669410857881</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Added Wallet, Storages and tests for their">
+      <created>1669564516451</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1669564516451</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,7 +254,7 @@
     <option name="coveragePercentColumnWidth" value="150" />
     <option name="sortOrder" value="DESCENDING" />
     <option name="sortedColumn" value="1" />
-    <option name="symbolColumnWidth" value="324" />
+    <option name="symbolColumnWidth" value="365" />
     <coverage-tree-state>
       <expand />
       <select />
@@ -271,6 +287,7 @@
     <MESSAGE value="Fixed logic in some models and test logic. Added new tests" />
     <MESSAGE value="Some decomposition of enemy logic" />
     <MESSAGE value="Very small fix of AttackTransformView" />
-    <option name="LAST_COMMIT_MESSAGE" value="Very small fix of AttackTransformView" />
+    <MESSAGE value="Added Wallet, Storages and tests for their" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Wallet, Storages and tests for their" />
   </component>
 </project>

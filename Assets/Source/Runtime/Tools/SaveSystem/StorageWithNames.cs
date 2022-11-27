@@ -1,4 +1,3 @@
-using System;
 using System.IO;
 
 namespace SwampAttack.Runtime.Tools.SaveSystem
@@ -8,9 +7,9 @@ namespace SwampAttack.Runtime.Tools.SaveSystem
         private readonly string _path;
         private readonly IStorage _storage;
         
-        public StorageWithNames(IStorage storage)
+        public StorageWithNames()
         {
-            _storage = storage ?? throw new ArgumentException("Storage can't be null");
+            _storage = new BinaryStorage();
             _path = Path.Combine(typeof(TUser).Name, typeof(TObject).Name);
         }
 

@@ -537,6 +537,7 @@ Transform:
   - {fileID: 210625807}
   - {fileID: 1877261982}
   - {fileID: 791476858}
+  - {fileID: 801993106}
   m_Father: {fileID: 1016163985}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -555,6 +556,7 @@ MonoBehaviour:
   _roots:
   - {fileID: 1877261983}
   - {fileID: 791476859}
+  - {fileID: 801993107}
 --- !u!1 &357125327
 GameObject:
   m_ObjectHideFlags: 0
@@ -1568,6 +1570,72 @@ MonoBehaviour:
       Entry: 10
       Data: 0
   _enemyFactory: {fileID: 1480613921}
+--- !u!1 &801993105
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 801993106}
+  - component: {fileID: 801993107}
+  m_Layer: 0
+  m_Name: ShopRoot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &801993106
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801993105}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 306109090}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &801993107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801993105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaaf220c9d3545c5b92444a97f3f352b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 1597521619}
+    - {fileID: 156518412}
+    - {fileID: 11400000, guid: a2479d89349a8e64b84e01267127e979, type: 2}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: _weaponBulletsView
+      Entry: 10
+      Data: 0
+    - Name: _walletView
+      Entry: 10
+      Data: 1
+    - Name: _pistolProductData
+      Entry: 10
+      Data: 2
+  _bulletsFactory: {fileID: 1312467244}
 --- !u!1 &808106943
 GameObject:
   m_ObjectHideFlags: 0

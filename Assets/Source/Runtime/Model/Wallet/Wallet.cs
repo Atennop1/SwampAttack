@@ -10,14 +10,12 @@ namespace SwampAttack.Runtime.Model.Wallet
         private readonly StorageWithNames<TWalletType, int> _storage;
         private readonly IWalletView _view;
         
-        public Wallet(IStorage storage, IWalletView view)
+        public Wallet(IWalletView view)
         {
-            _view = view ?? throw new ArgumentException("View can't be null");
-            if (storage == null)
-                throw new ArgumentException("Storage can't be null");
-
-            _storage = new StorageWithNames<TWalletType, int>(storage);
-            Money = _storage.Load<int>();
+            _view = view ?? throw new ArgumentException("View can't be null"); ;
+            _storage = new StorageWithNames<TWalletType, int>();
+            
+            Money = _storage.Exist() ? _storage.Load<int>() : 0;
             VisualizeAndSave();
         }
         
