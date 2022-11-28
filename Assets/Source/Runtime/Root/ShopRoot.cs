@@ -1,5 +1,9 @@
+using System.Collections.Generic;
+using System.Linq;
 using SwampAttack.Runtime.Factories;
 using SwampAttack.Runtime.Model.InventorySystem;
+using SwampAttack.Runtime.Model.Shop;
+using SwampAttack.Runtime.Model.Shop.Cells;
 using SwampAttack.Runtime.Model.Shop.Clients;
 using SwampAttack.Runtime.Model.Shop.Products;
 using SwampAttack.Runtime.Model.Wallet;
@@ -26,10 +30,14 @@ namespace SwampAttack.Runtime.Root
 
             var weaponProduct = new WeaponProduct(weapon, _pistolProductData);
             var wallet = new Wallet<IMoney>(_walletView);
-            _walletView.Visualize(wallet.Money);
+
+            var shop = new Shop<IWeapon>(new List<IShopCell<IWeapon>> { new ShopCell<IWeapon>(weaponProduct) });
+            var client = new WeaponClient(shop, wallet, weaponInventory);
+            client.Buy(weaponProduct);
 
             Debug.Log(wallet.Money);
-            Debug.Log(new WeaponClient(wallet, weaponInventory).EnoughMoney(weaponProduct));
+            Debug.Log(shop.Cells.Any(cell => cell.Product == weaponProduct));
+            _walletView.Visualize(wallet.Money);
         }
     }
 }

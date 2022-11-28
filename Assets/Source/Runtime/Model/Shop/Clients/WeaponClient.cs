@@ -1,4 +1,5 @@
 using System;
+using JetBrains.Annotations;
 using SwampAttack.Runtime.Model.InventorySystem;
 using SwampAttack.Runtime.Model.Shop.Products;
 using SwampAttack.Runtime.Model.Wallet;
@@ -10,9 +11,11 @@ namespace SwampAttack.Runtime.Model.Shop.Clients
     {
         private readonly IWallet _wallet;
         private readonly IInventory<IWeapon> _inventory;
+        private readonly IShop<IWeapon> _shop;
         
-        public WeaponClient(IWallet wallet, IInventory<IWeapon> inventory)
+        public WeaponClient(IShop<IWeapon> shop, IWallet wallet, IInventory<IWeapon> inventory)
         {
+            _shop = shop ?? throw new ArgumentException("Shop can't be null");
             _wallet = wallet ?? throw new ArgumentException("Wallet can't be null");
             _inventory = inventory ?? throw new ArgumentException("Inventory can't be null");
         }
@@ -22,7 +25,9 @@ namespace SwampAttack.Runtime.Model.Shop.Clients
             if (!EnoughMoney(product))
                 throw new InvalidOperationException("Not enough money!");
             
+            _wallet.Take(product.Data.Cost);
             _inventory.Add(product.Item);
+            _shop.Take(product);
         }
 
         public bool EnoughMoney(IProduct<IWeapon> product)
