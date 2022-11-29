@@ -13,10 +13,10 @@ namespace SwampAttack.Tests.Shop.Client
         {
             var errors = 0;
             
-            try { var client = new WeaponClient(null, new Inventory<IWeapon>(1)); }
+            try { var client = new Runtime.Model.Shop.Clients.Client(null, new Inventory<IWeapon>(1)); }
             catch { errors++; }
             
-            try { var client = new WeaponClient(new NullWallet(1), null); }
+            try { var client = new Runtime.Model.Shop.Clients.Client(new NullWallet(1), null); }
             catch { errors++; }
             
             if (errors == 2)

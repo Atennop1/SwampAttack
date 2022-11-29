@@ -7,20 +7,20 @@ using SwampAttack.Runtime.Model.Weapons;
 
 namespace SwampAttack.Runtime.Model.Shop.Clients
 {
-    public class WeaponClient : IClient<IWeapon>
+    public class Client<T> : IClient<T>
     {
         private readonly IWallet _wallet;
-        private readonly IInventory<IWeapon> _inventory;
-        private readonly IShop<IWeapon> _shop;
+        private readonly IInventory<T> _inventory;
+        private readonly IShop<T> _shop;
         
-        public WeaponClient(IShop<IWeapon> shop, IWallet wallet, IInventory<IWeapon> inventory)
+        public Client(IShop<T> shop, IWallet wallet, IInventory<T> inventory)
         {
             _shop = shop ?? throw new ArgumentException("Shop can't be null");
             _wallet = wallet ?? throw new ArgumentException("Wallet can't be null");
             _inventory = inventory ?? throw new ArgumentException("Inventory can't be null");
         }
 
-        public void Buy(IProduct<IWeapon> product)
+        public void Buy(IProduct<T> product)
         {
             if (!EnoughMoney(product))
                 throw new InvalidOperationException("Not enough money!");
@@ -30,7 +30,7 @@ namespace SwampAttack.Runtime.Model.Shop.Clients
             _shop.Take(product);
         }
 
-        public bool EnoughMoney(IProduct<IWeapon> product)
+        public bool EnoughMoney(IProduct<T> product)
         {
             if (product == null)
                 throw new ArgumentException("Product can't be null");

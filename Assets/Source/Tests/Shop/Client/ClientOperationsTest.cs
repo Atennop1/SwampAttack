@@ -16,10 +16,10 @@ namespace SwampAttack.Tests.Shop.Client
         public void IsBuyingValid()
         {
             var inventory = new Inventory<IWeapon>(1);
-            var client = new WeaponClient(new NullWallet(10), inventory);
+            var client = new Runtime.Model.Shop.Clients.Client(new NullWallet(10), inventory);
             
             var weapon = new Weapon(new NullBulletsFactory(), new NullWeaponBulletsView(), 1);
-            var product = new WeaponProduct(weapon, new NullProductData(5));
+            var product = new Runtime.Model.Shop.Products.Product(weapon, new NullProductData(5));
             
             client.Buy(product);
             Assert.That(inventory.Items.Contains(weapon));
