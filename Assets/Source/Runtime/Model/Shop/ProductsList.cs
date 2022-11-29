@@ -1,17 +1,16 @@
 using System;
 using System.Collections.Generic;
 using SwampAttack.Runtime.Model.Shop.Cells;
-using SwampAttack.Runtime.Model.Shop.Clients;
 using SwampAttack.Runtime.Model.Shop.Products;
 
 namespace SwampAttack.Runtime.Model.Shop
 {
-    public class Shop<T> : IShop<T>
+    public class ProductsList<T> : IProductsList<T>
     {
-        public IReadOnlyList<IReadOnlyShopCell<T>> Cells => _cells;
-        private readonly List<IShopCell<T>> _cells;
+        public IReadOnlyList<IReadOnlyProductCell<T>> Cells => _cells;
+        private readonly List<IProductCell<T>> _cells;
         
-        public Shop(List<IShopCell<T>> cells)
+        public ProductsList(List<IProductCell<T>> cells)
         {
             _cells = cells ?? throw new ArgumentException("ProductsList can't be null");
         }
@@ -26,15 +25,21 @@ namespace SwampAttack.Runtime.Model.Shop
 
             if (_cells.Exists(cell => cell.Product == addingProduct))
             {
-                _cells.Find(cell => cell.Product == addingProduct).Merge(new ShopCell<T>(addingProduct, count));
+                _cells.Find(cell => cell.Product == addingProduct).Merge(new ProductCell<T>(addingProduct, count));
                 return;
             }
             
-            _cells.Add(new ShopCell<T>(addingProduct, count));
+            _cells.Add(new ProductCell<T>(addingProduct, count));
         }
 
         public void Take(IProduct<T> takingProduct, int count = 1)
         {
+            if (takingProduct == null)
+                throw new ArgumentException("Can't take null product");
+            
+            if (count < 1)
+                throw new ArgumentException("Count can't be negative number");
+            
             var cellFromWhichTaking = _cells.Find(cell => cell.Product == takingProduct);
 
             if (cellFromWhichTaking == null)

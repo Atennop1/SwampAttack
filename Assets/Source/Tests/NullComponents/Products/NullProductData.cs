@@ -8,12 +8,6 @@ namespace SwampAttack.Tests.NullComponents.Products
         public string Name { get; }
         public string Description { get; }
         public Sprite Sprite { get; }
-        
         public int Cost { get; }
-        
-        public NullProductData(int cost)
-        {
-            Cost = cost;
-        }
     }
 }

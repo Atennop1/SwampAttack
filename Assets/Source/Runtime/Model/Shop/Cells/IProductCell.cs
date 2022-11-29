@@ -1,9 +1,9 @@
 namespace SwampAttack.Runtime.Model.Shop.Cells
 {
-    public interface IShopCell<T> : IReadOnlyShopCell<T>
+    public interface IProductCell<T> : IReadOnlyProductCell<T>
     {
         bool CanTake(int count);
-        void Merge(IShopCell<T> cell);
+        void Merge(IProductCell<T> cell);
         void Take(int count);
     }
 }

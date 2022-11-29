@@ -3,12 +3,12 @@ using SwampAttack.Runtime.Model.Shop.Products;
 
 namespace SwampAttack.Runtime.Model.Shop.Cells
 {
-    public class ShopCell<T> : IShopCell<T>
+    public class ProductCell<T> : IProductCell<T>
     {
         public IProduct<T> Product { get; }
         public int Count { get; private set; }
         
-        public ShopCell(IProduct<T> product, int count = 1)
+        public ProductCell(IProduct<T> product, int count = 1)
         {
             if (count < 1)
                 throw new ArgumentException("Count can't be negative number");
@@ -17,7 +17,7 @@ namespace SwampAttack.Runtime.Model.Shop.Cells
             Count = count;
         }
 
-        public void Merge(IShopCell<T> anotherCell)
+        public void Merge(IProductCell<T> anotherCell)
         {
             if (anotherCell == null)
                 throw new ArgumentException("AnotherCell can't be null");

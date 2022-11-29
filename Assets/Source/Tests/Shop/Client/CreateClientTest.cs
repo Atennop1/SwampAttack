@@ -2,6 +2,7 @@ using NUnit.Framework;
 using SwampAttack.Runtime.Model.InventorySystem;
 using SwampAttack.Runtime.Model.Shop.Clients;
 using SwampAttack.Runtime.Model.Weapons;
+using SwampAttack.Tests.NullComponents.Products;
 using SwampAttack.Tests.NullComponents.Wallet;
 
 namespace SwampAttack.Tests.Shop.Client
@@ -12,15 +13,17 @@ namespace SwampAttack.Tests.Shop.Client
         public void CantCreateInvalidClient()
         {
             var errors = 0;
-            
-            try { var client = new Runtime.Model.Shop.Clients.Client(null, new Inventory<IWeapon>(1)); }
+
+            try { var client = new Client<IWeapon>(new NullProductsList<IWeapon>(), new NullWallet(1), null); }
             catch { errors++; }
             
-            try { var client = new Runtime.Model.Shop.Clients.Client(new NullWallet(1), null); }
+            try { var client = new Client<IWeapon>(new NullProductsList<IWeapon>(), null,new Inventory<IWeapon>(1)); }
             catch { errors++; }
             
-            if (errors == 2)
-                Assert.Pass();
+            try { var client = new Client<IWeapon>(null, new NullWallet(1),new Inventory<IWeapon>(1)); }
+            catch { errors++; }
+
+            Assert.That(errors == 3);
         }
     }
 }

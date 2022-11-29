@@ -31,7 +31,7 @@ namespace SwampAttack.Runtime.Root
             var weaponProduct = new Product<IWeapon>(weapon, _pistolProductData);
             var wallet = new Wallet<IMoney>(_walletView);
 
-            var shop = new Shop<IWeapon>(new List<IShopCell<IWeapon>> { new ShopCell<IWeapon>(weaponProduct) });
+            var shop = new ProductsList<IWeapon>(new List<IProductCell<IWeapon>> { new ProductCell<IWeapon>(weaponProduct) });
             var client = new Client<IWeapon>(shop, wallet, weaponInventory);
             client.Buy(weaponProduct);
         }
