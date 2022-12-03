@@ -13,6 +13,7 @@ namespace SwampAttack.Tests.Wallet
         public void Setup()
         {
             _wallet = new Wallet<ITestMoney>(new NullWalletView());
+            _wallet.Take(_wallet.Money);
         }
         
         [Test]

@@ -26,14 +26,21 @@ namespace SwampAttack.Runtime.Root
         public override void Compose()
         {
             IInventory<IWeapon> weaponInventory = new Inventory<IWeapon>(3);
+            var testWeapon = new Weapon(_bulletsFactory, _weaponBulletsView, 15);
+            weaponInventory.Add(testWeapon);
+            
             var weapon = new Weapon(_bulletsFactory, _weaponBulletsView, 18);
-
             var weaponProduct = new Product<IWeapon>(weapon, _pistolProductData);
             var wallet = new Wallet<IMoney>(_walletView);
 
-            var shop = new ProductsList<IWeapon>(new List<IProductCell<IWeapon>> { new ProductCell<IWeapon>(weaponProduct) });
-            var client = new Client<IWeapon>(shop, wallet, weaponInventory);
-            client.Buy(weaponProduct);
+            var productsList = new ProductsList<IWeapon>(new List<IProductCell<IWeapon>> { new ProductCell<IWeapon>(weaponProduct) });
+            var client = new Client<IWeapon>(productsList, wallet, weaponInventory);
+
+            if (client.EnoughMoney(weaponProduct) && productsList.Cells.Count(cell => cell.Product == weaponProduct) == 1)
+                client.Buy(weaponProduct);
+            
+            foreach (var item in weaponInventory.Items)
+                Debug.Log(item.Bullets);
         }
     }
 }

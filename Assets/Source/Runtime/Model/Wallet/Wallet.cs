@@ -4,16 +4,16 @@ using SwampAttack.Runtime.View.Wallet;
 
 namespace SwampAttack.Runtime.Model.Wallet
 {
-    public class Wallet<TWalletType> : IWallet
+    public class Wallet<TCurrency> : IWallet
     {
         public int Money { get; private set; }
-        private readonly StorageWithNames<TWalletType, int> _storage;
+        private readonly StorageWithNames<IWallet, TCurrency> _storage;
         private readonly IWalletView _view;
         
         public Wallet(IWalletView view)
         {
             _view = view ?? throw new ArgumentException("View can't be null"); ;
-            _storage = new StorageWithNames<TWalletType, int>();
+            _storage = new StorageWithNames<IWallet, TCurrency>();
             
             Money = _storage.Exist() ? _storage.Load<int>() : 0;
             VisualizeAndSave();

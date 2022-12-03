@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using SwampAttack.Runtime.Model.Shop.Cells;
 using SwampAttack.Runtime.Model.Shop.Products;
+using SwampAttack.Runtime.Tools.SaveSystem;
 
 namespace SwampAttack.Runtime.Model.Shop
 {
@@ -9,10 +10,15 @@ namespace SwampAttack.Runtime.Model.Shop
     {
         public IReadOnlyList<IReadOnlyProductCell<T>> Cells => _cells;
         private readonly List<IProductCell<T>> _cells;
-        
-        public ProductsList(List<IProductCell<T>> cells)
+        private readonly CollectionStorageWithNames<ProductsList<T>, IProductCell<T>> _storage;
+
+        public ProductsList(IEnumerable<IProductCell<T>> cells)
         {
-            _cells = cells ?? throw new ArgumentException("ProductsList can't be null");
+            if (cells == null)
+                throw new ArgumentException("ProductsList can't be null");
+            
+            _storage = new CollectionStorageWithNames<ProductsList<T>, IProductCell<T>>();
+            _cells = (List<IProductCell<T>>)(_storage.Exist() ? _storage.Load() : cells);
         }
 
         public void Add(IProduct<T> addingProduct, int count = 1)
@@ -25,11 +31,15 @@ namespace SwampAttack.Runtime.Model.Shop
 
             if (_cells.Exists(cell => cell.Product == addingProduct))
             {
-                _cells.Find(cell => cell.Product == addingProduct).Merge(new ProductCell<T>(addingProduct, count));
+                var productCell = _cells.Find(cell => cell.Product == addingProduct);
+                productCell.Merge(new ProductCell<T>(addingProduct, count));
+                _storage.Save(productCell);
                 return;
             }
-            
-            _cells.Add(new ProductCell<T>(addingProduct, count));
+
+            var newProductCell = new ProductCell<T>(addingProduct, count);
+            _cells.Add(newProductCell);
+            _storage.Save(newProductCell);
         }
 
         public void Take(IProduct<T> takingProduct, int count = 1)
@@ -49,16 +59,21 @@ namespace SwampAttack.Runtime.Model.Shop
                 throw new ArgumentException("Cant take from this shop");
             
             cellFromWhichTaking.Take(count);
-            if (cellFromWhichTaking.Count == 0)
-                Remove(cellFromWhichTaking.Product);
+            if (cellFromWhichTaking.Count != 0) 
+                return;
+            
+            _storage.RemoveElement(cellFromWhichTaking);
+            Remove(cellFromWhichTaking.Product);
         }
 
         private void Remove(IProduct<T> removingProduct)
         {
             if (!_cells.Exists(cell => cell.Product == removingProduct))
                 throw new ArgumentException("Requested cell doesn't contains in shop");
-            
-            _cells.Remove(_cells.Find(cell => cell.Product == removingProduct));
+
+            var removingCell = _cells.Find(cell => cell.Product == removingProduct);
+            _cells.Remove(removingCell);
+            _storage.RemoveElement(removingCell);
         }
     }
 }
