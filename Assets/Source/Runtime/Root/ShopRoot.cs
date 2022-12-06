@@ -10,6 +10,7 @@ using SwampAttack.Runtime.Model.Wallet;
 using SwampAttack.Runtime.Model.Weapons;
 using SwampAttack.Runtime.Root.Interfaces;
 using SwampAttack.Runtime.SO.Products;
+using SwampAttack.Runtime.View.Shop.ProductsLists;
 using SwampAttack.Runtime.View.Wallet;
 using SwampAttack.Runtime.View.Weapons;
 using UnityEngine;
@@ -20,9 +21,12 @@ namespace SwampAttack.Runtime.Root
     {
         [SerializeField] private BulletsFactory _bulletsFactory;
         [SerializeField] private IWeaponBulletsView _weaponBulletsView;
-        [SerializeField] private IWalletView _walletView;
-        [SerializeField] private IProductData _pistolProductData;
         
+        [Space]
+        [SerializeField] private IProductData _pistolProductData;
+        [SerializeField] private IWalletView _walletView;
+        [SerializeField] private IProductsListView<IWeapon> _productsListView;
+
         public override void Compose()
         {
             IInventory<IWeapon> weaponInventory = new Inventory<IWeapon>(3);
@@ -33,14 +37,11 @@ namespace SwampAttack.Runtime.Root
             var weaponProduct = new Product<IWeapon>(weapon, _pistolProductData);
             var wallet = new Wallet<IMoney>(_walletView);
 
-            var productsList = new ProductsList<IWeapon>(new List<IProductCell<IWeapon>> { new ProductCell<IWeapon>(weaponProduct) });
+            var productsList = new ProductsList<IWeapon>(_productsListView, new List<IProductCell<IWeapon>> { new ProductCell<IWeapon>(weaponProduct), new ProductCell<IWeapon>(weaponProduct) });
             var client = new Client<IWeapon>(productsList, wallet, weaponInventory);
-
-            if (client.EnoughMoney(weaponProduct) && productsList.Cells.Count(cell => cell.Product == weaponProduct) == 1)
-                client.Buy(weaponProduct);
             
-            foreach (var item in weaponInventory.Items)
-                Debug.Log(item.Bullets);
+            _productsListView.Init(client);
+            _productsListView.Visualize(productsList);
         }
     }
 }

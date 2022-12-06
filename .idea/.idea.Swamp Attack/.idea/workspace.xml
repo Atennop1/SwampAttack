@@ -2,18 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f65dff0-dc7f-4b3e-b613-fed6e8445b84" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/CollectionStorage.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/CollectionStorage.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/CollectionStorageWithNames.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/CollectionStorageWithNames.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/ICollectionStorage.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/ICollectionStorage.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Shop/Products.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Shop/Products/IProductView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Shop/Products/IProductView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Shop/Products/ProductView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Shop/Products/ProductView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Shop/ProductsLists.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Shop/ProductsLists/IProductsListView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Shop/ProductsLists/IProductsListView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Shop/ProductsLists/ProductsListView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Shop/ProductsLists/ProductsListView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Shop/ProductsLists/WeaponProductsListView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Shop/ProductsLists/WeaponProductsListView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Products/NullProductsListView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Products/NullProductsListView.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Swamp Attack/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Swamp Attack/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Shop/ProductsList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Shop/ProductsList.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Wallet/Wallet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Wallet/Wallet.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Root/ShopRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Root/ShopRoot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Tests/Wallet/WalletOperationsTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Tests/Wallet/WalletOperationsTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Products/NullProductsList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Products/NullProductsList.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Tests/Shop/CreateProductsListTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Tests/Shop/CreateProductsListTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Tests/Shop/ProductsListOperationsTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Tests/Shop/ProductsListOperationsTest.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +135,10 @@
       <workItem from="1669563719749" duration="9631000" />
       <workItem from="1669655247374" duration="7497000" />
       <workItem from="1669740453763" duration="8655000" />
-      <workItem from="1670075420978" duration="3775000" />
+      <workItem from="1670075420978" duration="3824000" />
+      <workItem from="1670084510206" duration="63000" />
+      <workItem from="1670085803529" duration="213000" />
+      <workItem from="1670326917568" duration="4895000" />
     </task>
     <task id="LOCAL-00001" summary="Added enemy StateMachine and IAttack interface">
       <created>1668113832992</created>
@@ -240,7 +252,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669746405562</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Added saving of products in ProductsList">
+      <created>1670080845534</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1670080845534</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,6 +307,7 @@
     <MESSAGE value="Added full model of shop, clients and products!" />
     <MESSAGE value="Small redesign" />
     <MESSAGE value="More redesign, fixed shop tests and new tests added" />
-    <option name="LAST_COMMIT_MESSAGE" value="More redesign, fixed shop tests and new tests added" />
+    <MESSAGE value="Added saving of products in ProductsList" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added saving of products in ProductsList" />
   </component>
 </project>

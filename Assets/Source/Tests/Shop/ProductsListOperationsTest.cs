@@ -5,6 +5,7 @@ using SwampAttack.Runtime.Model.Shop;
 using SwampAttack.Runtime.Model.Shop.Cells;
 using SwampAttack.Runtime.Model.Shop.Products;
 using SwampAttack.Runtime.Model.Weapons;
+using SwampAttack.Runtime.View.Shop.ProductsLists;
 using SwampAttack.Tests.NullComponents.Inventory;
 using SwampAttack.Tests.NullComponents.Products;
 
@@ -20,7 +21,7 @@ namespace SwampAttack.Tests.Shop
         {
             var weapon = new Weapon(new NullBulletsFactory(), new NullWeaponBulletsView(), 18);
             _weaponProduct = new Product<IWeapon>(weapon, new NullProductData());
-            _productsList = new ProductsList<IWeapon>(new List<IProductCell<IWeapon>>());
+            _productsList = new ProductsList<IWeapon>(new NullProductsListView<IWeapon>(),new List<IProductCell<IWeapon>>());
         }
 
         [Test]

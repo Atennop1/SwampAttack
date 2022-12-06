@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using SwampAttack.Runtime.Model.Shop;
 using SwampAttack.Runtime.Model.Shop.Cells;
 using SwampAttack.Runtime.Model.Shop.Products;
+using UnityEngine.Events;
 
 namespace SwampAttack.Tests.NullComponents.Products
 {
