@@ -2,7 +2,6 @@ using NUnit.Framework;
 using SwampAttack.Runtime.Model.InventorySystem;
 using SwampAttack.Runtime.Model.Shop.Clients;
 using SwampAttack.Runtime.Model.Weapons;
-using SwampAttack.Tests.NullComponents.Products;
 using SwampAttack.Tests.NullComponents.Wallet;
 
 namespace SwampAttack.Tests.Shop.Client
@@ -14,16 +13,13 @@ namespace SwampAttack.Tests.Shop.Client
         {
             var errors = 0;
 
-            try { var client = new Client<IWeapon>(new NullProductsList<IWeapon>(), new NullWallet(1), null); }
+            try { var client = new Client<IWeapon>(new NullWallet(1), null); }
             catch { errors++; }
             
-            try { var client = new Client<IWeapon>(new NullProductsList<IWeapon>(), null,new Inventory<IWeapon>(1)); }
-            catch { errors++; }
-            
-            try { var client = new Client<IWeapon>(null, new NullWallet(1),new Inventory<IWeapon>(1)); }
+            try { var client = new Client<IWeapon>(null,new Inventory<IWeapon>(1)); }
             catch { errors++; }
 
-            Assert.That(errors == 3);
+            Assert.That(errors == 2);
         }
     }
 }

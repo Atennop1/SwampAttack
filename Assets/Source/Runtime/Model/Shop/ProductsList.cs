@@ -23,7 +23,7 @@ namespace SwampAttack.Runtime.Model.Shop
             _cells = (List<IProductCell<T>>)(_storage.Exist() ? _storage.Load() : cells);
             
             _view = view ?? throw new ArgumentException("View can't be null");
-            //_view.Visualize(this);
+            _view.Visualize(this);
         }
 
         public void Add(IProduct<T> addingProduct, int count = 1)

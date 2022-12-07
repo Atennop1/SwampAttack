@@ -1,4 +1,5 @@
 using System;
+using Sirenix.OdinInspector;
 using SwampAttack.Runtime.Model.Shop;
 using SwampAttack.Runtime.Model.Shop.Clients;
 using SwampAttack.Runtime.View.Shop.Products;
@@ -6,10 +7,11 @@ using UnityEngine;
 
 namespace SwampAttack.Runtime.View.Shop.ProductsLists
 {
-    public class ProductsListView<T> : MonoBehaviour, IProductsListView<T>
+    public class ProductsListView<T> : SerializedMonoBehaviour, IProductsListView<T>
     {
         [SerializeField] private GameObject _productViewPrefab;
         [SerializeField] private Transform _scrollViewContent;
+        [SerializeField] private INotEnoughMoneyView _notEnoughMoneyView;
         private IClient<T> _client;
 
         public void Init(IClient<T> client)
@@ -30,7 +32,16 @@ namespace SwampAttack.Runtime.View.Shop.ProductsLists
                 var productView = productViewObject.GetComponent<IProductView>();
                 
                 productView.Init(cell.Product.Data);
-                productView.BuyButton.onClick.AddListener(() => _client.Buy(cell.Product));
+                productView.BuyButton.onClick.AddListener(() =>
+                {
+                    if (!_client.EnoughMoney(cell.Product))
+                    {
+                        _notEnoughMoneyView.Display();
+                        return;
+                    }
+
+                    _client.Buy(cell.Product, productsList);
+                });
             }
         }
 
