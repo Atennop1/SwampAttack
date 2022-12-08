@@ -1,17 +1,15 @@
-using System;
-using SwampAttack.Runtime.Model.Input;
+using Sirenix.OdinInspector;
+using SwampAttack.Runtime.Factories;
+using SwampAttack.Runtime.Model.Weapons.Bullets;
+using SwampAttack.Runtime.View.Weapons;
+using UnityEngine;
 
 namespace SwampAttack.Runtime.Model.Weapons
 {
-    public readonly struct WeaponData
+    public class WeaponData : SerializedMonoBehaviour
     {
-        public readonly IWeaponInput Input;
-        public readonly IWeapon Weapon;
-        
-        public WeaponData(IWeaponInput input, IWeapon weapon)
-        {
-            Input = input ?? throw new ArgumentException("Input can't be null");
-            Weapon = weapon ?? throw new ArgumentException("Weapon can't be null");
-        }
+        [field: SerializeField] public IFactory<IBullet> BulletsFactory { get; private set; }
+        [field: SerializeField] public IWeaponBulletsView BulletsView { get; private set; }
+        [field: SerializeField, MinValue(1)] public int Bullets { get; private set; } = 1;
     }
 }

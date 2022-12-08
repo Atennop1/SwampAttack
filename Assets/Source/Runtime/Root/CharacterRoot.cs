@@ -13,24 +13,28 @@ namespace SwampAttack.Runtime.Root
     public sealed class CharacterRoot : CompositeRoot
     {
         [SerializeField] private BulletsFactory _bulletsFactory;
+        [SerializeField] private IWeaponInput _weaponInput;
         [SerializeField] private HealthTransformView _healthTransformView;
         
         [Space]
         [SerializeField] private IHealthView _playerHealthView;
         [SerializeField] private IWeaponBulletsView _weaponBulletsView;
 
-        [Space]
+        [Space] 
+        [SerializeField] private ShopProductsRoot _productsRoot;
+        [SerializeField] private ShopRoot _shopRoot;
         [SerializeField] private PlayerRoot _playerRoot;
-        [SerializeField] private IWeaponInput _weaponInput;
 
         public override void Compose()
         {
             IInventory<IWeapon> weaponInventory = new Inventory<IWeapon>(3);
-            weaponInventory.Add(new Weapon(_bulletsFactory, _weaponBulletsView, 18));
+            var weapon = new Weapon(_bulletsFactory, _weaponBulletsView, 18);
+            weaponInventory.Add(weapon);
+            
+            _shopRoot.Compose(weaponInventory, _productsRoot.Compose());
+            
             _healthTransformView.Init(new Health(5, _playerHealthView));
-
-            var weapon = weaponInventory.Items[0];
-            _playerRoot.Compose(new WeaponData(_weaponInput, weapon));
+            _playerRoot.Compose(new WeaponUsingInfo(_weaponInput, weapon));
         }
     }
 }

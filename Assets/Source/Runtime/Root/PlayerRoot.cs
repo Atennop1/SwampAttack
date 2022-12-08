@@ -11,18 +11,18 @@ namespace SwampAttack.Runtime.Root
         private Player _player;
         private ISystemUpdate _systemUpdate;
 
-        public void Compose(WeaponData weaponData)
+        public void Compose(WeaponUsingInfo weaponUsingInfo)
         {
             if (_player == null)
             {
                 _systemUpdate = new SystemUpdate();
-                _player = new Player(weaponData);
+                _player = new Player(weaponUsingInfo);
 
                 _systemUpdate.Add(_player);
                 return;
             }
 
-            _player.SwitchWeapon(weaponData);
+            _player.SwitchWeapon(weaponUsingInfo);
         }
 
         private void Update() =>  _systemUpdate?.UpdateAll();

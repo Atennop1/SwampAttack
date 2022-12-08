@@ -1,15 +1,11 @@
 using System.Collections.Generic;
-using System.Linq;
-using SwampAttack.Runtime.Factories;
+using Sirenix.OdinInspector;
 using SwampAttack.Runtime.Model.InventorySystem;
 using SwampAttack.Runtime.Model.Shop;
 using SwampAttack.Runtime.Model.Shop.Cells;
 using SwampAttack.Runtime.Model.Shop.Clients;
-using SwampAttack.Runtime.Model.Shop.Products;
 using SwampAttack.Runtime.Model.Wallet;
 using SwampAttack.Runtime.Model.Weapons;
-using SwampAttack.Runtime.Root.Interfaces;
-using SwampAttack.Runtime.SO.Products;
 using SwampAttack.Runtime.View.Shop.ProductsLists;
 using SwampAttack.Runtime.View.Wallet;
 using SwampAttack.Runtime.View.Weapons;
@@ -17,29 +13,19 @@ using UnityEngine;
 
 namespace SwampAttack.Runtime.Root
 {
-    public class ShopRoot : CompositeRoot
+    public class ShopRoot : SerializedMonoBehaviour
     {
-        [SerializeField] private BulletsFactory _bulletsFactory;
         [SerializeField] private IWeaponBulletsView _weaponBulletsView;
-        
-        [Space]
-        [SerializeField] private IProductData _pistolProductData;
         [SerializeField] private IWalletView _walletView;
         [SerializeField] private IProductsListView<IWeapon> _productsListView;
 
-        public override void Compose()
+        public void Compose(IInventory<IWeapon> weaponInventory, IEnumerable<IProductCell<IWeapon>> cells)
         {
-            IInventory<IWeapon> weaponInventory = new Inventory<IWeapon>(3);
-            var testWeapon = new Weapon(_bulletsFactory, _weaponBulletsView, 15);
-            weaponInventory.Add(testWeapon);
-            
-            var weapon = new Weapon(_bulletsFactory, _weaponBulletsView, 18);
-            var weaponProduct = new Product<IWeapon>(weapon, _pistolProductData);
             var wallet = new Wallet<IMoney>(_walletView);
-            
             var client = new Client<IWeapon>(wallet, weaponInventory);
+            
             _productsListView.Init(client);
-            var productsList = new ProductsList<IWeapon>(_productsListView, new List<IProductCell<IWeapon>> { new ProductCell<IWeapon>(weaponProduct) });
+            var productsList = new ProductsList<IWeapon>(_productsListView, cells);
         }
     }
 }

@@ -10,12 +10,12 @@ namespace SwampAttack.Runtime.Model.Player
         private IWeapon _weapon;
         private IWeaponInput _weaponInput;
 
-        public Player(WeaponData weaponData) => SwitchWeapon(weaponData);
+        public Player(WeaponUsingInfo weaponUsingInfo) => SwitchWeapon(weaponUsingInfo);
 
-        public void SwitchWeapon(WeaponData weaponData)
+        public void SwitchWeapon(WeaponUsingInfo weaponUsingInfo)
         {
-            _weaponInput = weaponData.Input ?? throw new ArgumentException("Can't switch to null weapon input");
-            _weapon = weaponData.Weapon ?? throw new ArgumentException("Can't switch to null weapon");
+            _weaponInput = weaponUsingInfo.Input ?? throw new ArgumentException("Can't switch to null weapon input");
+            _weapon = weaponUsingInfo.Weapon ?? throw new ArgumentException("Can't switch to null weapon");
         }
 
         public void Update()
