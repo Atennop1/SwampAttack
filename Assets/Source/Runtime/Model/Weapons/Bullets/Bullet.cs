@@ -19,7 +19,13 @@ namespace SwampAttack.Runtime.Model.Weapons.Bullets
             _attack = attack;
         }
 
-        public void Launch() => _rigidbody.AddForce(-_rigidbody.transform.right * _throwForce);
+        public void Launch(Vector2 direction)
+        {
+            _rigidbody.AddForce(direction * _throwForce);
+            var rotatingQuaternion = Quaternion.LookRotation(Vector3.forward, direction);
+            _rigidbody.transform.rotation = rotatingQuaternion;
+        }
+        
         public void Collide(Collider2D coll) => _attack.Collide(coll);
         public bool IsCollisionWithHealth(Collider2D coll, out HealthTransformView healthView) => _attack.IsCollisionWithHealth(coll, out healthView);
     }

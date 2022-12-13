@@ -19,10 +19,10 @@ namespace SwampAttack.Runtime.Root
         [SerializeField] private IWalletView _walletView;
         [SerializeField] private IProductsListView<IWeapon> _productsListView;
 
-        public void Compose(IInventory<IWeapon> weaponInventory, IEnumerable<IProductCell<IWeapon>> cells)
+        public void Compose(IInventory<IWeapon> weaponsInventory, IEnumerable<IProductCell<IWeapon>> cells)
         {
             var wallet = new Wallet<IMoney>(_walletView);
-            var client = new Client<IWeapon>(wallet, weaponInventory);
+            var client = new Client<IWeapon>(wallet, weaponsInventory);
             
             _productsListView.Init(client);
             var productsList = new ProductsList<IWeapon>(_productsListView, cells);

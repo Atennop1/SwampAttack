@@ -19,10 +19,14 @@ namespace SwampAttack.Runtime.Root
 
             for (var i = 0; i < _weaponData.Count; i++)
             {
-                result.Add(new ProductCell<IWeapon>(
-                        new Product<IWeapon>(
-                        new Weapon(_weaponData[i].BulletsFactory, _weaponData[i].BulletsView, _weaponData[i].Bullets),
-                            _productData[i]))
+                result.Add(new ProductCell<IWeapon>
+                    (
+                        new Product<IWeapon>
+                        (
+                        new Weapon(_weaponData[i].BulletsFactory, _weaponData[i].BulletsView, _weaponData[i].Bullets), 
+                            _productData[i]
+                        )
+                    )
                 );
             }
             

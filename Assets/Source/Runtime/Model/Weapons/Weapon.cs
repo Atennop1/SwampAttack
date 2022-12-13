@@ -2,6 +2,7 @@ using System;
 using SwampAttack.Runtime.Factories;
 using SwampAttack.Runtime.Model.Weapons.Bullets;
 using SwampAttack.Runtime.View.Weapons;
+using UnityEngine;
 
 namespace SwampAttack.Runtime.Model.Weapons
 {
@@ -26,13 +27,13 @@ namespace SwampAttack.Runtime.Model.Weapons
             _factory = factory ?? throw new ArgumentException("Factory can't be null");
         }
 
-        public void Shoot()
+        public void Shoot(Vector2 direction)
         {
             if (!CanShoot)
                 throw new ArgumentException("Can't shoot");
-
+            
             Bullets--;
-            _factory.Create();
+            _factory.Create().Launch(direction);
             _bulletsView.Visualize(this);
         }
 

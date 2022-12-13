@@ -2,10 +2,13 @@ using SwampAttack.Runtime.Factories;
 using SwampAttack.Runtime.Model.HealthSystem;
 using SwampAttack.Runtime.Model.Input;
 using SwampAttack.Runtime.Model.InventorySystem;
+using SwampAttack.Runtime.Model.Shop.Products;
 using SwampAttack.Runtime.Model.Weapons;
 using SwampAttack.Runtime.Root.Interfaces;
+using SwampAttack.Runtime.SO.Products;
 using SwampAttack.Runtime.View.Health;
 using SwampAttack.Runtime.View.Weapons;
+using SwampAttack.Runtime.View.Weapons.PlayerWeapons;
 using UnityEngine;
 
 namespace SwampAttack.Runtime.Root
@@ -14,11 +17,13 @@ namespace SwampAttack.Runtime.Root
     {
         [SerializeField] private BulletsFactory _bulletsFactory;
         [SerializeField] private IWeaponInput _weaponInput;
-        [SerializeField] private HealthTransformView _healthTransformView;
-        
+        [SerializeField] private IProductData _pistolProductData;
+
         [Space]
+        [SerializeField] private HealthTransformView _healthTransformView;
         [SerializeField] private IHealthView _playerHealthView;
         [SerializeField] private IWeaponBulletsView _weaponBulletsView;
+        [SerializeField] private IPlayerWeaponsView _weaponsView;
 
         [Space] 
         [SerializeField] private ShopProductsRoot _productsRoot;
@@ -30,7 +35,11 @@ namespace SwampAttack.Runtime.Root
             IInventory<IWeapon> weaponInventory = new Inventory<IWeapon>(3);
             var weapon = new Weapon(_bulletsFactory, _weaponBulletsView, 18);
             weaponInventory.Add(weapon);
+
+            var weaponProductsInventory = new Inventory<IProduct<IWeapon>>(3);
+            weaponProductsInventory.Add(new Product<IWeapon>(weapon, _pistolProductData));
             
+            _weaponsView.Display(weaponProductsInventory);
             _shopRoot.Compose(weaponInventory, _productsRoot.Compose());
             
             _healthTransformView.Init(new Health(5, _playerHealthView));

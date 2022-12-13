@@ -1,3 +1,5 @@
+using UnityEngine;
+
 namespace SwampAttack.Runtime.Model.Weapons
 {
     public interface IWeapon
@@ -8,7 +10,7 @@ namespace SwampAttack.Runtime.Model.Weapons
         bool CanShoot { get; }
         bool IsFull { get; }
 
-        void Shoot();
+        void Shoot(Vector2 direction);
         void AddBullets(int count);
     }
 }

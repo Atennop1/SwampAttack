@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using SwampAttack.Runtime.Model.Weapons;
 using SwampAttack.Tests.NullComponents.Inventory;
+using UnityEngine;
 
 namespace SwampAttack.Tests.Weapons
 {
@@ -32,8 +33,8 @@ namespace SwampAttack.Tests.Weapons
         [Test]
         public void CantShootWithoutBullets()
         {
-            _weapon.Shoot();
-            try { _weapon.Shoot(); }
+            _weapon.Shoot(Vector2.down);
+            try { _weapon.Shoot(Vector2.down); }
             catch { Assert.Pass(); }
         }
     }

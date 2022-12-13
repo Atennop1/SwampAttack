@@ -2,6 +2,7 @@ using System;
 using SwampAttack.Runtime.Model.Input;
 using SwampAttack.Runtime.Model.Weapons;
 using SwampAttack.Runtime.Root.SystemUpdates;
+using UnityEngine;
 
 namespace SwampAttack.Runtime.Model.Player
 {
@@ -10,7 +11,15 @@ namespace SwampAttack.Runtime.Model.Player
         private IWeapon _weapon;
         private IWeaponInput _weaponInput;
 
-        public Player(WeaponUsingInfo weaponUsingInfo) => SwitchWeapon(weaponUsingInfo);
+        private readonly Camera _camera;
+        private readonly Transform _weaponGunEndPosition;
+
+        public Player(WeaponUsingInfo weaponUsingInfo, Camera camera, Transform weaponGunEndPosition)
+        {
+            SwitchWeapon(weaponUsingInfo);
+            _camera = camera;
+            _weaponGunEndPosition = weaponGunEndPosition;
+        }
 
         public void SwitchWeapon(WeaponUsingInfo weaponUsingInfo)
         {
@@ -21,7 +30,7 @@ namespace SwampAttack.Runtime.Model.Player
         public void Update()
         {
             if (_weapon.CanShoot && _weaponInput.IsActive)
-                _weapon.Shoot();
+                _weapon.Shoot((_weaponInput.TouchPosition - (Vector2)_camera.WorldToScreenPoint(_weaponGunEndPosition.position)).normalized);
         }
     }
 }

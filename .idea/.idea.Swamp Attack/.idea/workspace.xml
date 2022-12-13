@@ -2,22 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f65dff0-dc7f-4b3e-b613-fed6e8445b84" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/WeaponUsingInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/WeaponUsingInfo.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Root/ShopProductsRoot.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Root/ShopProductsRoot.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Input/MobileWeaponInput.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Input/MobileWeaponInput.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Input/UniversalWeaponInput.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Input/UniversalWeaponInput.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Weapons/PlayerWeapons/DefaultPlayerWeaponsView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Weapons/PlayerWeapons/DefaultPlayerWeaponsView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Weapons/PlayerWeapons/IPlayerWeaponSlotView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Weapons/PlayerWeapons/IPlayerWeaponSlotView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Weapons/PlayerWeapons/IPlayerWeaponsView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Weapons/PlayerWeapons/IPlayerWeaponsView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Weapons/PlayerWeapons/PlayerWeaponSlotView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Weapons/PlayerWeapons/PlayerWeaponSlotView.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Swamp Attack/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Swamp Attack/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/UI/Idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/UI/Idle.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/UI/Show.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/UI/Show.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Factories/BulletsFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Factories/BulletsFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Input/IWeaponInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Input/IWeaponInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Input/PCWeaponInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Input/PCWeaponInput.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Player/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/WeaponData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/WeaponData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/WeaponData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/WeaponData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Shop/ProductsList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Shop/ProductsList.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/Bullets/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/Bullets/Bullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/Bullets/IBullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/Bullets/IBullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/IWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/IWeapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/Weapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/Weapon.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Root/CharacterRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Root/CharacterRoot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Root/Interfaces/IPlayerRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Root/Interfaces/IPlayerRoot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Root/PlayerRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Root/PlayerRoot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Root/ShopProductsRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Root/ShopProductsRoot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Root/ShopRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Root/ShopRoot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/View/Shop/ProductsLists/ProductsListView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Shop/ProductsLists/ProductsListView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Tests/Weapons/WeaponOperationsTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Tests/Weapons/WeaponOperationsTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Bullet.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Bullet.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +45,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Products/NullProductData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Slider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5747309d01554f1a88437e220c6495b95c600/02/1da2d7ba/SerializedMonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b7f3f927b2fb45af9f06b7b94f1a7fc07400/6c/8983e05a/Input.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/edef46c9b2db4b878c98495bfdc516fa568ba8/8a/2d2e8e45/CancellationTokenSource.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/edef46c9b2db4b878c98495bfdc516fa568ba8/a7/fc62ea67/IReadOnlyList`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f1212ad1dec44ce7b7147976b91869c3157800/43/58250413/Behaviour.cs" root0="SKIP_HIGHLIGHTING" />
@@ -136,7 +151,9 @@
       <workItem from="1670085803529" duration="213000" />
       <workItem from="1670326917568" duration="5323000" />
       <workItem from="1670407813581" duration="4420000" />
-      <workItem from="1670509068785" duration="3424000" />
+      <workItem from="1670509068785" duration="3670000" />
+      <workItem from="1670845000546" duration="6220000" />
+      <workItem from="1670947413711" duration="3152000" />
     </task>
     <task id="LOCAL-00001" summary="Added enemy StateMachine and IAttack interface">
       <created>1668113832992</created>
@@ -271,7 +288,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670412547186</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="The shop view has been improved, buttons for entering and exiting it have been added. Added root for shop">
+      <created>1670513491443</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1670513491443</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -322,6 +346,7 @@
     <MESSAGE value="Added saving of products in ProductsList" />
     <MESSAGE value="Added first prototype of shop view" />
     <MESSAGE value="Added popup &quot;Not Enough Money!&quot;, when you try buy too expensive product" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added popup &quot;Not Enough Money!&quot;, when you try buy too expensive product" />
+    <MESSAGE value="The shop view has been improved, buttons for entering and exiting it have been added. Added root for shop" />
+    <option name="LAST_COMMIT_MESSAGE" value="The shop view has been improved, buttons for entering and exiting it have been added. Added root for shop" />
   </component>
 </project>

@@ -443,6 +443,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5b7aad6fa2bbce469ae53d67971b381, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _weaponGunEndPosition: {fileID: 1803168893}
+  _camera: {fileID: 519420031}
 --- !u!1 &216921996
 GameObject:
   m_ObjectHideFlags: 0
@@ -2897,7 +2899,7 @@ GameObject:
   - component: {fileID: 1065745400}
   - component: {fileID: 1065745401}
   m_Layer: 0
-  m_Name: PistolWeaponData
+  m_Name: ShotgunWeaponData
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4010,6 +4012,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1275661170}
   - component: {fileID: 1275661171}
+  - component: {fileID: 1275661173}
+  - component: {fileID: 1275661172}
   m_Layer: 0
   m_Name: INPUT
   m_TagString: Untagged
@@ -4042,6 +4046,47 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c05c8809f0e46f9449dbe0df7b8819f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1275661172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275661169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb46a6144d514eb8b61fcb3165f00ccd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 1275661173}
+    - {fileID: 1275661171}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: _mobileInput
+      Entry: 10
+      Data: 0
+    - Name: _pcInput
+      Entry: 10
+      Data: 1
+--- !u!114 &1275661173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275661169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36ff1f28e45f4957ae745a8764e6a181, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1275939436
@@ -5387,7 +5432,8 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 1275661171}
+    - {fileID: 1275661172}
+    - {fileID: 11400000, guid: a2479d89349a8e64b84e01267127e979, type: 2}
     - {fileID: 267144744}
     - {fileID: 1597521619}
     SerializedBytesString: 
@@ -5398,12 +5444,18 @@ MonoBehaviour:
     - Name: _weaponInput
       Entry: 10
       Data: 0
-    - Name: _playerHealthView
+    - Name: _pistolProductData
       Entry: 10
       Data: 1
-    - Name: _weaponBulletsView
+    - Name: _playerHealthView
       Entry: 10
       Data: 2
+    - Name: _weaponBulletsView
+      Entry: 10
+      Data: 3
+    - Name: _weaponsView
+      Entry: 6
+      Data: 
   _bulletsFactory: {fileID: 1312467244}
   _healthTransformView: {fileID: 1225503337}
   _productsRoot: {fileID: 2087842588}
@@ -6138,7 +6190,7 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 11400000, guid: a2479d89349a8e64b84e01267127e979, type: 2}
+    - {fileID: 11400000, guid: c8566232b2314ab4a8e270b56f17d8bf, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []

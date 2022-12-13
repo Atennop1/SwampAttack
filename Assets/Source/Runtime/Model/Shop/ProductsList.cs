@@ -11,6 +11,7 @@ namespace SwampAttack.Runtime.Model.Shop
     {
         public IReadOnlyList<IReadOnlyProductCell<T>> Cells => _cells;
         private readonly List<IProductCell<T>> _cells;
+        
         private readonly CollectionStorageWithNames<ProductsList<T>, IProductCell<T>> _storage;
         private readonly IProductsListView<T> _view;
 

@@ -59,17 +59,14 @@ namespace SwampAttack.Runtime.View.Shop.ProductsLists
 
         private void DisplayNoItemsText()
         {
-            if (_scrollViewContent.childCount == 0)
-                _noItemsText.gameObject.SetActive(true);
+            _noItemsText.gameObject.SetActive(_scrollViewContent.childCount == 0);
         }
 
         private void ClearContent()
         {
-            _noItemsText.gameObject.SetActive(false);
             var childCount = _scrollViewContent.childCount;
-            
             for (var i = 0; i < childCount; i++)
-                Destroy(_scrollViewContent.GetChild(i));
+                Destroy(_scrollViewContent.GetChild(0));
         }
 
         private void Awake()

@@ -8,6 +8,9 @@ namespace SwampAttack.Runtime.Root
 {
     public sealed class PlayerRoot : MonoBehaviour, IPlayerRoot
     {
+        [SerializeField] private Transform _weaponGunEndPosition;
+        [SerializeField] private Camera _camera;
+        
         private Player _player;
         private ISystemUpdate _systemUpdate;
 
@@ -16,7 +19,7 @@ namespace SwampAttack.Runtime.Root
             if (_player == null)
             {
                 _systemUpdate = new SystemUpdate();
-                _player = new Player(weaponUsingInfo);
+                _player = new Player(weaponUsingInfo, _camera, _weaponGunEndPosition);
 
                 _systemUpdate.Add(_player);
                 return;

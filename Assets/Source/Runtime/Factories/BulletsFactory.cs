@@ -25,8 +25,6 @@ namespace SwampAttack.Runtime.Factories
 
             IBullet bullet = new Bullet(new Attack(_damage), bulletObject.GetComponent<Rigidbody2D>(), _throwForce);
             bulletView.Init(bullet);
-
-            bullet.Launch();
             return bullet;
         }
     }
