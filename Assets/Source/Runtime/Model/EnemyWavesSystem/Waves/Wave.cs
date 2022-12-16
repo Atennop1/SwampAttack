@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using SwampAttack.Runtime.Factories;
 using SwampAttack.Runtime.Model.AI.Enemies.Interfaces;
+using UnityEngine;
 
 namespace SwampAttack.Runtime.Model.EnemyWavesSystem.Waves
 {
@@ -34,6 +35,9 @@ namespace SwampAttack.Runtime.Model.EnemyWavesSystem.Waves
         {
             while (IsStarted && !IsCompleted && _spawnedEnemies.Count < _waveInfo.EnemyCount)
             {
+                if (!Application.isPlaying)
+                    return;
+                
                 _spawnedEnemies.Add(_enemyFactory.Create().Enemy);
                 await Task.Delay((int)(_waveInfo.DelayBetweenEnemies * 1000));
             }

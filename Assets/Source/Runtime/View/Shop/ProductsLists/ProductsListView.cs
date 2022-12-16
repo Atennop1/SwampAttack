@@ -45,7 +45,7 @@ namespace SwampAttack.Runtime.View.Shop.ProductsLists
                         _notEnoughMoneyView.Display();
                         return;
                     }
-
+                    
                     _client.Buy(cell.Product, productsList);
                 });
             }
@@ -66,7 +66,7 @@ namespace SwampAttack.Runtime.View.Shop.ProductsLists
         {
             var childCount = _scrollViewContent.childCount;
             for (var i = 0; i < childCount; i++)
-                Destroy(_scrollViewContent.GetChild(0));
+                Destroy(_scrollViewContent.GetChild(0).gameObject);
         }
 
         private void Awake()

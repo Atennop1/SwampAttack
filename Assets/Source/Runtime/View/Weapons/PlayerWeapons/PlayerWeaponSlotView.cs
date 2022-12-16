@@ -10,6 +10,7 @@ namespace SwampAttack.Runtime.View.Weapons.PlayerWeapons
     {
         [SerializeField] private Image _photo;
         [SerializeField] private Text _nameText;
+        [field: SerializeField] public Button UsingButton { get; private set; }
 
         public void Init(IProduct<IWeapon> product)
         {

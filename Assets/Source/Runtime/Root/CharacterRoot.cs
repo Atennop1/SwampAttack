@@ -32,18 +32,14 @@ namespace SwampAttack.Runtime.Root
 
         public override void Compose()
         {
-            IInventory<IWeapon> weaponInventory = new Inventory<IWeapon>(3);
             var weapon = new Weapon(_bulletsFactory, _weaponBulletsView, 18);
-            weaponInventory.Add(weapon);
+            _playerRoot.Compose(new WeaponUsingInfo(_weaponInput, weapon));
 
-            var weaponProductsInventory = new Inventory<IProduct<IWeapon>>(3);
+            var weaponProductsInventory = new WeaponProductsInventory(new Inventory<IProduct<IWeapon>>(3), _weaponsView);
             weaponProductsInventory.Add(new Product<IWeapon>(weapon, _pistolProductData));
             
-            _weaponsView.Display(weaponProductsInventory);
-            _shopRoot.Compose(weaponInventory, _productsRoot.Compose());
-            
+            _shopRoot.Compose(weaponProductsInventory, _productsRoot.Compose());
             _healthTransformView.Init(new Health(5, _playerHealthView));
-            _playerRoot.Compose(new WeaponUsingInfo(_weaponInput, weapon));
         }
     }
 }

@@ -2,6 +2,7 @@ using System;
 using SwampAttack.Runtime.Model.InventorySystem;
 using SwampAttack.Runtime.Model.Shop.Products;
 using SwampAttack.Runtime.Model.Wallet;
+using UnityEngine;
 
 namespace SwampAttack.Runtime.Model.Shop.Clients
 {

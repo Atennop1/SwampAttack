@@ -8,29 +8,32 @@ namespace SwampAttack.Runtime.Model.Player
 {
     public sealed class Player : IUpdatable
     {
-        private IWeapon _weapon;
-        private IWeaponInput _weaponInput;
+        public IWeapon Weapon { get; private set; }
+        public IWeaponInput WeaponInput { get; private set; }
 
         private readonly Camera _camera;
-        private readonly Transform _weaponGunEndPosition;
+        private readonly Transform _gunEndPosition;
 
-        public Player(WeaponUsingInfo weaponUsingInfo, Camera camera, Transform weaponGunEndPosition)
+        public Player(WeaponUsingInfo weaponUsingInfo, Camera camera, Transform gunEndPosition)
         {
-            SwitchWeapon(weaponUsingInfo);
-            _camera = camera;
-            _weaponGunEndPosition = weaponGunEndPosition;
+            WeaponInput = weaponUsingInfo.Input ?? throw new ArgumentException("Can't switch to null weapon input");
+            Weapon = weaponUsingInfo.Weapon ?? throw new ArgumentException("Can't switch to null weapon");
+            
+            _camera = camera ? camera : throw new ArgumentException("Camera can't be null");
+            _gunEndPosition = gunEndPosition ? gunEndPosition : throw new ArgumentException("GunEndPosition can't be null");
         }
 
         public void SwitchWeapon(WeaponUsingInfo weaponUsingInfo)
         {
-            _weaponInput = weaponUsingInfo.Input ?? throw new ArgumentException("Can't switch to null weapon input");
-            _weapon = weaponUsingInfo.Weapon ?? throw new ArgumentException("Can't switch to null weapon");
+            WeaponInput = weaponUsingInfo.Input ?? throw new ArgumentException("Can't switch to null weapon input");
+            Weapon = weaponUsingInfo.Weapon ?? throw new ArgumentException("Can't switch to null weapon");
+            Weapon.VisualizeBullets();
         }
 
         public void Update()
         {
-            if (_weapon.CanShoot && _weaponInput.IsActive)
-                _weapon.Shoot((_weaponInput.TouchPosition - (Vector2)_camera.WorldToScreenPoint(_weaponGunEndPosition.position)).normalized);
+            if (Weapon.CanShoot && WeaponInput.IsActive)
+                Weapon.Shoot((WeaponInput.TouchPosition - (Vector2)_camera.WorldToScreenPoint(_gunEndPosition.position)).normalized);
         }
     }
 }

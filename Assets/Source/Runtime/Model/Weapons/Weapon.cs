@@ -48,5 +48,7 @@ namespace SwampAttack.Runtime.Model.Weapons
             Bullets += count;
             _bulletsView.Visualize(this);
         }
+
+        public void VisualizeBullets() => _bulletsView.Visualize(this);
     }
 }

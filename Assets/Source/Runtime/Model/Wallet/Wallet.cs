@@ -33,7 +33,7 @@ namespace SwampAttack.Runtime.Model.Wallet
             if (count > Money)
                 throw new ArgumentException($"Can't take {count} money from wallet where only {Money} money");
 
-            if (count <= 0)
+            if (count < 0)
                 throw new ArgumentException("Can't take negative number from wallet");
 
             Money -= count;

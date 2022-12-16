@@ -4,6 +4,7 @@ using SwampAttack.Runtime.Model.InventorySystem;
 using SwampAttack.Runtime.Model.Shop;
 using SwampAttack.Runtime.Model.Shop.Cells;
 using SwampAttack.Runtime.Model.Shop.Clients;
+using SwampAttack.Runtime.Model.Shop.Products;
 using SwampAttack.Runtime.Model.Wallet;
 using SwampAttack.Runtime.Model.Weapons;
 using SwampAttack.Runtime.View.Shop.ProductsLists;
@@ -17,15 +18,16 @@ namespace SwampAttack.Runtime.Root
     {
         [SerializeField] private IWeaponBulletsView _weaponBulletsView;
         [SerializeField] private IWalletView _walletView;
-        [SerializeField] private IProductsListView<IWeapon> _productsListView;
+        [SerializeField] private IProductsListView<IProduct<IWeapon>> _productsListView;
 
-        public void Compose(IInventory<IWeapon> weaponsInventory, IEnumerable<IProductCell<IWeapon>> cells)
+        public void Compose(IInventory<IProduct<IWeapon>> weaponsInventory, IEnumerable<IProductCell<IProduct<IWeapon>>> cells)
         {
             var wallet = new Wallet<IMoney>(_walletView);
-            var client = new Client<IWeapon>(wallet, weaponsInventory);
+            wallet.Put(20);
+            var client = new Client<IProduct<IWeapon>>(wallet, weaponsInventory);
             
             _productsListView.Init(client);
-            var productsList = new ProductsList<IWeapon>(_productsListView, cells);
+            var productsList = new ProductsList<IProduct<IWeapon>>(_productsListView, cells);
         }
     }
 }
