@@ -16,7 +16,7 @@ namespace SwampAttack.Runtime.Root
     {
         public IEnemy Enemy { get; private set; }
         
-        [SerializeField] private HealthTransformView _healthTransformView;
+        [SerializeField] private IHealthTransformView _healthTransformView;
         [SerializeField] private IEnemyTransformView _enemyTransformView;
         [SerializeField] private Rigidbody2D _rigidbody;
         [SerializeField] private AttackTransformView _attackTransformView;

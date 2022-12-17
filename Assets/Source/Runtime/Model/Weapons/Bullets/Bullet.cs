@@ -27,6 +27,6 @@ namespace SwampAttack.Runtime.Model.Weapons.Bullets
         }
         
         public void Collide(Collider2D coll) => _attack.Collide(coll);
-        public bool IsCollisionWithHealth(Collider2D coll, out HealthTransformView healthView) => _attack.IsCollisionWithHealth(coll, out healthView);
+        public bool IsCollisionWithHealth(Collider2D coll, out IHealthTransformView healthTransformView) => _attack.IsCollisionWithHealth(coll, out healthTransformView);
     }
 }

@@ -4,24 +4,22 @@ using NUnit.Framework;
 using SwampAttack.Runtime.Model.Shop;
 using SwampAttack.Runtime.Model.Shop.Cells;
 using SwampAttack.Runtime.Model.Shop.Products;
-using SwampAttack.Runtime.Model.Weapons;
-using SwampAttack.Runtime.View.Shop.ProductsLists;
-using SwampAttack.Tests.NullComponents.Inventory;
 using SwampAttack.Tests.NullComponents.Products;
+using SwampAttack.Tests.NullComponents.Weapons;
 
 namespace SwampAttack.Tests.Shop
 {
     public class ProductsListOperationsTest
     {
-        private ProductsList<IWeapon> _productsList;
-        private Product<IWeapon> _weaponProduct;
+        private ProductsList<NullWeapon> _productsList;
+        private Product<NullWeapon> _weaponProduct;
         
         [SetUp]
         public void Setup()
         {
-            var weapon = new Weapon(new NullBulletsFactory(), new NullWeaponBulletsView(), 18);
-            _weaponProduct = new Product<IWeapon>(weapon, new NullProductData());
-            _productsList = new ProductsList<IWeapon>(new NullProductsListView<IWeapon>(),new List<IProductCell<IWeapon>>());
+            var weapon = new NullWeapon();
+            _weaponProduct = new Product<NullWeapon>(weapon, new NullProductData());
+            _productsList = new ProductsList<NullWeapon>(new NullProductsListView<NullWeapon>(),new List<IProductCell<NullWeapon>>());
         }
 
         [Test]

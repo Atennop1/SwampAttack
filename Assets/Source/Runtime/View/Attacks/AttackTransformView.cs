@@ -15,8 +15,8 @@ namespace SwampAttack.Runtime.View.Attacks
         
         private void OnTriggerEnter2D(Collider2D coll)
         {
-            if (Attack.IsCollisionWithHealth(coll, out _))
-                Attack.Collide(coll);
+            if (Attack.IsCollisionWithHealth(coll, out var healthTransformView) && 
+                !healthTransformView.IsDead && healthTransformView.CanTakeDamage) Attack.Collide(coll);
         }
     }
 }

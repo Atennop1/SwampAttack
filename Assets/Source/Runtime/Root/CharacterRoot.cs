@@ -20,7 +20,7 @@ namespace SwampAttack.Runtime.Root
         [SerializeField] private IProductData _pistolProductData;
 
         [Space]
-        [SerializeField] private HealthTransformView _healthTransformView;
+        [SerializeField] private IHealthTransformView _healthTransformView;
         [SerializeField] private IHealthView _playerHealthView;
         [SerializeField] private IWeaponBulletsView _weaponBulletsView;
         [SerializeField] private IPlayerWeaponsView _weaponsView;

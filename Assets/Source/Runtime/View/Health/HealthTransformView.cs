@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace SwampAttack.Runtime.View.Health
 {
-    public sealed class HealthTransformView : MonoBehaviour
+    public sealed class HealthTransformView : MonoBehaviour, IHealthTransformView
     {
         [SerializeField] private GameObject _deathEffect;
         private IHealth _health;
@@ -25,6 +25,9 @@ namespace SwampAttack.Runtime.View.Health
 
             Destroy(gameObject);
         }
+
+        public bool CanHeal(int count) => _health.CanHeal(count);
+        public void Heal(int count) => _health.Heal(count);
         
         public bool IsDead => _health.IsDead;
         public bool CanTakeDamage => _health.CanTakeDamage;

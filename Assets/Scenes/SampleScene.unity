@@ -5817,6 +5817,7 @@ MonoBehaviour:
     ReferencedUnityObjects:
     - {fileID: 1275661172}
     - {fileID: 11400000, guid: a2479d89349a8e64b84e01267127e979, type: 2}
+    - {fileID: 1225503337}
     - {fileID: 267144744}
     - {fileID: 1597521619}
     - {fileID: 151189458}
@@ -5831,17 +5832,19 @@ MonoBehaviour:
     - Name: _pistolProductData
       Entry: 10
       Data: 1
-    - Name: _playerHealthView
+    - Name: _healthTransformView
       Entry: 10
       Data: 2
-    - Name: _weaponBulletsView
+    - Name: _playerHealthView
       Entry: 10
       Data: 3
-    - Name: _weaponsView
+    - Name: _weaponBulletsView
       Entry: 10
       Data: 4
+    - Name: _weaponsView
+      Entry: 10
+      Data: 5
   _bulletsFactory: {fileID: 1312467244}
-  _healthTransformView: {fileID: 1225503337}
   _productsRoot: {fileID: 2087842588}
   _shopRoot: {fileID: 801993107}
   _playerRoot: {fileID: 210625808}
@@ -6090,7 +6093,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 105.48922, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1982109510

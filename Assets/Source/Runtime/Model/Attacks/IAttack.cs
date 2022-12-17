@@ -7,6 +7,6 @@ namespace SwampAttack.Runtime.Model.Attacks
     {
         int Damage { get; }
         void Collide(Collider2D coll);
-        bool IsCollisionWithHealth(Collider2D coll, out HealthTransformView healthView);
+        bool IsCollisionWithHealth(Collider2D coll, out IHealthTransformView healthTransformView);
     }
 }

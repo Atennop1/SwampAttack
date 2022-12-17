@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using SwampAttack.Runtime.Model.Shop.Cells;
 using SwampAttack.Runtime.Model.Shop.Products;
 using SwampAttack.Runtime.Tools.SaveSystem;
@@ -21,7 +22,7 @@ namespace SwampAttack.Runtime.Model.Shop
                 throw new ArgumentException("ProductsList can't be null");
             
             _storage = new CollectionStorageWithNames<ProductsList<T>, IProductCell<T>>();
-            _cells = (List<IProductCell<T>>)(_storage.Exist() ? _storage.Load() : cells);
+            _cells = _storage.Exist() ? _storage.Load().ToList() : cells.ToList();
             
             _view = view ?? throw new ArgumentException("View can't be null");
             _view.Visualize(this);

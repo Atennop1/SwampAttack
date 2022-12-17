@@ -282,15 +282,18 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
+    - {fileID: 3975828546205684671}
     - {fileID: 3975828546205684664}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: _enemyTransformView
+    - Name: _healthTransformView
       Entry: 10
       Data: 0
-  _healthTransformView: {fileID: 3975828546205684671}
+    - Name: _enemyTransformView
+      Entry: 10
+      Data: 1
   _rigidbody: {fileID: 3975828546205684670}
   _attackTransformView: {fileID: 3975828544888897862}
