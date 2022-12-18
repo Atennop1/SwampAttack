@@ -13,7 +13,7 @@ namespace SwampAttack.Runtime.Tools.SaveSystem
         {
             var allPath = CreatePath(path);
 
-            if (Exist(allPath) == false)
+            if (Exists(allPath) == false)
                 throw new InvalidOperationException(nameof(DeleteSave));
 
             File.Delete(allPath);
@@ -23,7 +23,7 @@ namespace SwampAttack.Runtime.Tools.SaveSystem
         {
             var allPath = CreatePath(path);
 
-            if (Exist(path) == false)
+            if (Exists(path) == false)
                 throw new InvalidOperationException(nameof(Load));
 
             using var file = File.Open(allPath, FileMode.Open);
@@ -39,7 +39,7 @@ namespace SwampAttack.Runtime.Tools.SaveSystem
             _formatter.Serialize(file, saveObject);
         }
 
-        public bool Exist(string key) => File.Exists(CreatePath(key));
+        public bool Exists(string key) => File.Exists(CreatePath(key));
         private string CreatePath(string name) => Path.Combine(Application.persistentDataPath, name);
     }
 }

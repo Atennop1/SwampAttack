@@ -19,20 +19,20 @@ namespace SwampAttack.Runtime.Tools.SaveSystem
         {
             var jsonPath = CreatePath(path);
 
-            if (Exist(path) == false)
+            if (Exists(path) == false)
                 throw new ArgumentException($"Saves doesn't contains object with path {path}");
 
             var jsonString = File.ReadAllText(jsonPath);
             return JsonUtility.FromJson<T>(jsonString);
         }
 
-        public bool Exist(string path) => File.Exists(CreatePath(path));
+        public bool Exists(string path) => File.Exists(CreatePath(path));
 
         public void DeleteSave(string path)
         {
             var jsonPath = CreatePath(path);
 
-            if (Exist(path) == false)
+            if (Exists(path) == false)
                 throw new ArgumentException($"Saves doesn't contains object with path {path}");
             
             File.Delete(jsonPath);

@@ -15,7 +15,7 @@ namespace SwampAttack.Runtime.Tools.SaveSystem
 
         public IEnumerable<T> Load(string key)
         {
-            if (Exist(key) == false)
+            if (Exists(key) == false)
                 throw new InvalidOperationException("Storage doesn't have save!");
             
             return _storage.Load<IEnumerable<T>>(key);
@@ -33,7 +33,7 @@ namespace SwampAttack.Runtime.Tools.SaveSystem
             _storage.Save(_allSavedObject, key);
         }
 
-        public bool Exist(string key) => _storage.Exist(key);
+        public bool Exists(string key) => _storage.Exists(key);
         public void DeleteSave(string key) => _storage.DeleteSave(key);
     }
 }

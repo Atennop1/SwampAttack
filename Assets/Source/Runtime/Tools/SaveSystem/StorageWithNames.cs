@@ -15,7 +15,7 @@ namespace SwampAttack.Runtime.Tools.SaveSystem
 
         public void Save<T>(T item) => _storage.Save(item, _path);
         public T Load<T>() => _storage.Load<T>(_path);
-        public bool Exist() => _storage.Exist(_path);
+        public bool Exist() => _storage.Exists(_path);
         public void DeleteSave() => _storage.DeleteSave(_path);
     }
 }

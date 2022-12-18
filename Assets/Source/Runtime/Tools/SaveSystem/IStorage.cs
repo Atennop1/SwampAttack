@@ -5,7 +5,7 @@ namespace SwampAttack.Runtime.Tools.SaveSystem
         void Save<T>(T item, string path);
         T Load<T>(string path);
 
-        bool Exist(string path);
+        bool Exists(string path);
         void DeleteSave(string path);
     }
 }

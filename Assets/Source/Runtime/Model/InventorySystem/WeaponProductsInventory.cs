@@ -40,11 +40,9 @@ namespace SwampAttack.Runtime.Model.InventorySystem
 
         private void Load(IWeaponProductsFactory weaponProductsFactory)
         {
-            if (!_weaponSavingDataStorage.Exist()) 
-                return;
-            
-            foreach (var data in _weaponSavingDataStorage.Load().ToList())
-                _inventory.Add(weaponProductsFactory.Create(data));
+            if (_weaponSavingDataStorage.Exist())
+                foreach (var data in _weaponSavingDataStorage.Load())
+                    _inventory.Add(weaponProductsFactory.Create(data));
         }
     }
 }

@@ -7,7 +7,7 @@ namespace SwampAttack.Tests.NullComponents.Storages
     {
         public void Save<T>(T item, string path) { }
         public T Load<T>(string path) => Activator.CreateInstance<T>();
-        public bool Exist(string path) => true;
+        public bool Exists(string path) => true;
         public void DeleteSave(string path) { }
     }
 }

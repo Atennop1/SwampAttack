@@ -8,7 +8,7 @@ namespace SwampAttack.Runtime.Tools.SaveSystem
         public void Save(T saveObject, string key);
         public void RemoveElement(T saveObject, string key);
         
-        public bool Exist(string key);
+        public bool Exists(string key);
         void DeleteSave(string path);
     }
 }

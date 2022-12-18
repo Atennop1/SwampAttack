@@ -2,56 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f65dff0-dc7f-4b3e-b613-fed6e8445b84" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Factories/WeaponFactories.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Factories/WeaponFactories/IWeaponProductsFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Factories/WeaponFactories/IWeaponProductsFactory.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Factories/WeaponFactories/IWeaponsFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Factories/WeaponFactories/IWeaponsFactory.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Factories/WeaponFactories/WeaponProductsFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Factories/WeaponFactories/WeaponProductsFactory.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Factories/WeaponFactories/WeaponsFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Factories/WeaponFactories/WeaponsFactory.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/Data.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/Data/WeaponSavingData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/Data/WeaponSavingData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/Data/WeaponType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/Data/WeaponType.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/Data/WeaponTypeIdentifier.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/Data/WeaponTypeIdentifier.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/Types.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/Types/Pistol.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/Types/Pistol.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/Types/Shotgun.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/Types/Shotgun.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/Inventory/WeaponProductsInventoryTests.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/Inventory/WeaponProductsInventoryTests/AddItemsTest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/Inventory/WeaponProductsInventoryTests/AddItemsTest.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/Inventory/WeaponProductsInventoryTests/CreateInventoryTest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/Inventory/WeaponProductsInventoryTests/CreateInventoryTest.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Products/NullWeaponProductsFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Products/NullWeaponProductsFactory.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Weapons/NullWeaponsFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Weapons/NullWeaponsFactory.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Weapons/NullWeaponsView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Weapons/NullWeaponsView.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Swamp Attack/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Swamp Attack/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/InventorySystem/IInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/InventorySystem/IInventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/InventorySystem/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/InventorySystem/Inventory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/InventorySystem/WeaponProductsInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/InventorySystem/WeaponProductsInventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Player/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/Weapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/Weapon.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/WeaponData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/Data/WeaponData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/WeaponData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/Data/WeaponData.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/WeaponUsingInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/Data/WeaponUsingInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/WeaponUsingInfo.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/Data/WeaponUsingInfo.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Root/CharacterRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Root/CharacterRoot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Root/Interfaces/IPlayerRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Root/Interfaces/IPlayerRoot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Root/PlayerRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Root/PlayerRoot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Root/ShopProductsRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Root/ShopProductsRoot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/View/Weapons/PlayerWeapons/DefaultPlayerWeaponsView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Weapons/PlayerWeapons/DefaultPlayerWeaponsView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Products/NullProductData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Products/NullProductData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Weapons/NullWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Weapons/NullWeapon.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/BinaryStorage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/BinaryStorage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/CollectionStorage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/CollectionStorage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/CollectionStorageWithNames.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/CollectionStorageWithNames.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/ICollectionStorage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/ICollectionStorage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/IStorage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/IStorage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/JSONStorage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/JSONStorage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/StorageWithNames.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/StorageWithNames.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Storages/NullStorage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Storages/NullStorage.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +52,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.completion&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -178,7 +138,8 @@
       <workItem from="1671208105608" duration="8408000" />
       <workItem from="1671220492623" duration="116000" />
       <workItem from="1671288383922" duration="4803000" />
-      <workItem from="1671379014200" duration="10521000" />
+      <workItem from="1671379014200" duration="10886000" />
+      <workItem from="1671390499814" duration="1081000" />
     </task>
     <task id="LOCAL-00001" summary="Added enemy StateMachine and IAttack interface">
       <created>1668113832992</created>
@@ -341,7 +302,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671293367635</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Added WeaponProductsInventory with saves and tests for it">
+      <created>1671390188983</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1671390188983</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -396,6 +364,7 @@
     <MESSAGE value="PlayerWeaponsView is added in the code, but not on the scene" />
     <MESSAGE value="Added PlayerWeaponsView on scene and now player buying WeaponProducts, not weapons" />
     <MESSAGE value="Fixed some tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed some tests" />
+    <MESSAGE value="Added WeaponProductsInventory with saves and tests for it" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added WeaponProductsInventory with saves and tests for it" />
   </component>
 </project>
