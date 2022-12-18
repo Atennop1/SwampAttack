@@ -1,0 +1,50 @@
+using System.Linq;
+using NUnit.Framework;
+using NUnit.Framework.Internal;
+using SwampAttack.Runtime.Model.InventorySystem;
+using SwampAttack.Runtime.Model.Shop.Products;
+using SwampAttack.Runtime.Model.Weapons;
+using SwampAttack.Runtime.Model.Weapons.Data;
+using SwampAttack.Runtime.Model.Weapons.Types;
+using SwampAttack.Tests.NullComponents.Inventory;
+using SwampAttack.Tests.NullComponents.Products;
+using SwampAttack.Tests.NullComponents.Weapons;
+using UnityEngine;
+
+namespace SwampAttack.Tests.Inventory.WeaponProductsInventoryTests
+{
+    public class AddItemsTest
+    {
+        private WeaponProductsInventory<Test> _inventory;
+        private NullWeaponsView _view;
+
+        [SetUp]
+        public void Setup()
+        {
+            _view = new NullWeaponsView();
+            _inventory = new WeaponProductsInventory<Test>(_view, new NullWeaponProductsFactory(), int.MaxValue);
+        }
+
+        [Test]
+        public void IsVisualizingCorrect()
+        {
+            if (!_inventory.IsFull)
+                _inventory.Add(new Product<IWeapon>(new Pistol(new NullBulletsFactory(), new NullWeaponBulletsView(), 1), new NullProductData()));
+            
+            Assert.That(_inventory.IsFull || _view.IsVisualized);
+        }
+
+        [Test]
+        public void IsSavingValid()
+        {
+            _inventory.Add(new Product<IWeapon>(new Shotgun(new NullBulletsFactory(), new NullWeaponBulletsView(), 1), new NullProductData()));
+            _inventory.Add(new Product<IWeapon>(new Pistol(new NullBulletsFactory(), new NullWeaponBulletsView(), 1), new NullProductData()));
+
+            var newInventory = new WeaponProductsInventory<Test>(_view, new NullWeaponProductsFactory(), int.MaxValue);
+            Assert.That(_inventory.Items.Count == newInventory.Items.Count &&
+                        (_inventory.Items.Count == 0 || 
+                        (_inventory.Items[^1].Item.GetType() == newInventory.Items[^1].Item.GetType() &&
+                        _inventory.Items[^2].Item.GetType() == newInventory.Items[^2].Item.GetType())));
+        }
+    }
+}

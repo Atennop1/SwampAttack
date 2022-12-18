@@ -1,6 +1,18 @@
-using System;
+using SwampAttack.Runtime.Model.Weapons;
+using UnityEngine;
 
 namespace SwampAttack.Tests.NullComponents.Weapons
 {
-    public class NullWeapon { }
+    public class NullWeapon : IWeapon
+    {
+        public int MaxBullets { get; }
+        public int Bullets { get; }
+        
+        public bool CanShoot => true;
+        public bool IsFull => false;
+        
+        public void Shoot(Vector2 direction) { }
+        public void AddBullets(int count) { }
+        public void VisualizeBullets() { }
+    }
 }

@@ -4,7 +4,7 @@ using SwampAttack.Runtime.Model.Weapons.Bullets;
 using SwampAttack.Runtime.View.Weapons;
 using UnityEngine;
 
-namespace SwampAttack.Runtime.Model.Weapons
+namespace SwampAttack.Runtime.Model.Weapons.Data
 {
     public class WeaponData : SerializedMonoBehaviour
     {

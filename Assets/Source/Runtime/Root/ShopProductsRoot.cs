@@ -3,6 +3,7 @@ using Sirenix.OdinInspector;
 using SwampAttack.Runtime.Model.Shop.Cells;
 using SwampAttack.Runtime.Model.Shop.Products;
 using SwampAttack.Runtime.Model.Weapons;
+using SwampAttack.Runtime.Model.Weapons.Data;
 using SwampAttack.Runtime.SO.Products;
 using UnityEngine;
 

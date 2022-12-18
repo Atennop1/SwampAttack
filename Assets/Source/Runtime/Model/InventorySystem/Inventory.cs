@@ -28,8 +28,7 @@ namespace SwampAttack.Runtime.Model.InventorySystem
             
             if ((count += Items.Count) > _capacity)
                 throw new ArgumentException($"{count} items won't fit in inventory");
-
-            Debug.Log($"Added {count}");
+            
             for (var i = 0; i < count; i++)
                 _items.Add(item);
         }

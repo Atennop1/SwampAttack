@@ -1,12 +1,13 @@
 using System;
 using SwampAttack.Runtime.Factories;
+using SwampAttack.Runtime.Factories.WeaponFactories;
 using SwampAttack.Runtime.Model.Weapons.Bullets;
 using SwampAttack.Runtime.View.Weapons;
 using UnityEngine;
 
 namespace SwampAttack.Runtime.Model.Weapons
 {
-    public sealed class Weapon : IWeapon
+    public class Weapon : IWeapon
     {
         public int MaxBullets { get; }
         public int Bullets { get; private set; }
@@ -21,7 +22,7 @@ namespace SwampAttack.Runtime.Model.Weapons
         {
             if (bullets <= 0)
                 throw new ArgumentException("BulletsCount can't be negative number");
-                
+            
             Bullets = MaxBullets = bullets;
             _bulletsView = bulletsView ?? throw new ArgumentException("BulletsView can't be null");
             _factory = factory ?? throw new ArgumentException("Factory can't be null");

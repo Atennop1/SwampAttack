@@ -6,7 +6,6 @@ namespace SwampAttack.Runtime.Model.InventorySystem
     {
         bool IsFull { get; }
         IReadOnlyList<T> Items {get; }
-
         void Add(T item, int count = 1);
     }
 }

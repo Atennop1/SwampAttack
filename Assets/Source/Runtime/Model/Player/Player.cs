@@ -1,6 +1,7 @@
 using System;
 using SwampAttack.Runtime.Model.Input;
 using SwampAttack.Runtime.Model.Weapons;
+using SwampAttack.Runtime.Model.Weapons.Data;
 using SwampAttack.Runtime.Root.SystemUpdates;
 using UnityEngine;
 
