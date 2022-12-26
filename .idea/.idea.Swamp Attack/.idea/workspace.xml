@@ -3,15 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="8f65dff0-dc7f-4b3e-b613-fed6e8445b84" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Swamp Attack/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Swamp Attack/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/InventorySystem/IInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/InventorySystem/IInventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/InventorySystem/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/InventorySystem/Inventory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/InventorySystem/WeaponProductsInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/InventorySystem/WeaponProductsInventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/BinaryStorage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/BinaryStorage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/CollectionStorage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/CollectionStorage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/CollectionStorageWithNames.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/CollectionStorageWithNames.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/ICollectionStorage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/ICollectionStorage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/IStorage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/IStorage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/JSONStorage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/JSONStorage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/StorageWithNames.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/StorageWithNames.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Storages/NullStorage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Storages/NullStorage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/Data/WeaponData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/Data/WeaponData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Root/CharacterRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Root/CharacterRoot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Root/ShopRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Root/ShopRoot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Tests/Inventory/AddItemsTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Tests/Inventory/AddItemsTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Tests/Inventory/WeaponProductsInventoryTests/AddItemsTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Tests/Inventory/WeaponProductsInventoryTests/AddItemsTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Tests/Storages/BinaryStorageTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Tests/Storages/BinaryStorageTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Tests/Storages/JSONStorageTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Tests/Storages/JSONStorageTest.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +28,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Slider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5747309d01554f1a88437e220c6495b95c600/02/1da2d7ba/SerializedMonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b7f3f927b2fb45af9f06b7b94f1a7fc07400/6c/8983e05a/Input.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/edef46c9b2db4b878c98495bfdc516fa568ba8/7f/9d11cd9b/ArgumentException.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/edef46c9b2db4b878c98495bfdc516fa568ba8/8a/2d2e8e45/CancellationTokenSource.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/edef46c9b2db4b878c98495bfdc516fa568ba8/a7/fc62ea67/IReadOnlyList`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/edef46c9b2db4b878c98495bfdc516fa568ba8/ac/c75eba71/List`1.cs" root0="SKIP_HIGHLIGHTING" />
@@ -52,7 +55,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.statistic.project.settings&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -139,7 +142,8 @@
       <workItem from="1671220492623" duration="116000" />
       <workItem from="1671288383922" duration="4803000" />
       <workItem from="1671379014200" duration="10886000" />
-      <workItem from="1671390499814" duration="1081000" />
+      <workItem from="1671390499814" duration="2560000" />
+      <workItem from="1672071749606" duration="3424000" />
     </task>
     <task id="LOCAL-00001" summary="Added enemy StateMachine and IAttack interface">
       <created>1668113832992</created>
@@ -309,7 +313,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671390188983</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Some cosmetic features">
+      <created>1671391630066</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1671391630066</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -365,6 +376,11 @@
     <MESSAGE value="Added PlayerWeaponsView on scene and now player buying WeaponProducts, not weapons" />
     <MESSAGE value="Fixed some tests" />
     <MESSAGE value="Added WeaponProductsInventory with saves and tests for it" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added WeaponProductsInventory with saves and tests for it" />
+    <MESSAGE value="Some cosmetic features" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some cosmetic features" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

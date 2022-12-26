@@ -160,6 +160,68 @@ RectTransform:
   m_AnchoredPosition: {x: -0.03340149, y: -0.15386963}
   m_SizeDelta: {x: -0.0663, y: 0.30788}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &59482186
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 59482187}
+  - component: {fileID: 59482188}
+  m_Layer: 0
+  m_Name: PistolWeaponData
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &59482187
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59482186}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1090299423}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &59482188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59482186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfdab23a01604d069994bcaa62abb6f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 1312467244}
+    - {fileID: 1597521619}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: <BulletsFactory>k__BackingField
+      Entry: 10
+      Data: 0
+    - Name: <BulletsView>k__BackingField
+      Entry: 10
+      Data: 1
+  <Bullets>k__BackingField: 18
 --- !u!1 &107385982
 GameObject:
   m_ObjectHideFlags: 0
@@ -1774,6 +1836,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1312467243}
+  - {fileID: 1560323456}
+  - {fileID: 1090299423}
   - {fileID: 1480613920}
   m_Father: {fileID: 1016163985}
   m_RootOrder: 1
@@ -3217,13 +3281,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1065745399}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2087842587}
-  m_RootOrder: 0
+  m_Father: {fileID: 1090299423}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1065745401
 MonoBehaviour:
@@ -3794,6 +3858,63 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &1090299422
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1090299423}
+  - component: {fileID: 1090299424}
+  m_Layer: 0
+  m_Name: WeaponsFactory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1090299423
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1090299422}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 59482187}
+  - {fileID: 1065745400}
+  m_Father: {fileID: 657999643}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1090299424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1090299422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d387ac9fcef49ceb346ea41cf97d967, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  _pistolData: {fileID: 59482188}
+  _shotgunData: {fileID: 1065745401}
 --- !u!1 &1123901370
 GameObject:
   m_ObjectHideFlags: 0
@@ -4783,7 +4904,7 @@ Transform:
   m_Children:
   - {fileID: 241216850}
   m_Father: {fileID: 657999643}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1480613921
 MonoBehaviour:
@@ -5057,6 +5178,71 @@ Transform:
   m_Father: {fileID: 2025585940}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1560323455
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1560323456}
+  - component: {fileID: 1560323457}
+  m_Layer: 0
+  m_Name: WeaponProductsFactory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1560323456
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560323455}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 657999643}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1560323457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560323455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dad83eebf974c089d36dae0019fe999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 1090299424}
+    - {fileID: 11400000, guid: a2479d89349a8e64b84e01267127e979, type: 2}
+    - {fileID: 11400000, guid: c8566232b2314ab4a8e270b56f17d8bf, type: 2}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: _weaponsFactory
+      Entry: 10
+      Data: 0
+    - Name: _pistolProductsData
+      Entry: 10
+      Data: 1
+    - Name: _shotgunProductData
+      Entry: 10
+      Data: 2
 --- !u!1 &1597521614
 GameObject:
   m_ObjectHideFlags: 0
@@ -5815,6 +6001,7 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
+    - {fileID: 1560323457}
     - {fileID: 1275661172}
     - {fileID: 11400000, guid: a2479d89349a8e64b84e01267127e979, type: 2}
     - {fileID: 1225503337}
@@ -5826,24 +6013,27 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: _weaponInput
+    - Name: _weaponProductsFactory
       Entry: 10
       Data: 0
-    - Name: _pistolProductData
+    - Name: _weaponInput
       Entry: 10
       Data: 1
-    - Name: _healthTransformView
+    - Name: _pistolProductData
       Entry: 10
       Data: 2
-    - Name: _playerHealthView
+    - Name: _healthTransformView
       Entry: 10
       Data: 3
-    - Name: _weaponBulletsView
+    - Name: _playerHealthView
       Entry: 10
       Data: 4
-    - Name: _weaponsView
+    - Name: _weaponBulletsView
       Entry: 10
       Data: 5
+    - Name: _weaponsView
+      Entry: 10
+      Data: 6
   _bulletsFactory: {fileID: 1312467244}
   _productsRoot: {fileID: 2087842588}
   _shopRoot: {fileID: 801993107}
@@ -6556,8 +6746,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1065745400}
+  m_Children: []
   m_Father: {fileID: 306109090}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

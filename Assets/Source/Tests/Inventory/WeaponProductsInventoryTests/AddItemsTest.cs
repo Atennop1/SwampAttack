@@ -1,10 +1,8 @@
-using System.Linq;
 using NUnit.Framework;
 using NUnit.Framework.Internal;
 using SwampAttack.Runtime.Model.InventorySystem;
 using SwampAttack.Runtime.Model.Shop.Products;
 using SwampAttack.Runtime.Model.Weapons;
-using SwampAttack.Runtime.Model.Weapons.Data;
 using SwampAttack.Runtime.Model.Weapons.Types;
 using SwampAttack.Tests.NullComponents.Inventory;
 using SwampAttack.Tests.NullComponents.Products;
@@ -26,17 +24,26 @@ namespace SwampAttack.Tests.Inventory.WeaponProductsInventoryTests
         }
 
         [Test]
+        public void IsAddingCorrect()
+        {
+            var countBefore = _inventory.Items.Count;
+            _inventory.Add(new Product<IWeapon>(new Pistol(new NullBulletsFactory(), new NullWeaponBulletsView(), 1), new NullProductData()), 4);
+            Assert.That(countBefore + 4 == _inventory.Items.Count);
+        }
+
+        [Test]
         public void IsVisualizingCorrect()
         {
             if (!_inventory.IsFull)
                 _inventory.Add(new Product<IWeapon>(new Pistol(new NullBulletsFactory(), new NullWeaponBulletsView(), 1), new NullProductData()));
             
-            Assert.That(_inventory.IsFull || _view.IsVisualized);
+            Assert.That(_view.IsVisualized);
         }
 
         [Test]
         public void IsSavingValid()
         {
+            _inventory.Clear();
             _inventory.Add(new Product<IWeapon>(new Shotgun(new NullBulletsFactory(), new NullWeaponBulletsView(), 1), new NullProductData()));
             _inventory.Add(new Product<IWeapon>(new Pistol(new NullBulletsFactory(), new NullWeaponBulletsView(), 1), new NullProductData()));
 

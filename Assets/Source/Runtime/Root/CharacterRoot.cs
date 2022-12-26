@@ -7,6 +7,7 @@ using SwampAttack.Runtime.Model.Player;
 using SwampAttack.Runtime.Model.Shop.Products;
 using SwampAttack.Runtime.Model.Weapons;
 using SwampAttack.Runtime.Model.Weapons.Data;
+using SwampAttack.Runtime.Model.Weapons.Types;
 using SwampAttack.Runtime.Root.Interfaces;
 using SwampAttack.Runtime.SO.Products;
 using SwampAttack.Runtime.View.Health;
@@ -36,12 +37,12 @@ namespace SwampAttack.Runtime.Root
 
         public override void Compose()
         {
-            var weapon = new Weapon(_bulletsFactory, _weaponBulletsView, 18);
+            var weapon = new Pistol(_bulletsFactory, _weaponBulletsView, 18);
             _playerRoot.Compose(new WeaponUsingInfo(_weaponInput, weapon));
 
-            var weaponProductsInventory = new WeaponProductsInventory<Player>(_weaponsView, _weaponProductsFactory, 3);
+            var weaponProductsInventory = new WeaponProductsInventory<Player>(_weaponsView, _weaponProductsFactory, 10);
             weaponProductsInventory.Add(new Product<IWeapon>(weapon, _pistolProductData));
-            
+
             _shopRoot.Compose(weaponProductsInventory, _productsRoot.Compose());
             _healthTransformView.Init(new Health(5, _playerHealthView));
         }

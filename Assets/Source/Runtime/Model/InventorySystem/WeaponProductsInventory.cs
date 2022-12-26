@@ -22,7 +22,7 @@ namespace SwampAttack.Runtime.Model.InventorySystem
         public WeaponProductsInventory(IPlayerWeaponsView weaponsView, IWeaponProductsFactory weaponProductsFactory, int capacity = 1)
         {
             if (weaponProductsFactory == null)
-                throw new ArgumentException("WeaponsFactory can't be null");
+                throw new ArgumentException("WeaponProductsFactory can't be null");
                 
             _weaponsView = weaponsView ?? throw new ArgumentException("WeaponsView can't be null");
             _inventory = new Inventory<IProduct<IWeapon>>(capacity);
@@ -38,11 +38,16 @@ namespace SwampAttack.Runtime.Model.InventorySystem
             _weaponSavingDataStorage.Save(new WeaponSavingData(item.Item));
         }
 
+        public void Clear() => _inventory.Clear();
+
         private void Load(IWeaponProductsFactory weaponProductsFactory)
         {
-            if (_weaponSavingDataStorage.Exist())
-                foreach (var data in _weaponSavingDataStorage.Load())
-                    _inventory.Add(weaponProductsFactory.Create(data));
+            if (!_weaponSavingDataStorage.Exist()) 
+                return;
+            
+            _inventory.Clear();
+            foreach (var data in _weaponSavingDataStorage.Load())
+                _inventory.Add(weaponProductsFactory.Create(data));
         }
     }
 }

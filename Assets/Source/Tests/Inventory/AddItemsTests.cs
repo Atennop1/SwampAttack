@@ -2,6 +2,7 @@ using NUnit.Framework;
 using SwampAttack.Runtime.Model.InventorySystem;
 using SwampAttack.Runtime.Model.Weapons;
 using SwampAttack.Tests.NullComponents.Inventory;
+using SwampAttack.Tests.NullComponents.Weapons;
 
 namespace SwampAttack.Tests.Inventory
 {
@@ -12,7 +13,7 @@ namespace SwampAttack.Tests.Inventory
         [SetUp]
         public void Setup()
         {
-            _inventory = new Inventory<IWeapon>(1);
+            _inventory = new Inventory<IWeapon>(int.MaxValue);
         }
         
         [Test]
@@ -30,6 +31,14 @@ namespace SwampAttack.Tests.Inventory
         {
             try { _inventory.Add(new Weapon(new NullBulletsFactory(), new NullWeaponBulletsView(), 1), 2); }
             catch { Assert.Pass(); }
+        }
+
+        [Test]
+        public void IsAddingCorrect()
+        {
+            var countBefore = _inventory.Items.Count;
+            _inventory.Add(new NullWeapon(), 4);
+            Assert.That(countBefore + 4 == _inventory.Items.Count);
         }
     }
 }

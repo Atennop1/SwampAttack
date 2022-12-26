@@ -26,11 +26,13 @@ namespace SwampAttack.Runtime.Model.InventorySystem
             if (IsFull)
                 throw new ArgumentException("Inventory is full");
             
-            if ((count += Items.Count) > _capacity)
+            if (count + Items.Count > _capacity)
                 throw new ArgumentException($"{count} items won't fit in inventory");
-            
+
             for (var i = 0; i < count; i++)
                 _items.Add(item);
         }
+
+        public void Clear() => _items.Clear();
     }
 }

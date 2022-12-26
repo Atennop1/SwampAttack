@@ -23,7 +23,6 @@ namespace SwampAttack.Runtime.Root
         public void Compose(IInventory<IProduct<IWeapon>> weaponsInventory, IEnumerable<IProductCell<IProduct<IWeapon>>> cells)
         {
             var wallet = new Wallet<IMoney>(_walletView);
-            wallet.Put(20);
             var client = new Client<IProduct<IWeapon>>(wallet, weaponsInventory);
             
             _productsListView.Init(client);

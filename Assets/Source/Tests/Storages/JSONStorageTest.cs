@@ -9,9 +9,9 @@ namespace SwampAttack.Tests.Storages
         public void IsWorkingCorrect()
         {
             var jsonStorage = new JSONStorage();
-            jsonStorage.Save(76, "test.json");
+            jsonStorage.Save(76, "Test.json");
             
-            if (jsonStorage.Load<int>("test.json") == 76)
+            if (jsonStorage.Load<int>("Test.json") == 76)
                 Assert.Pass();
         }
     }

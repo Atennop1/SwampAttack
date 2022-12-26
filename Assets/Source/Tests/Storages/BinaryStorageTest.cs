@@ -9,9 +9,9 @@ namespace SwampAttack.Tests.Storages
         public void IsWorkingCorrect()
         {
             var storage = new BinaryStorage();
-            storage.Save(76, "test");
+            storage.Save(76, "Test.binary");
             
-            if (storage.Load<int>("test") == 76)
+            if (storage.Load<int>("Test.binary") == 76)
                 Assert.Pass();
         }
     }
