@@ -12,17 +12,16 @@ namespace SwampAttack.Tests.NullComponents.Products
     {
         public IProduct<IWeapon> Create(WeaponSavingData savingData)
         {
-            switch (savingData.Type)
+            return savingData.Type switch
             {
-                case WeaponType.Pistol:
-                    return new Product<IWeapon>(new Pistol(new NullBulletsFactory(), new NullWeaponBulletsView(), 1), new NullProductData());
+                WeaponType.Pistol => new Product<IWeapon>(
+                    new Pistol(new NullBulletsFactory(), new NullWeaponBulletsView(), 1), new NullProductData()),
                 
-                case WeaponType.Shotgun:
-                    return new Product<IWeapon>(new Shotgun(new NullBulletsFactory(), new NullWeaponBulletsView(), 1), new NullProductData());
+                WeaponType.Shotgun => new Product<IWeapon>(
+                    new Shotgun(new NullBulletsFactory(), new NullWeaponBulletsView(), 1), new NullProductData()),
                 
-                default:
-                    throw new SystemException("Invalid WeaponType");
-            }
+                _ => throw new SystemException("Invalid WeaponType")
+            };
         }
     }
 }

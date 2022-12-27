@@ -35,13 +35,11 @@ namespace SwampAttack.Runtime.Model.Shop.ProductsLists
             {
                 var productCell = _cells.Find(cell => cell.Product == addingProduct);
                 productCell.Merge(new ProductCell<T>(addingProduct, count));
-                _storage.Save(productCell);
                 return;
             }
 
             var newProductCell = new ProductCell<T>(addingProduct, count);
             _cells.Add(newProductCell);
-            _storage.Save(newProductCell);
             _view.Visualize(this);
         }
         
@@ -65,7 +63,6 @@ namespace SwampAttack.Runtime.Model.Shop.ProductsLists
             if (cellFromWhichTaking.Count != 0) 
                 return;
             
-            _storage.RemoveElement(cellFromWhichTaking);
             Remove(cellFromWhichTaking.Product);
             _view.Visualize(this);
         }

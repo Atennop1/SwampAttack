@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using SwampAttack.Runtime.Factories.WeaponFactories;
 using SwampAttack.Runtime.Model.Shop.Products;
 using SwampAttack.Runtime.Model.Weapons;
@@ -14,8 +13,10 @@ namespace SwampAttack.Runtime.Model.InventorySystem
     {
         private readonly IInventory<IProduct<IWeapon>> _inventory;
         private readonly IPlayerWeaponsView _weaponsView;
-        private readonly CollectionStorageWithNames<TUser, WeaponSavingData> _weaponSavingDataStorage;
         
+        private readonly StorageWithNames<TUser, WeaponSavingData> _weaponSavingDataStorage;
+        private readonly List<WeaponSavingData> _savedData = new();
+
         public bool IsFull => _inventory.IsFull;
         public IReadOnlyList<IProduct<IWeapon>> Items => _inventory.Items;
 
@@ -27,7 +28,7 @@ namespace SwampAttack.Runtime.Model.InventorySystem
             _weaponsView = weaponsView ?? throw new ArgumentException("WeaponsView can't be null");
             _inventory = new Inventory<IProduct<IWeapon>>(capacity);
             
-            _weaponSavingDataStorage = new CollectionStorageWithNames<TUser, WeaponSavingData>();
+            _weaponSavingDataStorage = new StorageWithNames<TUser, WeaponSavingData>();
             Load(weaponProductsFactory);
         }
 
@@ -35,10 +36,17 @@ namespace SwampAttack.Runtime.Model.InventorySystem
         {
             _inventory.Add(item, count);
             _weaponsView.Display(_inventory);
-            _weaponSavingDataStorage.Save(new WeaponSavingData(item.Item));
+            
+            _savedData.Add(new WeaponSavingData(item.Item));
+            _weaponSavingDataStorage.Save(_savedData);
         }
 
-        public void Clear() => _inventory.Clear();
+        public void Clear()
+        {
+            _savedData.Clear();
+            _inventory.Clear();
+            _weaponSavingDataStorage.Save(_savedData);
+        }
 
         private void Load(IWeaponProductsFactory weaponProductsFactory)
         {
@@ -46,8 +54,11 @@ namespace SwampAttack.Runtime.Model.InventorySystem
                 return;
             
             _inventory.Clear();
-            foreach (var data in _weaponSavingDataStorage.Load())
+            foreach (var data in _weaponSavingDataStorage.Load<List<WeaponSavingData>>())
+            {
+                _savedData.Add(data);
                 _inventory.Add(weaponProductsFactory.Create(data));
+            }
         }
     }
 }

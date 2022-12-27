@@ -44,6 +44,7 @@ namespace SwampAttack.Tests.Inventory.WeaponProductsInventoryTests
         public void IsSavingValid()
         {
             _inventory.Clear();
+            
             _inventory.Add(new Product<IWeapon>(new Shotgun(new NullBulletsFactory(), new NullWeaponBulletsView(), 1), new NullProductData()));
             _inventory.Add(new Product<IWeapon>(new Pistol(new NullBulletsFactory(), new NullWeaponBulletsView(), 1), new NullProductData()));
 

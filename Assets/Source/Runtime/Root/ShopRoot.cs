@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
+using SwampAttack.Runtime.Factories.WeaponFactories;
 using SwampAttack.Runtime.Model.InventorySystem;
+using SwampAttack.Runtime.Model.Player;
 using SwampAttack.Runtime.Model.Shop;
 using SwampAttack.Runtime.Model.Shop.Cells;
 using SwampAttack.Runtime.Model.Shop.Clients;
@@ -20,6 +22,7 @@ namespace SwampAttack.Runtime.Root
         [SerializeField] private IWeaponBulletsView _weaponBulletsView;
         [SerializeField] private IWalletView _walletView;
         [SerializeField] private IProductsListView<IProduct<IWeapon>> _productsListView;
+        [SerializeField] private IWeaponProductProductsFactory _weaponProductProductsFactory;
 
         public void Compose(IInventory<IProduct<IWeapon>> weaponsInventory, IEnumerable<IProductCell<IProduct<IWeapon>>> cells)
         {
@@ -27,7 +30,7 @@ namespace SwampAttack.Runtime.Root
             var client = new Client<IProduct<IWeapon>>(wallet, weaponsInventory);
             
             _productsListView.Init(client);
-            var productsList = new ProductsList<IProduct<IWeapon>>(_productsListView, cells);
+            var productsList = new WeaponProductsList<Player>(new ProductsList<IProduct<IWeapon>>(_productsListView, cells), _weaponProductProductsFactory);
         }
     }
 }

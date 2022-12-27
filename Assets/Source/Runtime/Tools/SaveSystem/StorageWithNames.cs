@@ -1,4 +1,5 @@
 using System.IO;
+using SwampAttack.Runtime.Tools.Extensions;
 
 namespace SwampAttack.Runtime.Tools.SaveSystem
 {
@@ -10,7 +11,7 @@ namespace SwampAttack.Runtime.Tools.SaveSystem
         public StorageWithNames()
         {
             _storage = new BinaryStorage();
-            _path = Path.Combine(typeof(TUser).Name, typeof(TObject).Name);
+            _path = Path.Combine(typeof(TUser).GetFriendlyName(), typeof(TObject).GetFriendlyName());
         }
 
         public void Save<T>(T item) => _storage.Save(item, _path);

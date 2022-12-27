@@ -4,7 +4,7 @@ using SwampAttack.Tests.NullComponents.Storages;
 
 namespace SwampAttack.Tests.Storages
 {
-    public class StorageWithNameTest
+    public class StorageWithNamesTest
     {
         [Test]
         public void IsWorkingCorrect()
