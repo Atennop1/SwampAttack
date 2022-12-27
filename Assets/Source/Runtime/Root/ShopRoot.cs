@@ -5,6 +5,7 @@ using SwampAttack.Runtime.Model.Shop;
 using SwampAttack.Runtime.Model.Shop.Cells;
 using SwampAttack.Runtime.Model.Shop.Clients;
 using SwampAttack.Runtime.Model.Shop.Products;
+using SwampAttack.Runtime.Model.Shop.ProductsLists;
 using SwampAttack.Runtime.Model.Wallet;
 using SwampAttack.Runtime.Model.Weapons;
 using SwampAttack.Runtime.View.Shop.ProductsLists;

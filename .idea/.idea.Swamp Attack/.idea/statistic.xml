@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Statistic">
+    <option name="excludeMinifiedJavascript" value="false" />
+    <option name="excludeMinifiedStyleSheet" value="false" />
+    <option name="fileTypes" value="" />
+    <option name="fileTypesIncluded" value="cs" />
+    <option name="excludeCompilerOutput" value="false" />
+    <option name="excludeIdea9ArtifactDirectory" value="false" />
+    <option name="excludeNPMDirectory" value="false" />
+    <option name="excludePyCacheDirectory" value="false" />
+    <option name="excludeGitArtifactDirectory" value="false" />
+    <option name="excludeSubversionArtifactDirectory" value="false" />
+    <option name="excludeAndroidRJavaFile" value="false" />
+    <option name="excludeMinifiedJavascriptMinCheckBox" value="false" />
+    <option name="excludeMinifiedStyleSheetMinCheckBox" value="false" />
+    <option name="excludeTargetDirectories" value="false" />
+    <option name="excludedDirectories">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Plugins" />
+        <option value="$PROJECT_DIR$/Packages" />
+        <option value="$PROJECT_DIR$/Library" />
+      </list>
+    </option>
+  </component>
+</project>

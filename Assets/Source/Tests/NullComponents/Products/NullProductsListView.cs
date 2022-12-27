@@ -1,5 +1,6 @@
 using SwampAttack.Runtime.Model.Shop;
 using SwampAttack.Runtime.Model.Shop.Clients;
+using SwampAttack.Runtime.Model.Shop.ProductsLists;
 using SwampAttack.Runtime.View.Shop.ProductsLists;
 
 namespace SwampAttack.Tests.NullComponents.Products

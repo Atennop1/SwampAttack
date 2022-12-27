@@ -3,27 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using SwampAttack.Runtime.Model.Shop.Cells;
 using SwampAttack.Runtime.Model.Shop.Products;
-using SwampAttack.Runtime.Tools.SaveSystem;
 using SwampAttack.Runtime.View.Shop.ProductsLists;
 
-namespace SwampAttack.Runtime.Model.Shop
+namespace SwampAttack.Runtime.Model.Shop.ProductsLists
 {
     public class ProductsList<T> : IProductsList<T>
     {
         public IReadOnlyList<IReadOnlyProductCell<T>> Cells => _cells;
         private readonly List<IProductCell<T>> _cells;
-        
-        private readonly CollectionStorageWithNames<ProductsList<T>, IProductCell<T>> _storage;
         private readonly IProductsListView<T> _view;
 
         public ProductsList(IProductsListView<T> view, IEnumerable<IProductCell<T>> cells)
         {
             if (cells == null)
                 throw new ArgumentException("ProductsList can't be null");
-            
-            _storage = new CollectionStorageWithNames<ProductsList<T>, IProductCell<T>>();
-            _cells = _storage.Exist() ? _storage.Load().ToList() : cells.ToList();
-            
+
+            _cells = cells.ToList();
             _view = view ?? throw new ArgumentException("View can't be null");
             _view.Visualize(this);
         }
@@ -82,7 +77,6 @@ namespace SwampAttack.Runtime.Model.Shop
 
             var removingCell = _cells.Find(cell => cell.Product == removingProduct);
             _cells.Remove(removingCell);
-            _storage.RemoveElement(removingCell);
         }
     }
 }
