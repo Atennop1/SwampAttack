@@ -1,5 +1,6 @@
 using System;
 using SwampAttack.Runtime.Model.Shop.Products;
+using SwampAttack.Runtime.Model.Weapons;
 
 namespace SwampAttack.Runtime.Model.Shop.Cells
 {
@@ -7,7 +8,7 @@ namespace SwampAttack.Runtime.Model.Shop.Cells
     {
         public IProduct<T> Product { get; }
         public int Count { get; private set; }
-        
+
         public ProductCell(IProduct<T> product, int count = 1)
         {
             if (count < 1)

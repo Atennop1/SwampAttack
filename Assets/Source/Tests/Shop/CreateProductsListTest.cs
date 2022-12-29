@@ -14,15 +14,10 @@ namespace SwampAttack.Tests.Shop
         [Test]
         public void CantCreateInvalidProductsList()
         {
-            var errors = 0;
-
-            try { var productsList = new ProductsList<IWeapon>(null, new List<IProductCell<IWeapon>> { }); }
-            catch { errors++; }
-            
-            try { var productsList = new ProductsList<IWeapon>(new NullProductsListView<IWeapon>(), null); }
-            catch { errors++; }
-            
-            Assert.That(errors == 2);
+            Assert.Throws<ArgumentException>(() =>
+            {
+                var productsList = new ProductsList<IWeapon>(null);
+            });
         }
     }
 }

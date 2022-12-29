@@ -1,3 +1,4 @@
+using System.Linq;
 using SwampAttack.Runtime.Factories;
 using SwampAttack.Runtime.Factories.WeaponFactories;
 using SwampAttack.Runtime.Model.HealthSystem;
@@ -10,6 +11,7 @@ using SwampAttack.Runtime.Model.Weapons.Data;
 using SwampAttack.Runtime.Model.Weapons.Types;
 using SwampAttack.Runtime.Root.Interfaces;
 using SwampAttack.Runtime.SO.Products;
+using SwampAttack.Runtime.Tools.Extensions;
 using SwampAttack.Runtime.View.Health;
 using SwampAttack.Runtime.View.Weapons;
 using SwampAttack.Runtime.View.Weapons.PlayerWeapons;
@@ -41,7 +43,9 @@ namespace SwampAttack.Runtime.Root
             _playerRoot.Compose(new WeaponUsingInfo(_weaponInput, weapon));
 
             var weaponProductsInventory = new WeaponProductsInventory<Player>(_weaponsView, _weaponProductsFactory, 10);
-            weaponProductsInventory.Add(new Product<IWeapon>(weapon, _pistolProductData));
+            
+            if (weaponProductsInventory.Items.Count(item => item.Item.GetWeaponType() == weapon.GetWeaponType()) == 0)
+                weaponProductsInventory.Add(new Product<IWeapon>(weapon, _pistolProductData));
 
             _shopRoot.Compose(weaponProductsInventory, _productsRoot.Compose());
             _healthTransformView.Init(new Health(5, _playerHealthView));

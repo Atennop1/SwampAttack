@@ -24,7 +24,7 @@ namespace SwampAttack.Tests.Shop.Client
             
             var weapon = new Weapon(new NullBulletsFactory(), new NullWeaponBulletsView(), 1);
             var product = new Product<IWeapon>(weapon, new NullProductData());
-            var productsList = new ProductsList<IWeapon>(new NullProductsListView<IWeapon>(), new List<IProductCell<IWeapon>> { new ProductCell<IWeapon>(product) });
+            var productsList = new ProductsList<IWeapon>(new List<IProductCell<IWeapon>> { new ProductCell<IWeapon>(product) });
             
             client.Buy(product, productsList);
             Assert.That(inventory.Items.Contains(weapon));

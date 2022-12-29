@@ -11,16 +11,13 @@ namespace SwampAttack.Runtime.Model.Shop.ProductsLists
     {
         public IReadOnlyList<IReadOnlyProductCell<T>> Cells => _cells;
         private readonly List<IProductCell<T>> _cells;
-        private readonly IProductsListView<T> _view;
 
-        public ProductsList(IProductsListView<T> view, IEnumerable<IProductCell<T>> cells)
+        public ProductsList(IEnumerable<IProductCell<T>> cells)
         {
             if (cells == null)
                 throw new ArgumentException("ProductsList can't be null");
 
             _cells = cells.ToList();
-            _view = view ?? throw new ArgumentException("View can't be null");
-            _view.Visualize(this);
         }
 
         public void Add(IProduct<T> addingProduct, int count = 1)
@@ -40,7 +37,6 @@ namespace SwampAttack.Runtime.Model.Shop.ProductsLists
 
             var newProductCell = new ProductCell<T>(addingProduct, count);
             _cells.Add(newProductCell);
-            _view.Visualize(this);
         }
         
         public void Take(IProduct<T> takingProduct, int count = 1)
@@ -64,7 +60,6 @@ namespace SwampAttack.Runtime.Model.Shop.ProductsLists
                 return;
             
             Remove(cellFromWhichTaking.Product);
-            _view.Visualize(this);
         }
 
         private void Remove(IProduct<T> removingProduct)

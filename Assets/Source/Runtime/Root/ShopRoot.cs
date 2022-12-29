@@ -30,7 +30,7 @@ namespace SwampAttack.Runtime.Root
             var client = new Client<IProduct<IWeapon>>(wallet, weaponsInventory);
             
             _productsListView.Init(client);
-            var productsList = new WeaponProductsList<Player>(new ProductsList<IProduct<IWeapon>>(_productsListView, cells), _weaponProductProductsFactory);
+            var productsList = new WeaponProductsList<Player>(new ProductsList<IProduct<IWeapon>>(cells), _weaponProductProductsFactory, _productsListView);
         }
     }
 }

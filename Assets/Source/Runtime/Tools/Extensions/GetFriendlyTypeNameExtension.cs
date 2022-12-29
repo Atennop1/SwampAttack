@@ -2,7 +2,7 @@ using System;
 
 namespace SwampAttack.Runtime.Tools.Extensions
 {
-    public static class TypeNameExtension
+    public static class GetFriendlyTypeNameExtension
     {
         public static string GetFriendlyName(this Type type)
         {

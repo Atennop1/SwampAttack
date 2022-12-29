@@ -20,7 +20,7 @@ namespace SwampAttack.Tests.Shop
         {
             var weapon = new NullWeapon();
             _weaponProduct = new Product<NullWeapon>(weapon, new NullProductData());
-            _productsList = new ProductsList<NullWeapon>(new NullProductsListView<NullWeapon>(),new List<IProductCell<NullWeapon>>());
+            _productsList = new ProductsList<NullWeapon>(new List<IProductCell<NullWeapon>>());
         }
 
         [Test]

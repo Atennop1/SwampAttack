@@ -221,6 +221,7 @@ MonoBehaviour:
     - Name: <BulletsView>k__BackingField
       Entry: 10
       Data: 1
+  <Type>k__BackingField: 0
   <Bullets>k__BackingField: 18
 --- !u!1 &107385982
 GameObject:
@@ -1836,6 +1837,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1312467243}
+  - {fileID: 1364276266}
   - {fileID: 1560323456}
   - {fileID: 1090299423}
   - {fileID: 1480613920}
@@ -2696,6 +2698,7 @@ MonoBehaviour:
     - {fileID: 1597521619}
     - {fileID: 156518412}
     - {fileID: 1880776948}
+    - {fileID: 1364276267}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -2710,6 +2713,9 @@ MonoBehaviour:
     - Name: _productsListView
       Entry: 10
       Data: 2
+    - Name: _weaponProductProductsFactory
+      Entry: 10
+      Data: 3
 --- !u!1 &808106943
 GameObject:
   m_ObjectHideFlags: 0
@@ -3318,6 +3324,7 @@ MonoBehaviour:
     - Name: <BulletsView>k__BackingField
       Entry: 10
       Data: 1
+  <Type>k__BackingField: 1
   <Bullets>k__BackingField: 18
 --- !u!1 &1079089407
 GameObject:
@@ -3890,7 +3897,7 @@ Transform:
   - {fileID: 59482187}
   - {fileID: 1065745400}
   m_Father: {fileID: 657999643}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1090299424
 MonoBehaviour:
@@ -4719,6 +4726,71 @@ MonoBehaviour:
   _throwForce: 300
   _bulletPrefab: {fileID: 7958431323045843859, guid: 864f499e141ee9241b628068469f053e, type: 3}
   _spawnPoint: {fileID: 1803168893}
+--- !u!1 &1364276265
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1364276266}
+  - component: {fileID: 1364276267}
+  m_Layer: 0
+  m_Name: WeaponProductProductsFactory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1364276266
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364276265}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 657999643}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1364276267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364276265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd388358785415295fb1daedb0cea05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 1560323457}
+    - {fileID: 11400000, guid: a2479d89349a8e64b84e01267127e979, type: 2}
+    - {fileID: 11400000, guid: c8566232b2314ab4a8e270b56f17d8bf, type: 2}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: _weaponProductsFactory
+      Entry: 10
+      Data: 0
+    - Name: _pistolProductsData
+      Entry: 10
+      Data: 1
+    - Name: _shotgunProductData
+      Entry: 10
+      Data: 2
 --- !u!1 &1396922444
 GameObject:
   m_ObjectHideFlags: 0
@@ -4904,7 +4976,7 @@ Transform:
   m_Children:
   - {fileID: 241216850}
   m_Father: {fileID: 657999643}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1480613921
 MonoBehaviour:
@@ -5208,7 +5280,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 657999643}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1560323457
 MonoBehaviour:

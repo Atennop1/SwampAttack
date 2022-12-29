@@ -30,6 +30,7 @@ namespace SwampAttack.Runtime.Model.InventorySystem
             
             _weaponSavingDataStorage = new StorageWithNames<TUser, WeaponSavingData>();
             Load(weaponProductsFactory);
+            _weaponsView.Display(_inventory);
         }
 
         public void Add(IProduct<IWeapon> item, int count = 1)

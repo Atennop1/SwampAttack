@@ -1,4 +1,5 @@
 using System;
+using SwampAttack.Runtime.Tools.Extensions;
 
 namespace SwampAttack.Runtime.Model.Weapons.Data
 {
@@ -16,7 +17,7 @@ namespace SwampAttack.Runtime.Model.Weapons.Data
             if (weapon.Bullets == 0)
                 throw new ArgumentException("Bullets can't be zero");
 
-            Type = new WeaponTypeIdentifier().Identify(weapon);
+            Type = weapon.GetWeaponType();
             Bullets = weapon.Bullets;
         }
     }

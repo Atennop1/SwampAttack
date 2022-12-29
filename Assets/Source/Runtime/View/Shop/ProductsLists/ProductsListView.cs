@@ -51,16 +51,16 @@ namespace SwampAttack.Runtime.View.Shop.ProductsLists
                 });
             }
 
-            DisplayNoItemsText();
+            DisplayNoItemsText(productsList);
         }
 
         public void Close() => _screen.SetActive(false);
 
         public void Open() => _screen.SetActive(true);
 
-        private void DisplayNoItemsText()
+        private void DisplayNoItemsText(IProductsList<T> productsList)
         {
-            _noItemsText.gameObject.SetActive(_scrollViewContent.childCount == 0);
+            _noItemsText.gameObject.SetActive(productsList.Cells.Count == 0);
         }
 
         private void ClearContent()

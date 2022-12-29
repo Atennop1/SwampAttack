@@ -1,11 +1,13 @@
 using System;
+using SwampAttack.Runtime.Model.Weapons;
+using SwampAttack.Runtime.Model.Weapons.Data;
 using SwampAttack.Runtime.Model.Weapons.Types;
 
-namespace SwampAttack.Runtime.Model.Weapons.Data
+namespace SwampAttack.Runtime.Tools.Extensions
 {
-    public class WeaponTypeIdentifier
+    public static class GetWeaponTypeExtension
     {
-        public WeaponType Identify(IWeapon weapon)
+        public static WeaponType GetWeaponType(this IWeapon weapon)
         {
             if (weapon.GetType() == typeof(Pistol))
                 return WeaponType.Pistol;

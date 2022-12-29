@@ -16,18 +16,24 @@ namespace SwampAttack.Tests.Shop.WeaponProductsListTests
         {
             var errors = 0;
             
-            try { var weaponProductsList = new WeaponProductsList<Test>(null, new NullWeaponProductProductsFactory()); }
+            try { var weaponProductsList = new WeaponProductsList<Test>(null, new NullWeaponProductProductsFactory(), new NullProductsListView<IProduct<IWeapon>>()); }
             catch { errors++; }
             
             try 
             { 
                 var weaponProductsList = new WeaponProductsList<Test>
-                (new ProductsList<IProduct<IWeapon>>(new NullProductsListView<IProduct<IWeapon>>(), 
-                        new List<IProductCell<IProduct<IWeapon>>>()), null); 
+                (new ProductsList<IProduct<IWeapon>>(new List<IProductCell<IProduct<IWeapon>>>()), null, new NullProductsListView<IProduct<IWeapon>>()); 
             }
             catch { errors++; }
             
-            Assert.That(errors == 2);
+            try 
+            { 
+                var weaponProductsList = new WeaponProductsList<Test>
+                (new ProductsList<IProduct<IWeapon>>(new List<IProductCell<IProduct<IWeapon>>>()), new NullWeaponProductProductsFactory(), null); 
+            }
+            catch { errors++; }
+            
+            Assert.That(errors == 3);
         }
     }
 }
