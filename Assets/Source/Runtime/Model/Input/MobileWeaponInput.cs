@@ -1,10 +1,21 @@
+using System;
 using UnityEngine;
 
 namespace SwampAttack.Runtime.Model.Input
 {
-    public class MobileWeaponInput : MonoBehaviour, IWeaponInput
+    public class MobileWeaponInput : IWeaponInput
     {
-        public bool IsActive => UnityEngine.Input.touchCount > 0;
-        public Vector2 TouchPosition => UnityEngine.Input.touchCount == 0 ? Vector2.zero : UnityEngine.Input.GetTouch(0).position;
+        private readonly IShootDirectionCalculator _shootDirectionCalculator;
+
+        public MobileWeaponInput(IShootDirectionCalculator shootDirectionCalculator)
+            => _shootDirectionCalculator = shootDirectionCalculator ?? throw new ArgumentNullException(nameof(shootDirectionCalculator));
+        
+        public bool IsActive 
+            => UnityEngine.Input.touchCount > 0;
+        
+        public Vector2 ShootDirection 
+            => UnityEngine.Input.touchCount == 0 
+               ? Vector2.zero 
+               : _shootDirectionCalculator.CalculateDirection(UnityEngine.Input.GetTouch(0).position);
     }
 }

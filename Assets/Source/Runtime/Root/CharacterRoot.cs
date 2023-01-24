@@ -7,6 +7,7 @@ using SwampAttack.Runtime.Model.InventorySystem;
 using SwampAttack.Runtime.Model.Player;
 using SwampAttack.Runtime.Model.Shop.Products;
 using SwampAttack.Runtime.Model.Weapons;
+using SwampAttack.Runtime.Model.Weapons.Bullets;
 using SwampAttack.Runtime.Model.Weapons.Data;
 using SwampAttack.Runtime.Model.Weapons.Types;
 using SwampAttack.Runtime.Root.Interfaces;
@@ -21,9 +22,8 @@ namespace SwampAttack.Runtime.Root
 {
     public sealed class CharacterRoot : CompositeRoot
     {
-        [SerializeField] private BulletsFactory _bulletsFactory;
+        [SerializeField] private IFactory<IBullet> _bulletsFactory;
         [SerializeField] private IWeaponProductsFactory _weaponProductsFactory;
-        [SerializeField] private IWeaponInput _weaponInput;
         [SerializeField] private IProductData _pistolProductData;
 
         [Space]
@@ -36,11 +36,12 @@ namespace SwampAttack.Runtime.Root
         [SerializeField] private ShopProductsRoot _productsRoot;
         [SerializeField] private ShopRoot _shopRoot;
         [SerializeField] private PlayerRoot _playerRoot;
+        [SerializeField] private InputRoot _inputRoot;
 
         public override void Compose()
         {
             var weapon = new Pistol(_bulletsFactory, _weaponBulletsView, 18);
-            _playerRoot.Compose(new WeaponUsingInfo(_weaponInput, weapon));
+            _playerRoot.Compose(new WeaponUsingInfo(_inputRoot.Compose(), weapon));
 
             var weaponProductsInventory = new WeaponProductsInventory<Player>(_weaponsView, _weaponProductsFactory, 10);
             
