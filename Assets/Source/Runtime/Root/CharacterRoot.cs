@@ -2,7 +2,6 @@ using System.Linq;
 using SwampAttack.Runtime.Factories;
 using SwampAttack.Runtime.Factories.WeaponFactories;
 using SwampAttack.Runtime.Model.HealthSystem;
-using SwampAttack.Runtime.Model.Input;
 using SwampAttack.Runtime.Model.InventorySystem;
 using SwampAttack.Runtime.Model.Player;
 using SwampAttack.Runtime.Model.Shop.Products;

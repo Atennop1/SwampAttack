@@ -1,11 +1,13 @@
-using SwampAttack.Runtime.Model.Weapons;
-using SwampAttack.Runtime.View.SliderValueChangers;
+using UnityEngine;
+using UnityEngine.UI;
 
 namespace SwampAttack.Runtime.View.Weapons
 {
-    public class DefaultWeaponBulletsView : ViewWithSmoothSliderValueChanger, IWeaponBulletsView
+    public class DefaultWeaponBulletsView : MonoBehaviour, IWeaponBulletsView
     {
-        public void Visualize(IWeapon weapon) => ChangeSliderValue(weapon.Bullets, weapon.MaxBullets);
-        private void Start() => Slider.value = Slider.maxValue;
+        [SerializeField] private Text _countText;
+
+        public void Visualize(int currentBulletsCount, int maxBulletsCount)
+            => _countText.text = $"{currentBulletsCount}/{maxBulletsCount}";
     }
 }

@@ -12,6 +12,5 @@ namespace SwampAttack.Runtime.Model.Weapons
 
         void Shoot(Vector2 direction);
         void AddBullets(int count);
-        void VisualizeBullets();
     }
 }

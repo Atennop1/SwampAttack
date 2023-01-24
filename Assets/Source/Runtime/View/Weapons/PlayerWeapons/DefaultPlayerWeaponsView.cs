@@ -1,4 +1,5 @@
 using System;
+using Sirenix.OdinInspector;
 using SwampAttack.Runtime.Model.InventorySystem;
 using SwampAttack.Runtime.Model.Player;
 using SwampAttack.Runtime.Model.Shop.Products;
@@ -8,11 +9,13 @@ using UnityEngine;
 
 namespace SwampAttack.Runtime.View.Weapons.PlayerWeapons
 {
-    public class DefaultPlayerWeaponsView : MonoBehaviour, IPlayerWeaponsView
+    public class DefaultPlayerWeaponsView : SerializedMonoBehaviour, IPlayerWeaponsView
     {
-        [SerializeField] private Player _player;
+        [SerializeField] private IWeaponBulletsView _weaponBulletsView;
         [SerializeField] private Transform _content;
         [SerializeField] private GameObject _slotViewPrefab;
+
+        private Player _player;
         
         public void Display(IInventory<IProduct<IWeapon>> inventory)
         {
@@ -29,12 +32,18 @@ namespace SwampAttack.Runtime.View.Weapons.PlayerWeapons
                 var slotObject = Instantiate(_slotViewPrefab, _content);
                 var slot = slotObject.GetComponent<IPlayerWeaponSlotView>();
 
-                slot.UsingButton.onClick.AddListener(() => _player.SwitchWeapon(new WeaponUsingInfo(_player.WeaponInput, product.Item)));
+                slot.UsingButton.onClick.AddListener(() =>
+                {
+                    _player.SwitchWeapon(new WeaponUsingInfo(_player.WeaponInput, product.Item));
+                    _weaponBulletsView.Visualize(product.Item.Bullets, product.Item.MaxBullets);
+                });
+                
                 slot.Init(product);
             }
         }
 
-        public void Init(Player player) => _player = player ?? throw new ArgumentException("Player can't be null");
+        public void Init(Player player) 
+            => _player = player ?? throw new ArgumentException("Player can't be null");
 
         private void Awake()
         {

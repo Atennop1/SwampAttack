@@ -21,7 +21,6 @@ namespace SwampAttack.Runtime.Model.Player
         {
             WeaponInput = weaponUsingInfo.Input ?? throw new ArgumentException("Can't switch to null weapon input");
             _weapon = weaponUsingInfo.Weapon ?? throw new ArgumentException("Can't switch to null weapon");
-            _weapon.VisualizeBullets();
         }
 
         public void Update()
