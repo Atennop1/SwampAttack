@@ -9,14 +9,10 @@ namespace SwampAttack.Runtime.Model.AI.Enemies.Minotaur.States
         private readonly IEnemyTransformView _enemyTransformView;
 
         public VictoryState(IEnemyTransformView enemyTransformView)
-        {
-            _enemyTransformView = enemyTransformView ?? throw new ArgumentException("EnemyView can't be null");
-        }
+            => _enemyTransformView = enemyTransformView ?? throw new ArgumentException("EnemyView can't be null");
 
         public void OnEnter()
-        {
-            _enemyTransformView.PlayAnimation("Victory");
-        }
+            => _enemyTransformView.PlayAnimation("Victory");
 
         public void Tick() { }
         public void OnExit() { }

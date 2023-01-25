@@ -17,15 +17,11 @@ namespace SwampAttack.Runtime.Model.AI.Enemies.Minotaur.States
         }
 
         public void OnEnter()
-        {
-            _enemyTransformView.PlayAnimation("Walk");
-        }
+            => _enemyTransformView.PlayAnimation("Walk");
 
         public void Tick()
-        {
-            _enemy.Movement.Move(_enemy.TargetData.Target);
-        }
-        
+            => _enemy.Movement.Move(_enemy.TargetData.Target);
+
         public void OnExit() { }
     }
 }

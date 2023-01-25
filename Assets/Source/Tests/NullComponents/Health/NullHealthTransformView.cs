@@ -8,10 +8,15 @@ namespace SwampAttack.Tests.NullComponents.Health
         public void Init(IHealth health) { }
         public void TakeDamage(int damage) { }
 
-        public bool CanHeal(int count) => true;
         public void Heal(int count) { }
+        
+        public bool CanHeal(int count) 
+            => true;
 
-        public bool IsDead => false;
-        public bool CanTakeDamage => true;
+        public bool IsDead 
+            => false;
+        
+        public bool CanTakeDamage 
+            => true;
     }
 }

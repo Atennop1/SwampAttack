@@ -8,6 +8,7 @@ namespace SwampAttack.Tests.NullComponents.Weapons
     public class NullBullet : IBullet
     {
         public int Damage => 0;
+        
         public void Collide(Collider2D coll) { }
         public void Launch(Vector2 direction)  { }
 

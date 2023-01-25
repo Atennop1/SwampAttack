@@ -8,8 +8,6 @@ namespace SwampAttack.Runtime.View.Wallet
         [SerializeField] private TextMeshProUGUI _moneyText;
         
         public void Visualize(int money)
-        {
-            _moneyText.text = money.ToString();
-        }
+            => _moneyText.text = money.ToString();
     }
 }

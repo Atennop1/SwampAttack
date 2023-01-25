@@ -6,6 +6,7 @@ namespace SwampAttack.Tests.NullComponents.Inventory
 {
     public class NullBulletsFactory : IFactory<IBullet>
     {
-        public IBullet Create() => new NullBullet();
+        public IBullet Create() 
+            => new NullBullet();
     }
 }

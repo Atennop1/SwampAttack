@@ -37,6 +37,7 @@ namespace SwampAttack.Runtime.Model.Shop.Cells
             Count -= count;
         }
         
-        public bool CanTake(int count) => Count >= count;
+        public bool CanTake(int count) 
+            => Count >= count;
     }
 }

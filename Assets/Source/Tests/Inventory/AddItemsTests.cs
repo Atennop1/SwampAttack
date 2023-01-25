@@ -12,10 +12,8 @@ namespace SwampAttack.Tests.Inventory
 
         [SetUp]
         public void Setup()
-        {
-            _inventory = new Inventory<IWeapon>(int.MaxValue);
-        }
-        
+            => _inventory = new Inventory<IWeapon>(int.MaxValue);
+
         [Test]
         public void CantAddItemsIfInventoryIsFull()
         {

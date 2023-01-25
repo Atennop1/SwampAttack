@@ -25,10 +25,8 @@ namespace SwampAttack.Runtime.Root
         private Transform _target;
 
         public void Init(Transform target)
-        {
-            _target = target;
-        }
-        
+            => _target = target;
+
         public override void Compose()
         {
             _systemUpdate = new SystemUpdate();
@@ -48,6 +46,7 @@ namespace SwampAttack.Runtime.Root
             _systemUpdate.Add(attacksSetup);
         }
 
-        private void Update() => _systemUpdate.UpdateAll();
+        private void Update() 
+            => _systemUpdate.UpdateAll();
     }
 }

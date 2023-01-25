@@ -19,6 +19,7 @@ namespace SwampAttack.Runtime.View.SliderValueChangers
             _sliderValueChanger.ChangeValue(newValue);
         }
         
-        private void Awake() => _sliderValueChanger = new SmoothSliderValueChanger(Slider, _timeOfVisualizing);
+        private void Awake() 
+            => _sliderValueChanger = new SmoothSliderValueChanger(Slider, _timeOfVisualizing);
     }
 }

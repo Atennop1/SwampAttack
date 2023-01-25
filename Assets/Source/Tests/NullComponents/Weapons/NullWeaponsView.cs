@@ -11,6 +11,8 @@ namespace SwampAttack.Tests.NullComponents.Weapons
         public bool IsVisualized { get; private set; }
         
         public void Init(Player player) { }
-        public void Display(IInventory<IProduct<IWeapon>> inventory) => IsVisualized = true;
+        
+        public void Display(IInventory<IProduct<IWeapon>> inventory) 
+            => IsVisualized = true;
     }
 }

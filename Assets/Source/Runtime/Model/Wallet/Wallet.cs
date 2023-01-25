@@ -40,7 +40,8 @@ namespace SwampAttack.Runtime.Model.Wallet
             VisualizeAndSave();
         }
 
-        public bool CanTake(int count) => count < Money && count > 0;
+        public bool CanTake(int count) 
+            => count < Money && count > 0;
 
         private void VisualizeAndSave()
         {

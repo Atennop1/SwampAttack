@@ -10,10 +10,8 @@ namespace SwampAttack.Tests.Health
 
         [SetUp]
         public void Setup()
-        {
-            _health = new Runtime.Model.HealthSystem.Health(10, new NullHealthView());
-        }
-        
+            => _health = new Runtime.Model.HealthSystem.Health(10, new NullHealthView());
+
         [Test]
         public void IsTakeDamageWorksCorrectly()
         {

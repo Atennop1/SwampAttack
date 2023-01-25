@@ -10,9 +10,7 @@ namespace SwampAttack.Runtime.View.Health
         private IHealth _health;
 
         public void Init(IHealth health)
-        {
-            _health = health ?? throw new ArgumentException("Can't init null health");
-        }
+            => _health = health ?? throw new ArgumentException("Can't init null health");
 
         public void TakeDamage(int damage)
         {
@@ -26,10 +24,16 @@ namespace SwampAttack.Runtime.View.Health
             Destroy(gameObject);
         }
 
-        public bool CanHeal(int count) => _health.CanHeal(count);
-        public void Heal(int count) => _health.Heal(count);
+        public bool CanHeal(int count) 
+            => _health.CanHeal(count);
         
-        public bool IsDead => _health.IsDead;
-        public bool CanTakeDamage => _health.CanTakeDamage;
+        public void Heal(int count) 
+            => _health.Heal(count);
+        
+        public bool IsDead 
+            => _health.IsDead;
+        
+        public bool CanTakeDamage 
+            => _health.CanTakeDamage;
     }
 }

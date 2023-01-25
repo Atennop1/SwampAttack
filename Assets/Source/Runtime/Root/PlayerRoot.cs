@@ -31,6 +31,7 @@ namespace SwampAttack.Runtime.Root
             _player.SwitchWeapon(weaponUsingInfo);
         }
 
-        private void Update() => _systemUpdate?.UpdateAll();
+        private void Update() 
+            => _systemUpdate?.UpdateAll();
     }
 }

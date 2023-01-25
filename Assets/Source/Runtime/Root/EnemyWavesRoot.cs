@@ -32,6 +32,7 @@ namespace SwampAttack.Runtime.Root
             wavesCycle.Start();
         }
         
-        private void FixedUpdate() => _systemUpdate?.UpdateAll();
+        private void FixedUpdate() 
+            => _systemUpdate?.UpdateAll();
     }
 }

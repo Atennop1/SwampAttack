@@ -49,6 +49,7 @@ namespace SwampAttack.Runtime.Model.HealthSystem
             _healthView.Visualize(this);
         }
         
-        public bool CanHeal(int count) => count + Value <= MaxValue;
+        public bool CanHeal(int count) 
+            => count + Value <= MaxValue;
     }
 }

@@ -3,16 +3,48 @@
   <component name="ChangeListManager">
     <list default="true" id="8f65dff0-dc7f-4b3e-b613-fed6e8445b84" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Swamp Attack/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Swamp Attack/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Player/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/IWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/IWeapon.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/Weapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/Weapon.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Root/CharacterRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Root/CharacterRoot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/View/Weapons/DefaultWeaponBulletsView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Weapons/DefaultWeaponBulletsView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/View/Weapons/IWeaponBulletsView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Weapons/IWeaponBulletsView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/View/Weapons/PlayerWeapons/DefaultPlayerWeaponsView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Weapons/PlayerWeapons/DefaultPlayerWeaponsView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Inventory/NullWeaponBulletsView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Inventory/NullWeaponBulletsView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/EnemyAttacksSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/EnemyAttacksSetup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/EnemyStateMachineSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/EnemyStateMachineSetup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/MinotaurEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/MinotaurEnemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/States/AttackState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/States/AttackState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/States/PlayerTooFarState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/States/PlayerTooFarState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/States/VictoryState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/States/VictoryState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/StateMachine/StateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/StateMachine/StateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Attacks/Attack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Attacks/Attack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/EnemyWavesSystem/Cycles/WavesCycle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/EnemyWavesSystem/Cycles/WavesCycle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/HealthSystem/Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/HealthSystem/Health.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/InventorySystem/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/InventorySystem/Inventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Shop/Cells/ProductCell.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Shop/Cells/ProductCell.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Wallet/Wallet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Wallet/Wallet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/Bullets/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/Bullets/Bullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Root/EnemyRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Root/EnemyRoot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Root/EnemyWavesRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Root/EnemyWavesRoot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Root/EntryPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Root/EntryPoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Root/PlayerRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Root/PlayerRoot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Root/SystemUpdates/SystemUpdate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Root/SystemUpdates/SystemUpdate.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/BinaryStorage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/BinaryStorage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/JSONStorage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/JSONStorage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/StorageWithNames.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/SaveSystem/StorageWithNames.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/View/Attacks/AttackTransformView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Attacks/AttackTransformView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/View/Enemies/DefaultEnemyTransformView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Enemies/DefaultEnemyTransformView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/View/EnemyWavesSystem/DefaultWavesCycleProgressView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/EnemyWavesSystem/DefaultWavesCycleProgressView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/View/Health/HealthTransformView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Health/HealthTransformView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/View/Health/PlayerHealthView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Health/PlayerHealthView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/View/Shop/NotEnoughMoneyView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Shop/NotEnoughMoneyView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/View/Shop/ProductsLists/IProductsListView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Shop/ProductsLists/IProductsListView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/View/Shop/ProductsLists/ProductsListView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Shop/ProductsLists/ProductsListView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/View/SliderValueChangers/ViewWithSmoothSliderValueChanger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/SliderValueChangers/ViewWithSmoothSliderValueChanger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/View/Wallet/DefaultWalletView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Wallet/DefaultWalletView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Tests/Health/HealthOperationsTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Tests/Health/HealthOperationsTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Tests/Inventory/AddItemsTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Tests/Inventory/AddItemsTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Health/NullHealthTransformView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Health/NullHealthTransformView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Inventory/NullBulletsFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Inventory/NullBulletsFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Products/NullProductsListView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Products/NullProductsListView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Wallet/NullWallet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Wallet/NullWallet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Weapons/NullBullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Weapons/NullBullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Weapons/NullWeaponsFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Weapons/NullWeaponsFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Weapons/NullWeaponsView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Weapons/NullWeaponsView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Tests/Weapons/WeaponOperationsTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Tests/Weapons/WeaponOperationsTests.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +53,6 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/App.config" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Unity/Swamp Attack/Assets/Source/Runtime/Root/CharacterRoot.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Runtime/View/Enemies/DefaultEnemyTransformView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Runtime/View/Shop/NotEnoughMoneyView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Products/NullProductData.cs" root0="FORCE_HIGHLIGHTING" />
@@ -150,7 +181,8 @@
       <workItem from="1672321026671" duration="4531000" />
       <workItem from="1672487907056" duration="24000" />
       <workItem from="1674582751383" duration="1660000" />
-      <workItem from="1674585023381" duration="1111000" />
+      <workItem from="1674585023381" duration="1369000" />
+      <workItem from="1674671747697" duration="1036000" />
     </task>
     <task id="LOCAL-00001" summary="Added enemy StateMachine and IAttack interface">
       <created>1668113832992</created>
@@ -362,7 +394,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674584321679</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Updated WeaponBulletsView">
+      <created>1674586385153</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1674586385153</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -394,7 +433,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="View and Model are separated into folders" />
     <MESSAGE value="Installed UniTask, added View for Health and Waves Completion Progress" />
     <MESSAGE value="Added View for count of weapon bullets, logic of slider value changing separated. Some bugs fixed" />
     <MESSAGE value="Fixed logic in some models and test logic. Added new tests" />
@@ -419,7 +457,8 @@
     <MESSAGE value="Deleted CollectionStorages, fully done WeaponProductsList and added tests for this" />
     <MESSAGE value="Added changes to the scene, bug fixes. Now player weapons in inventory and weapons in shop saves" />
     <MESSAGE value="Separated input and player, made input classes non-monobehaviours" />
-    <option name="LAST_COMMIT_MESSAGE" value="Separated input and player, made input classes non-monobehaviours" />
+    <MESSAGE value="Updated WeaponBulletsView" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated WeaponBulletsView" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -11,10 +11,8 @@ namespace SwampAttack.Tests.Weapons
         
         [SetUp]
         public void Setup()
-        {
-            _weapon = new Weapon(new NullBulletsFactory(), new NullWeaponBulletsView(), 1);
-        }
-        
+            => _weapon = new Weapon(new NullBulletsFactory(), new NullWeaponBulletsView(), 1);
+
         [Test]
         public void CantAddInvalidBullets()
         {

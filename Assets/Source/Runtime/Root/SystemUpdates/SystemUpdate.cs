@@ -7,7 +7,8 @@ namespace SwampAttack.Runtime.Root.SystemUpdates
     {
         private readonly List<IUpdatable> _updatables;
 
-        public SystemUpdate() => _updatables = new List<IUpdatable>();
+        public SystemUpdate() 
+            => _updatables = new List<IUpdatable>();
 
         public void Add(params IUpdatable[] updatables)
         {
@@ -28,6 +29,7 @@ namespace SwampAttack.Runtime.Root.SystemUpdates
             _updatables.Remove(updatable);
         }
 
-        public void UpdateAll() => _updatables.ForEach(updatable => updatable.Update());
+        public void UpdateAll() 
+            => _updatables.ForEach(updatable => updatable.Update());
     }
 }

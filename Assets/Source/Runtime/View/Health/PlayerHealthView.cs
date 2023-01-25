@@ -5,6 +5,7 @@ namespace SwampAttack.Runtime.View.Health
 {
     public class PlayerHealthView : ViewWithSmoothSliderValueChanger, IHealthView
     {
-        public void Visualize(IHealth health) => ChangeSliderValue(health.Value, health.MaxValue);
+        public void Visualize(IHealth health) 
+            => ChangeSliderValue(health.Value, health.MaxValue);
     }
 }

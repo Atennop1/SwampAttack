@@ -1,4 +1,3 @@
-using SwampAttack.Runtime.Model.Shop;
 using SwampAttack.Runtime.Model.Shop.Clients;
 using SwampAttack.Runtime.Model.Shop.ProductsLists;
 

@@ -8,6 +8,7 @@ namespace SwampAttack.Tests.NullComponents.Weapons
 {
     public class NullWeaponsFactory : IWeaponsFactory
     {
-        public IWeapon Create(WeaponSavingData savingData) => new Pistol(new NullBulletsFactory(), new NullWeaponBulletsView(), 1);
+        public IWeapon Create(WeaponSavingData savingData) 
+            => new Pistol(new NullBulletsFactory(), new NullWeaponBulletsView(), 1);
     }
 }

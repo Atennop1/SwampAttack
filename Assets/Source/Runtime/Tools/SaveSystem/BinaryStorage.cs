@@ -39,7 +39,10 @@ namespace SwampAttack.Runtime.Tools.SaveSystem
             _formatter.Serialize(file, saveObject);
         }
 
-        public bool Exists(string key) => File.Exists(CreatePath(key));
-        private string CreatePath(string name) => Path.Combine(Application.persistentDataPath, name);
+        public bool Exists(string key) 
+            => File.Exists(CreatePath(key));
+        
+        private string CreatePath(string name) 
+            => Path.Combine(Application.persistentDataPath, name);
     }
 }

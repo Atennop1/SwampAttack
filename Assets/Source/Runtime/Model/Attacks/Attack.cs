@@ -10,6 +10,9 @@ namespace SwampAttack.Runtime.Model.Attacks
         
         public Attack(int damage)
         {
+            if (damage <= 0)
+                throw new ArgumentException("Damage can't be less or equals zero");
+            
             Damage = damage;
         }
         
@@ -28,8 +31,6 @@ namespace SwampAttack.Runtime.Model.Attacks
         }
 
         public bool IsCollisionWithHealth(Collider2D coll, out IHealthTransformView healthTransformView)
-        {
-            return coll.gameObject.TryGetComponent(out healthTransformView);
-        }
+            => coll.gameObject.TryGetComponent(out healthTransformView);
     }
 }

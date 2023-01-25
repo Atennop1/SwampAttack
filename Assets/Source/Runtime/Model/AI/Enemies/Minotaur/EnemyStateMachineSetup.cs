@@ -39,12 +39,17 @@ namespace SwampAttack.Runtime.Model.AI.Enemies.Minotaur
             return stateMachine;
         }
 
-        private bool PlayerToNear() => _enemyWithTarget.TargetData.Target != null &&
-                                       Vector2.Distance(_enemyTransformView.Transform.position, _enemyWithTarget.TargetData.Target.position) <= 
-                                       _enemyWithTarget.TargetData.AttackRadius;
-        private bool PlayerTooFar() => _enemyWithTarget.TargetData.Target != null &&
-                                       Vector2.Distance(_enemyTransformView.Transform.position, _enemyWithTarget.TargetData.Target.position) > 
-                                       _enemyWithTarget.TargetData.AttackRadius;
-        private bool PlayerIsDead() => _enemyWithTarget.TargetData.Target == null;
+        private bool PlayerToNear() 
+            => _enemyWithTarget.TargetData.Target != null &&
+               Vector2.Distance(_enemyTransformView.Transform.position, _enemyWithTarget.TargetData.Target.position) <= 
+               _enemyWithTarget.TargetData.AttackRadius;
+        
+        private bool PlayerTooFar() 
+            => _enemyWithTarget.TargetData.Target != null &&
+               Vector2.Distance(_enemyTransformView.Transform.position, _enemyWithTarget.TargetData.Target.position) > 
+               _enemyWithTarget.TargetData.AttackRadius;
+        
+        private bool PlayerIsDead() 
+            => _enemyWithTarget.TargetData.Target == null;
     }
 }

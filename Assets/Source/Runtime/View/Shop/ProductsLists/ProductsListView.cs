@@ -22,9 +22,7 @@ namespace SwampAttack.Runtime.View.Shop.ProductsLists
         private IClient<T> _client;
 
         public void Init(IClient<T> client)
-        {
-            _client = client ?? throw new ArgumentException("Client can't be null");
-        }
+            => _client = client ?? throw new ArgumentException("Client can't be null");
 
         public void Visualize(IProductsList<T> productsList)
         {
@@ -54,9 +52,11 @@ namespace SwampAttack.Runtime.View.Shop.ProductsLists
             DisplayNoItemsText(productsList);
         }
 
-        public void Close() => _screen.SetActive(false);
+        public void Close() 
+            => _screen.SetActive(false);
 
-        public void Open() => _screen.SetActive(true);
+        public void Open() 
+            => _screen.SetActive(true);
 
         private void DisplayNoItemsText(IProductsList<T> productsList)
         {

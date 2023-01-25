@@ -23,7 +23,8 @@ namespace SwampAttack.Runtime.Model.EnemyWavesSystem.Cycles
             _progressView = progressView ?? throw new ArgumentException("ProgressView can't be null");
         }
 
-        public void Start() => IsStarted = true;
+        public void Start() 
+            => IsStarted = true;
 
         public void Update()
         {

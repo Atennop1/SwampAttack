@@ -34,6 +34,7 @@ namespace SwampAttack.Runtime.Model.AI.Enemies.Minotaur
             StateMachine = stateMachineSetup.BuildStateMachine();
         }
 
-        public void Update() => StateMachine.Tick();
+        public void Update() 
+            => StateMachine.Tick();
     }
 }

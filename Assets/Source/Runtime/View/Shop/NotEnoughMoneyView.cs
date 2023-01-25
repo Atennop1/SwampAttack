@@ -9,13 +9,9 @@ namespace SwampAttack.Runtime.View.Shop
         private const string CLOSE_ANIMATOR_NAME = "Close";
 
         public void Display()
-        {
-            _animator.Play(DISPLAY_ANIMATOR_NAME);
-        }
+            => _animator.Play(DISPLAY_ANIMATOR_NAME);
 
         public void Close()
-        {
-            _animator.Play(CLOSE_ANIMATOR_NAME);
-        }
+            => _animator.Play(CLOSE_ANIMATOR_NAME);
     }
 }

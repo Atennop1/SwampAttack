@@ -9,10 +9,8 @@ namespace SwampAttack.Runtime.View.Attacks
         protected IAttack Attack { get; private set; }
 
         public void Init(IAttack attack)
-        {
-            Attack = attack ?? throw new ArgumentException("Attack can't be null");
-        }
-        
+            => Attack = attack ?? throw new ArgumentException("Attack can't be null");
+
         private void OnTriggerEnter2D(Collider2D coll)
         {
             if (Attack.IsCollisionWithHealth(coll, out var healthTransformView) && 

@@ -38,6 +38,7 @@ namespace SwampAttack.Runtime.Tools.SaveSystem
             File.Delete(jsonPath);
         }
 
-        private string CreatePath(string path) => Path.Combine(Application.persistentDataPath, path);
+        private string CreatePath(string path) 
+            => Path.Combine(Application.persistentDataPath, path);
     }
 }

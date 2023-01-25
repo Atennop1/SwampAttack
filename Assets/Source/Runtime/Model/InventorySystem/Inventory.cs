@@ -33,6 +33,7 @@ namespace SwampAttack.Runtime.Model.InventorySystem
                 _items.Add(item);
         }
 
-        public void Clear() => _items.Clear();
+        public void Clear() 
+            => _items.Clear();
     }
 }

@@ -13,6 +13,8 @@ namespace SwampAttack.Tests.NullComponents.Wallet
         
         public void Put(int count) { }
         public void Take(int count) { }
-        public bool CanTake(int count) => false;
+        
+        public bool CanTake(int count) 
+            => false;
     }
 }

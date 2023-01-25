@@ -52,9 +52,7 @@ namespace SwampAttack.Runtime.Model.AI.StateMachine
         }
         
         public void AddAnyTransition(IState to, Func<bool> predicate)
-        {
-            _anyTransitions.Add(new Transition(to, predicate, null));
-        }
+            => _anyTransitions.Add(new Transition(to, predicate, null));
 
         public void AddExceptionsToTransition(IState from, params IState[] exceptions)
         {
@@ -76,12 +74,15 @@ namespace SwampAttack.Runtime.Model.AI.StateMachine
         
         public bool StateBannedInCurrentContext(IState state)
         {
-            if (_currentState == null) return false;
+            if (_currentState == null) 
+                return false;
+            
             _transitions.TryGetValue(_currentState.GetType(), out _currentTransitions);
             return _currentTransitions != null && _currentTransitions.Any(transition => transition.Exceptions != null && transition.Exceptions.Contains(state.GetType()));
         }
 
-        public bool StateAlreadySet(IState state) => state == _currentState;
+        public bool StateAlreadySet(IState state) 
+            => state == _currentState;
 
         private Transition GetTransition()
         {
