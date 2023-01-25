@@ -1,7 +1,7 @@
 using SwampAttack.Factories;
 using SwampAttack.Model.Weapons;
 
-namespace SwampAttack.Tests.NullComponents
+namespace SwampAttack.NullComponents
 {
     public class NullWeaponsFactory : IWeaponsFactory
     {

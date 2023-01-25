@@ -1,7 +1,7 @@
 using NUnit.Framework;
 using SwampAttack.Tools;
 
-namespace SwampAttack.Tests.Storages
+namespace SwampAttack.Storages
 {
     public class JSONStorageTest
     {

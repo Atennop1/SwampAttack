@@ -1,7 +1,7 @@
 using System;
 using SwampAttack.Tools;
 
-namespace SwampAttack.Tests.NullComponents
+namespace SwampAttack.NullComponents
 {
     public class NullStorage : IStorage
     {

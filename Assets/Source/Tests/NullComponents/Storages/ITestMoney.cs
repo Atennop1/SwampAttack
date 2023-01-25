@@ -1,4 +1,4 @@
-namespace SwampAttack.Tests.NullComponents
+namespace SwampAttack.NullComponents
 {
     public interface ITestMoney { }
 }

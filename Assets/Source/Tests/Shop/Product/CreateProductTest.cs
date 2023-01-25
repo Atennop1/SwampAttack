@@ -1,9 +1,9 @@
 using NUnit.Framework;
 using SwampAttack.Model.Shop;
 using SwampAttack.Model.Weapons;
-using SwampAttack.Tests.NullComponents;
+using SwampAttack.NullComponents;
 
-namespace SwampAttack.Tests.Shop.Product
+namespace SwampAttack.Shop.Product
 {
     public class CreateProductTest
     {

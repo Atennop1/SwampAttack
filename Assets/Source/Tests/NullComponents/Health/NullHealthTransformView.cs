@@ -1,7 +1,7 @@
 using SwampAttack.Model.HealthSystem;
 using SwampAttack.View.Health;
 
-namespace SwampAttack.Tests.NullComponents
+namespace SwampAttack.NullComponents
 {
     public class NullHealthTransformView : IHealthTransformView
     {

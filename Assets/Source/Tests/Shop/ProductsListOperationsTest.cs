@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
 using SwampAttack.Model.Shop;
-using SwampAttack.Tests.NullComponents;
+using SwampAttack.NullComponents;
 
-namespace SwampAttack.Tests.Shop
+namespace SwampAttack.Shop
 {
     public class ProductsListOperationsTest
     {

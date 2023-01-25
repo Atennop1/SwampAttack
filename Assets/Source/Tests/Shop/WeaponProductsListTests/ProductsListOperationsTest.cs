@@ -4,9 +4,9 @@ using NUnit.Framework;
 using NUnit.Framework.Internal;
 using SwampAttack.Model.Shop;
 using SwampAttack.Model.Weapons;
-using SwampAttack.Tests.NullComponents;
+using SwampAttack.NullComponents;
 
-namespace SwampAttack.Tests.Shop.WeaponProductsListTests
+namespace SwampAttack.Shop.WeaponProductsListTests
 {
     public class ProductsListOperationsTest
     {

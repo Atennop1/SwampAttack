@@ -4,9 +4,9 @@ using NUnit.Framework;
 using SwampAttack.Model.InventorySystem;
 using SwampAttack.Model.Shop;
 using SwampAttack.Model.Weapons;
-using SwampAttack.Tests.NullComponents;
+using SwampAttack.NullComponents;
 
-namespace SwampAttack.Tests.Shop.Client
+namespace SwampAttack.Shop.Client
 {
     public class ClientOperationsTest
     {

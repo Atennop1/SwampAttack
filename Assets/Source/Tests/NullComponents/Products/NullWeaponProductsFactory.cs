@@ -3,7 +3,7 @@ using SwampAttack.Factories;
 using SwampAttack.Model.Shop;
 using SwampAttack.Model.Weapons;
 
-namespace SwampAttack.Tests.NullComponents
+namespace SwampAttack.NullComponents
 {
     public class NullWeaponProductsFactory : IWeaponProductsFactory
     {

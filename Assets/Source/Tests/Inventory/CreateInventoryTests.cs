@@ -2,7 +2,7 @@ using NUnit.Framework;
 using SwampAttack.Model.InventorySystem;
 using SwampAttack.Model.Weapons;
 
-namespace SwampAttack.Tests.Inventory
+namespace SwampAttack.Inventory
 {
     public class CreateInventoryTests
     {

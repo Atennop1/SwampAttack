@@ -1,10 +1,9 @@
 using System;
-using System.Collections.Generic;
 using NUnit.Framework;
 using SwampAttack.Model.Shop;
 using SwampAttack.Model.Weapons;
 
-namespace SwampAttack.Tests.Shop
+namespace SwampAttack.Shop
 {
     public class CreateProductsListTest
     {

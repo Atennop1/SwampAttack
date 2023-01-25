@@ -4,7 +4,7 @@ using SwampAttack.Model.Shop;
 using SwampAttack.Model.Weapons;
 using SwampAttack.View.Weapons;
 
-namespace SwampAttack.Tests.NullComponents
+namespace SwampAttack.NullComponents
 {
     public class NullWeaponsView : IPlayerWeaponsView
     {
