@@ -1,4 +1,4 @@
-namespace SwampAttack.Runtime.Factories
+namespace SwampAttack.Factories
 {
     public interface IFactory<T>
     {

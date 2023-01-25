@@ -1,13 +1,12 @@
 using System;
 using System.Collections.Generic;
-using SwampAttack.Runtime.Factories.WeaponFactories;
-using SwampAttack.Runtime.Model.Shop.Products;
-using SwampAttack.Runtime.Model.Weapons;
-using SwampAttack.Runtime.Model.Weapons.Data;
-using SwampAttack.Runtime.Tools.SaveSystem;
-using SwampAttack.Runtime.View.Weapons.PlayerWeapons;
+using SwampAttack.Factories;
+using SwampAttack.Model.Shop;
+using SwampAttack.Model.Weapons;
+using SwampAttack.Tools;
+using SwampAttack.View.Weapons;
 
-namespace SwampAttack.Runtime.Model.InventorySystem
+namespace SwampAttack.Model.InventorySystem
 {
     public class WeaponProductsInventory<TUser> : IInventory<IProduct<IWeapon>>
     {

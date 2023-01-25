@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace SwampAttack.Runtime.Model.AI.StateMachine
+namespace SwampAttack.Model.AI.StateMachine
 {
     public sealed class StateMachine
     {

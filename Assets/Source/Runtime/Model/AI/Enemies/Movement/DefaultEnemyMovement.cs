@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace SwampAttack.Runtime.Model.AI.Enemies.Movement
+namespace SwampAttack.Model.AI.Enemies
 {
     public class DefaultEnemyMovement : IEnemyMovement
     {

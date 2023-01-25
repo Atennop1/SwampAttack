@@ -1,10 +1,10 @@
 using System;
-using SwampAttack.Runtime.Model.Shop.Products;
-using SwampAttack.Runtime.Model.Weapons;
+using SwampAttack.Model.Shop;
+using SwampAttack.Model.Weapons;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace SwampAttack.Runtime.View.Weapons.PlayerWeapons
+namespace SwampAttack.View.Weapons
 {
     public class PlayerWeaponSlotView : MonoBehaviour, IPlayerWeaponSlotView
     {

@@ -1,8 +1,7 @@
-using SwampAttack.Runtime.Factories;
-using SwampAttack.Runtime.Model.Weapons.Bullets;
-using SwampAttack.Runtime.View.Weapons;
+using SwampAttack.Factories;
+using SwampAttack.View.Weapons;
 
-namespace SwampAttack.Runtime.Model.Weapons.Types
+namespace SwampAttack.Model.Weapons
 {
     public class Pistol : Weapon
     {

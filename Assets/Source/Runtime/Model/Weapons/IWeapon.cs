@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace SwampAttack.Runtime.Model.Weapons
+namespace SwampAttack.Model.Weapons
 {
     public interface IWeapon
     {

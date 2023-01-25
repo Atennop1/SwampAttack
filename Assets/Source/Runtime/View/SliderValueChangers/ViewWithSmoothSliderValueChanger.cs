@@ -2,7 +2,7 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace SwampAttack.Runtime.View.SliderValueChangers
+namespace SwampAttack.View.SliderValueChangers
 {
     public class ViewWithSmoothSliderValueChanger : SerializedMonoBehaviour
     {

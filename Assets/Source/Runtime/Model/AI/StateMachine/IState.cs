@@ -1,4 +1,4 @@
-﻿namespace SwampAttack.Runtime.Model.AI.StateMachine
+﻿namespace SwampAttack.Model.AI.StateMachine
 {
     public interface IState
     {

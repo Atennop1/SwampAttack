@@ -1,11 +1,9 @@
 using System;
 using Sirenix.OdinInspector;
-using SwampAttack.Runtime.Model.Weapons;
-using SwampAttack.Runtime.Model.Weapons.Data;
-using SwampAttack.Runtime.Model.Weapons.Types;
+using SwampAttack.Model.Weapons;
 using UnityEngine;
 
-namespace SwampAttack.Runtime.Factories.WeaponFactories
+namespace SwampAttack.Factories
 {
     public class WeaponsFactory : SerializedMonoBehaviour, IWeaponsFactory
     {

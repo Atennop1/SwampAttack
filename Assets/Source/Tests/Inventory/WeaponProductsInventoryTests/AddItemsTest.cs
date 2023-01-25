@@ -1,12 +1,9 @@
 using NUnit.Framework;
 using NUnit.Framework.Internal;
-using SwampAttack.Runtime.Model.InventorySystem;
-using SwampAttack.Runtime.Model.Shop.Products;
-using SwampAttack.Runtime.Model.Weapons;
-using SwampAttack.Runtime.Model.Weapons.Types;
-using SwampAttack.Tests.NullComponents.Inventory;
-using SwampAttack.Tests.NullComponents.Products;
-using SwampAttack.Tests.NullComponents.Weapons;
+using SwampAttack.Model.InventorySystem;
+using SwampAttack.Model.Shop;
+using SwampAttack.Model.Weapons;
+using SwampAttack.Tests.NullComponents;
 using UnityEngine;
 
 namespace SwampAttack.Tests.Inventory.WeaponProductsInventoryTests

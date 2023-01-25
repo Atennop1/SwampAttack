@@ -1,10 +1,10 @@
 using System;
-using SwampAttack.Runtime.Model.Attacks;
-using SwampAttack.Runtime.Model.Weapons.Bullets;
-using SwampAttack.Runtime.View.Attacks;
+using SwampAttack.Model.Attacks;
+using SwampAttack.Model.Weapons;
+using SwampAttack.View.Attacks;
 using UnityEngine;
 
-namespace SwampAttack.Runtime.Factories
+namespace SwampAttack.Factories
 {
     public sealed class BulletsFactory : MonoBehaviour, IFactory<IBullet>
     {

@@ -1,8 +1,8 @@
 using System;
-using SwampAttack.Runtime.Model.Attacks;
+using SwampAttack.Model.Attacks;
 using UnityEngine;
 
-namespace SwampAttack.Runtime.View.Attacks
+namespace SwampAttack.View.Attacks
 {
     public class AttackTransformView : MonoBehaviour
     {

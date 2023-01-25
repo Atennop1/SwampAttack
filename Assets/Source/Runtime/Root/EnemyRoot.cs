@@ -1,16 +1,12 @@
-using SwampAttack.Runtime.Model.AI.Enemies.Interfaces;
-using SwampAttack.Runtime.Model.AI.Enemies.Minotaur;
-using SwampAttack.Runtime.Model.AI.Enemies.Movement;
-using SwampAttack.Runtime.Model.Attacks;
-using SwampAttack.Runtime.Model.HealthSystem;
-using SwampAttack.Runtime.Root.Interfaces;
-using SwampAttack.Runtime.Root.SystemUpdates;
-using SwampAttack.Runtime.View.Attacks;
-using SwampAttack.Runtime.View.Enemies;
-using SwampAttack.Runtime.View.Health;
+using SwampAttack.Model.AI.Enemies;
+using SwampAttack.Model.Attacks;
+using SwampAttack.Model.HealthSystem;
+using SwampAttack.View.Attacks;
+using SwampAttack.View.Enemies;
+using SwampAttack.View.Health;
 using UnityEngine;
 
-namespace SwampAttack.Runtime.Root
+namespace SwampAttack.Root
 {
     public sealed class EnemyRoot : CompositeRoot
     {

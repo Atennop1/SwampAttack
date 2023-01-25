@@ -1,4 +1,4 @@
-namespace SwampAttack.Runtime.Model.Weapons.Data
+namespace SwampAttack.Model.Weapons
 {
     public enum WeaponType
     {

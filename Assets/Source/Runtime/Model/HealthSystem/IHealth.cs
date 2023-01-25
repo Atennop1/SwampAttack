@@ -1,4 +1,4 @@
-namespace SwampAttack.Runtime.Model.HealthSystem
+namespace SwampAttack.Model.HealthSystem
 {
     public interface IHealth
     {

@@ -1,7 +1,6 @@
 using System.IO;
-using SwampAttack.Runtime.Tools.Extensions;
 
-namespace SwampAttack.Runtime.Tools.SaveSystem
+namespace SwampAttack.Tools
 {
     public class StorageWithNames<TUser, TObject>
     {

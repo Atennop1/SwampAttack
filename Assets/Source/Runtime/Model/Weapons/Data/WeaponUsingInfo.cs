@@ -1,7 +1,7 @@
 using System;
-using SwampAttack.Runtime.Model.Input;
+using SwampAttack.Model.Input;
 
-namespace SwampAttack.Runtime.Model.Weapons.Data
+namespace SwampAttack.Model.Weapons
 {
     public readonly struct WeaponUsingInfo
     {

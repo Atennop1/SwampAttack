@@ -1,8 +1,8 @@
 using System;
-using SwampAttack.Runtime.Tools.SaveSystem;
-using SwampAttack.Runtime.View.Wallet;
+using SwampAttack.Tools;
+using SwampAttack.View.Wallet;
 
-namespace SwampAttack.Runtime.Model.Wallet
+namespace SwampAttack.Model.Wallet
 {
     public class Wallet<TCurrency> : IWallet
     {

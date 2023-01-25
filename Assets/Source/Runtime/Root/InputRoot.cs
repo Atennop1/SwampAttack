@@ -1,8 +1,8 @@
 using Sirenix.OdinInspector;
-using SwampAttack.Runtime.Model.Input;
+using SwampAttack.Model.Input;
 using UnityEngine;
 
-namespace SwampAttack.Runtime.Root
+namespace SwampAttack.Root
 {
     public class InputRoot : SerializedMonoBehaviour
     {

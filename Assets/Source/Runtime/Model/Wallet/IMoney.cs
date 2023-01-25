@@ -1,4 +1,4 @@
-namespace SwampAttack.Runtime.Model.Wallet
+namespace SwampAttack.Model.Wallet
 {
     public interface IMoney { }
 }

@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-namespace SwampAttack.Runtime.View.Wallet
+namespace SwampAttack.View.Wallet
 {
     public class DefaultWalletView : MonoBehaviour, IWalletView
     {

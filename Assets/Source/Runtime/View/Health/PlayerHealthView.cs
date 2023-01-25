@@ -1,7 +1,7 @@
-using SwampAttack.Runtime.Model.HealthSystem;
-using SwampAttack.Runtime.View.SliderValueChangers;
+using SwampAttack.Model.HealthSystem;
+using SwampAttack.View.SliderValueChangers;
 
-namespace SwampAttack.Runtime.View.Health
+namespace SwampAttack.View.Health
 {
     public class PlayerHealthView : ViewWithSmoothSliderValueChanger, IHealthView
     {

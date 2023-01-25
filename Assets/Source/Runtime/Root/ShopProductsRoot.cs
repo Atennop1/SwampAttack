@@ -1,15 +1,12 @@
 using System;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
-using SwampAttack.Runtime.Model.Shop.Cells;
-using SwampAttack.Runtime.Model.Shop.Products;
-using SwampAttack.Runtime.Model.Weapons;
-using SwampAttack.Runtime.Model.Weapons.Data;
-using SwampAttack.Runtime.Model.Weapons.Types;
-using SwampAttack.Runtime.SO.Products;
+using SwampAttack.Model.Shop;
+using SwampAttack.Model.Weapons;
+using SwampAttack.SO;
 using UnityEngine;
 
-namespace SwampAttack.Runtime.Root
+namespace SwampAttack.Root
 {
     public class ShopProductsRoot : SerializedMonoBehaviour
     {

@@ -1,6 +1,6 @@
-using SwampAttack.Runtime.SO.Products;
+using SwampAttack.SO;
 
-namespace SwampAttack.Runtime.Model.Shop.Products
+namespace SwampAttack.Model.Shop
 {
     public interface IProduct<T>
     {

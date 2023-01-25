@@ -1,12 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
-using SwampAttack.Runtime.Model.Shop;
-using SwampAttack.Runtime.Model.Shop.Cells;
-using SwampAttack.Runtime.Model.Shop.Products;
-using SwampAttack.Runtime.Model.Shop.ProductsLists;
-using SwampAttack.Tests.NullComponents.Products;
-using SwampAttack.Tests.NullComponents.Weapons;
+using SwampAttack.Model.Shop;
+using SwampAttack.Tests.NullComponents;
 
 namespace SwampAttack.Tests.Shop
 {

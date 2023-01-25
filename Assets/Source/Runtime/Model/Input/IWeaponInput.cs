@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace SwampAttack.Runtime.Model.Input
+namespace SwampAttack.Model.Input
 {
     public interface IWeaponInput
     {

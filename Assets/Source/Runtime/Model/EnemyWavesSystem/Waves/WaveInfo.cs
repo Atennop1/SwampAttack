@@ -1,6 +1,6 @@
 using System;
 
-namespace SwampAttack.Runtime.Model.EnemyWavesSystem.Waves
+namespace SwampAttack.Model.EnemyWavesSystem
 {
     public readonly struct WaveInfo
     {

@@ -1,8 +1,8 @@
 using NUnit.Framework;
-using SwampAttack.Runtime.Model.InventorySystem;
-using SwampAttack.Runtime.Model.Shop.Clients;
-using SwampAttack.Runtime.Model.Weapons;
-using SwampAttack.Tests.NullComponents.Wallet;
+using SwampAttack.Model.InventorySystem;
+using SwampAttack.Model.Shop;
+using SwampAttack.Model.Weapons;
+using SwampAttack.Tests.NullComponents;
 
 namespace SwampAttack.Tests.Shop.Client
 {

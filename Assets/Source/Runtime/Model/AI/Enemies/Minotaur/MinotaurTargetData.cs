@@ -1,9 +1,8 @@
 using System;
-using SwampAttack.Runtime.Model.AI.Enemies.Interfaces;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace SwampAttack.Runtime.Model.AI.Enemies.Minotaur
+namespace SwampAttack.Model.AI.Enemies
 {
     public sealed class MinotaurTargetData : IEnemyTargetData
     {

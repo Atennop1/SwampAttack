@@ -1,4 +1,4 @@
-namespace SwampAttack.Runtime.Root.SystemUpdates
+namespace SwampAttack.Root
 {
     public interface IUpdatable
     {

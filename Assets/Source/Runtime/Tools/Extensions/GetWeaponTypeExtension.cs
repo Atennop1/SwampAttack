@@ -1,9 +1,7 @@
 using System;
-using SwampAttack.Runtime.Model.Weapons;
-using SwampAttack.Runtime.Model.Weapons.Data;
-using SwampAttack.Runtime.Model.Weapons.Types;
+using SwampAttack.Model.Weapons;
 
-namespace SwampAttack.Runtime.Tools.Extensions
+namespace SwampAttack.Tools
 {
     public static class GetWeaponTypeExtension
     {

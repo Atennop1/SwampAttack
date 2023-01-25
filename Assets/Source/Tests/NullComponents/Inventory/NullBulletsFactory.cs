@@ -1,8 +1,7 @@
-using SwampAttack.Runtime.Factories;
-using SwampAttack.Runtime.Model.Weapons.Bullets;
-using SwampAttack.Tests.NullComponents.Weapons;
+using SwampAttack.Factories;
+using SwampAttack.Model.Weapons;
 
-namespace SwampAttack.Tests.NullComponents.Inventory
+namespace SwampAttack.Tests.NullComponents
 {
     public class NullBulletsFactory : IFactory<IBullet>
     {

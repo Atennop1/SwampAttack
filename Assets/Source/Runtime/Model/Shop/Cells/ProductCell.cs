@@ -1,8 +1,6 @@
 using System;
-using SwampAttack.Runtime.Model.Shop.Products;
-using SwampAttack.Runtime.Model.Weapons;
 
-namespace SwampAttack.Runtime.Model.Shop.Cells
+namespace SwampAttack.Model.Shop
 {
     public class ProductCell<T> : IProductCell<T>
     {

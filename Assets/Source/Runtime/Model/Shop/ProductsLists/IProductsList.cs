@@ -1,8 +1,6 @@
 using System.Collections.Generic;
-using SwampAttack.Runtime.Model.Shop.Cells;
-using SwampAttack.Runtime.Model.Shop.Products;
 
-namespace SwampAttack.Runtime.Model.Shop.ProductsLists
+namespace SwampAttack.Model.Shop
 {
     public interface IProductsList<T>
     {

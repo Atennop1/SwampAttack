@@ -1,7 +1,7 @@
-using SwampAttack.Runtime.Model.Attacks;
+using SwampAttack.Model.Attacks;
 using UnityEngine;
 
-namespace SwampAttack.Runtime.Model.Weapons.Bullets
+namespace SwampAttack.Model.Weapons
 {
     public interface IBullet : IAttack
     {

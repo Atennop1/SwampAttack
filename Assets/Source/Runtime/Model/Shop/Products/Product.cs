@@ -1,7 +1,7 @@
 using System;
-using SwampAttack.Runtime.SO.Products;
+using SwampAttack.SO;
 
-namespace SwampAttack.Runtime.Model.Shop.Products
+namespace SwampAttack.Model.Shop
 {
     public class Product<T> : IProduct<T>
     {

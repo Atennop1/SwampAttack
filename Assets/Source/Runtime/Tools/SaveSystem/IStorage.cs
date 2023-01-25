@@ -1,4 +1,4 @@
-namespace SwampAttack.Runtime.Tools.SaveSystem
+namespace SwampAttack.Tools
 {
     public interface IStorage
     {

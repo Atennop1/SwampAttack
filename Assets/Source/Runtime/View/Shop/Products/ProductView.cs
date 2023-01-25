@@ -1,8 +1,8 @@
-using SwampAttack.Runtime.SO.Products;
+using SwampAttack.SO;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace SwampAttack.Runtime.View.Shop.Products
+namespace SwampAttack.View.Shop
 {
     public class ProductView : MonoBehaviour, IProductView
     {

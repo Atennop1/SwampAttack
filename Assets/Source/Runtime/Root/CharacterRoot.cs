@@ -1,23 +1,17 @@
+using SwampAttack.Model.HealthSystem;
+using SwampAttack.Model.InventorySystem;
+using SwampAttack.Model.Player;
+using SwampAttack.Model.Shop;
+using SwampAttack.Model.Weapons;
+using SwampAttack.View.Health;
+using SwampAttack.View.Weapons;
+using SwampAttack.SO;
+using SwampAttack.Tools;
+using SwampAttack.Factories;
 using System.Linq;
-using SwampAttack.Runtime.Factories;
-using SwampAttack.Runtime.Factories.WeaponFactories;
-using SwampAttack.Runtime.Model.HealthSystem;
-using SwampAttack.Runtime.Model.InventorySystem;
-using SwampAttack.Runtime.Model.Player;
-using SwampAttack.Runtime.Model.Shop.Products;
-using SwampAttack.Runtime.Model.Weapons;
-using SwampAttack.Runtime.Model.Weapons.Bullets;
-using SwampAttack.Runtime.Model.Weapons.Data;
-using SwampAttack.Runtime.Model.Weapons.Types;
-using SwampAttack.Runtime.Root.Interfaces;
-using SwampAttack.Runtime.SO.Products;
-using SwampAttack.Runtime.Tools.Extensions;
-using SwampAttack.Runtime.View.Health;
-using SwampAttack.Runtime.View.Weapons;
-using SwampAttack.Runtime.View.Weapons.PlayerWeapons;
 using UnityEngine;
 
-namespace SwampAttack.Runtime.Root
+namespace SwampAttack.Root
 {
     public sealed class CharacterRoot : CompositeRoot
     {

@@ -1,10 +1,9 @@
 using System;
 using System.Collections.Generic;
-using SwampAttack.Runtime.Model.EnemyWavesSystem.Waves;
-using SwampAttack.Runtime.Root.SystemUpdates;
-using SwampAttack.Runtime.View.EnemyWavesSystem;
+using SwampAttack.Root;
+using SwampAttack.View.EnemyWavesSystem;
 
-namespace SwampAttack.Runtime.Model.EnemyWavesSystem.Cycles
+namespace SwampAttack.Model.EnemyWavesSystem
 {
     public sealed class WavesCycle : IWavesCycle, IUpdatable
     {

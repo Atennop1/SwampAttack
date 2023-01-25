@@ -1,6 +1,6 @@
 using NUnit.Framework;
-using SwampAttack.Runtime.Tools.SaveSystem;
-using SwampAttack.Tests.NullComponents.Storages;
+using SwampAttack.Tests.NullComponents;
+using SwampAttack.Tools;
 
 namespace SwampAttack.Tests.Storages
 {

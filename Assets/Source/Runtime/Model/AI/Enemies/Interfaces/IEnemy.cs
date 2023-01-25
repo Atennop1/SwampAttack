@@ -1,7 +1,6 @@
-using SwampAttack.Runtime.Model.AI.Enemies.Movement;
-using SwampAttack.Runtime.Model.HealthSystem;
+using SwampAttack.Model.HealthSystem;
 
-namespace SwampAttack.Runtime.Model.AI.Enemies.Interfaces
+namespace SwampAttack.Model.AI.Enemies
 {
     public interface IEnemy
     {

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace SwampAttack.Runtime.Model.InventorySystem
+namespace SwampAttack.Model.InventorySystem
 {
     public interface IInventory<T>
     {

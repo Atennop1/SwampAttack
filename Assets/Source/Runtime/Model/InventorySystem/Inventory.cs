@@ -1,8 +1,7 @@
 using System;
 using System.Collections.Generic;
-using UnityEngine;
 
-namespace SwampAttack.Runtime.Model.InventorySystem
+namespace SwampAttack.Model.InventorySystem
 {
     public sealed class Inventory<T> : IInventory<T>
     {

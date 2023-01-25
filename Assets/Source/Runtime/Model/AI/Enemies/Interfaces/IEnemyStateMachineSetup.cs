@@ -1,4 +1,4 @@
-namespace SwampAttack.Runtime.Model.AI.Enemies.Interfaces
+namespace SwampAttack.Model.AI.Enemies
 {
     public interface IEnemyStateMachineSetup
     {

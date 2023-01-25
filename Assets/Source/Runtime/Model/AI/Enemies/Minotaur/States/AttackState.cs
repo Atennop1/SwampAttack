@@ -1,9 +1,8 @@
 using System;
 using System.Linq;
-using SwampAttack.Runtime.Model.AI.Enemies.Interfaces;
-using SwampAttack.Runtime.Model.AI.StateMachine;
+using SwampAttack.Model.AI.StateMachine;
 
-namespace SwampAttack.Runtime.Model.AI.Enemies.Minotaur.States
+namespace SwampAttack.Model.AI.Enemies
 {
     public sealed class AttackState : IState
     {

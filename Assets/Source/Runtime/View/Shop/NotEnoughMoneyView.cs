@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace SwampAttack.Runtime.View.Shop
+namespace SwampAttack.View.Shop
 {
     public class NotEnoughMoneyView : MonoBehaviour, INotEnoughMoneyView
     {

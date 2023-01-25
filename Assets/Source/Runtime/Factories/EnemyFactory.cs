@@ -1,8 +1,8 @@
 using Sirenix.OdinInspector;
-using SwampAttack.Runtime.Root;
+using SwampAttack.Root;
 using UnityEngine;
 
-namespace SwampAttack.Runtime.Factories
+namespace SwampAttack.Factories
 {
     public sealed class EnemyFactory : SerializedMonoBehaviour, IFactory<EnemyRoot>
     {

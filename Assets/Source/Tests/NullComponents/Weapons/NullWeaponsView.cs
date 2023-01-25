@@ -1,10 +1,10 @@
-using SwampAttack.Runtime.Model.InventorySystem;
-using SwampAttack.Runtime.Model.Player;
-using SwampAttack.Runtime.Model.Shop.Products;
-using SwampAttack.Runtime.Model.Weapons;
-using SwampAttack.Runtime.View.Weapons.PlayerWeapons;
+using SwampAttack.Model.InventorySystem;
+using SwampAttack.Model.Player;
+using SwampAttack.Model.Shop;
+using SwampAttack.Model.Weapons;
+using SwampAttack.View.Weapons;
 
-namespace SwampAttack.Tests.NullComponents.Weapons
+namespace SwampAttack.Tests.NullComponents
 {
     public class NullWeaponsView : IPlayerWeaponsView
     {

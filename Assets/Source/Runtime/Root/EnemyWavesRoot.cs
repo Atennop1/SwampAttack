@@ -1,14 +1,11 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using SwampAttack.Runtime.Factories;
-using SwampAttack.Runtime.Model.EnemyWavesSystem.Cycles;
-using SwampAttack.Runtime.Model.EnemyWavesSystem.Waves;
-using SwampAttack.Runtime.Root.Interfaces;
-using SwampAttack.Runtime.Root.SystemUpdates;
-using SwampAttack.Runtime.View.EnemyWavesSystem;
+using SwampAttack.Factories;
+using SwampAttack.Model.EnemyWavesSystem;
+using SwampAttack.View.EnemyWavesSystem;
 using UnityEngine;
 
-namespace SwampAttack.Runtime.Root
+namespace SwampAttack.Root
 {
     public sealed class EnemyWavesRoot : CompositeRoot
     {

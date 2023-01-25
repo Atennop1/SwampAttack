@@ -1,11 +1,9 @@
 using System;
 using System.Collections.Generic;
-using SwampAttack.Runtime.Model.AI.Enemies.Interfaces;
-using SwampAttack.Runtime.Model.AI.Enemies.Minotaur.Attacks;
-using SwampAttack.Runtime.Root.SystemUpdates;
-using SwampAttack.Runtime.View.Enemies;
+using SwampAttack.Root;
+using SwampAttack.View.Enemies;
 
-namespace SwampAttack.Runtime.Model.AI.Enemies.Minotaur
+namespace SwampAttack.Model.AI.Enemies
 {
     public class EnemyAttacksSetup : IEnemyAttacksSetup, IUpdatable
     {

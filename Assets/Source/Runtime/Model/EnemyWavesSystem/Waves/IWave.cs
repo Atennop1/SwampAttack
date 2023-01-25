@@ -1,4 +1,4 @@
-namespace SwampAttack.Runtime.Model.EnemyWavesSystem.Waves
+namespace SwampAttack.Model.EnemyWavesSystem
 {
     public interface IWave
     {

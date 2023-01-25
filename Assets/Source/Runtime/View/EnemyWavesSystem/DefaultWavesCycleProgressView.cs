@@ -1,6 +1,6 @@
-using SwampAttack.Runtime.View.SliderValueChangers;
+using SwampAttack.View.SliderValueChangers;
 
-namespace SwampAttack.Runtime.View.EnemyWavesSystem
+namespace SwampAttack.View.EnemyWavesSystem
 {
     public class DefaultWavesCycleProgressView : ViewWithSmoothSliderValueChanger, IWavesCycleProgressView
     {

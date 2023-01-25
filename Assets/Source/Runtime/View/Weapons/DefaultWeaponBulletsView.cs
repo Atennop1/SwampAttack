@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace SwampAttack.Runtime.View.Weapons
+namespace SwampAttack.View.Weapons
 {
     public class DefaultWeaponBulletsView : MonoBehaviour, IWeaponBulletsView
     {

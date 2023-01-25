@@ -1,6 +1,4 @@
-using SwampAttack.Runtime.Model.Shop.Products;
-
-namespace SwampAttack.Runtime.Model.Shop.Cells
+namespace SwampAttack.Model.Shop
 {
     public interface IReadOnlyProductCell<T>
     {

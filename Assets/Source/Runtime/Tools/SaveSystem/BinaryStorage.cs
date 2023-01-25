@@ -3,7 +3,7 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 
-namespace SwampAttack.Runtime.Tools.SaveSystem
+namespace SwampAttack.Tools
 {
     public sealed class BinaryStorage : IStorage
     {

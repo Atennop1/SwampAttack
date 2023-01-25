@@ -1,13 +1,12 @@
 using System;
 using Sirenix.OdinInspector;
-using SwampAttack.Runtime.Model.InventorySystem;
-using SwampAttack.Runtime.Model.Player;
-using SwampAttack.Runtime.Model.Shop.Products;
-using SwampAttack.Runtime.Model.Weapons;
-using SwampAttack.Runtime.Model.Weapons.Data;
+using SwampAttack.Model.InventorySystem;
+using SwampAttack.Model.Player;
+using SwampAttack.Model.Shop;
+using SwampAttack.Model.Weapons;
 using UnityEngine;
 
-namespace SwampAttack.Runtime.View.Weapons.PlayerWeapons
+namespace SwampAttack.View.Weapons
 {
     public class DefaultPlayerWeaponsView : SerializedMonoBehaviour, IPlayerWeaponsView
     {

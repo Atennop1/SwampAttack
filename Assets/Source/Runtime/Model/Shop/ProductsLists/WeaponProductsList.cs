@@ -1,16 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using SwampAttack.Runtime.Factories.WeaponFactories;
-using SwampAttack.Runtime.Model.Shop.Cells;
-using SwampAttack.Runtime.Model.Shop.Products;
-using SwampAttack.Runtime.Model.Weapons;
-using SwampAttack.Runtime.Model.Weapons.Data;
-using SwampAttack.Runtime.Tools.Extensions;
-using SwampAttack.Runtime.Tools.SaveSystem;
-using SwampAttack.Runtime.View.Shop.ProductsLists;
+using SwampAttack.Factories;
+using SwampAttack.Model.Weapons;
+using SwampAttack.Tools;
+using SwampAttack.View.Shop;
 
-namespace SwampAttack.Runtime.Model.Shop.ProductsLists
+namespace SwampAttack.Model.Shop
 {
     public class WeaponProductsList<TUser> : IProductsList<IProduct<IWeapon>>
     {

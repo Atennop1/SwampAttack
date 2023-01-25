@@ -1,7 +1,7 @@
 using System;
-using SwampAttack.Runtime.Model.Weapons.Data;
+using SwampAttack.Model.Weapons;
 
-namespace SwampAttack.Runtime.Model.Shop.ProductsLists
+namespace SwampAttack.Model.Shop
 {
     [Serializable]
     public struct WeaponProductCellSavingData

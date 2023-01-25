@@ -2,11 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using SwampAttack.Runtime.Factories;
-using SwampAttack.Runtime.Model.AI.Enemies.Interfaces;
+using SwampAttack.Factories;
+using SwampAttack.Model.AI.Enemies;
 using UnityEngine;
 
-namespace SwampAttack.Runtime.Model.EnemyWavesSystem.Waves
+namespace SwampAttack.Model.EnemyWavesSystem
 {
     public sealed class Wave : IWave
     {

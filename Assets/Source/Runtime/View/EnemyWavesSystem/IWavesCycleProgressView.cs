@@ -1,4 +1,4 @@
-namespace SwampAttack.Runtime.View.EnemyWavesSystem
+namespace SwampAttack.View.EnemyWavesSystem
 {
     public interface IWavesCycleProgressView
     {

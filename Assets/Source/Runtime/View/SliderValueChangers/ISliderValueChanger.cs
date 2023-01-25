@@ -1,4 +1,4 @@
-namespace SwampAttack.Runtime.View.SliderValueChangers
+namespace SwampAttack.View.SliderValueChangers
 {
     public interface ISliderValueChanger
     {

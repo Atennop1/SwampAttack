@@ -1,5 +1,5 @@
 using NUnit.Framework;
-using SwampAttack.Runtime.Model.Wallet;
+using SwampAttack.Model.Wallet;
 
 namespace SwampAttack.Tests.Wallet
 {

@@ -1,7 +1,6 @@
 using NUnit.Framework;
-using SwampAttack.Runtime.Model.Wallet;
-using SwampAttack.Tests.NullComponents.Storages;
-using SwampAttack.Tests.NullComponents.Wallet;
+using SwampAttack.Model.Wallet;
+using SwampAttack.Tests.NullComponents;
 
 namespace SwampAttack.Tests.Wallet
 {

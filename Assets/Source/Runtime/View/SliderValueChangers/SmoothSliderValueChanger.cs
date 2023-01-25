@@ -4,7 +4,7 @@ using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace SwampAttack.Runtime.View.SliderValueChangers
+namespace SwampAttack.View.SliderValueChangers
 {
     public class SmoothSliderValueChanger : ISliderValueChanger
     {

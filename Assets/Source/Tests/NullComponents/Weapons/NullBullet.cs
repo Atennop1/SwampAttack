@@ -1,9 +1,8 @@
-using SwampAttack.Runtime.Model.Weapons.Bullets;
-using SwampAttack.Runtime.View.Health;
-using SwampAttack.Tests.NullComponents.Health;
+using SwampAttack.Model.Weapons;
+using SwampAttack.View.Health;
 using UnityEngine;
 
-namespace SwampAttack.Tests.NullComponents.Weapons
+namespace SwampAttack.Tests.NullComponents
 {
     public class NullBullet : IBullet
     {

@@ -1,12 +1,8 @@
 using System;
-using System.Collections.Generic;
-using SwampAttack.Runtime.Model.AI.Enemies.Interfaces;
-using SwampAttack.Runtime.Model.AI.Enemies.Minotaur.Attacks;
-using SwampAttack.Runtime.Model.AI.Enemies.Minotaur.States;
-using SwampAttack.Runtime.View.Enemies;
+using SwampAttack.View.Enemies;
 using UnityEngine;
 
-namespace SwampAttack.Runtime.Model.AI.Enemies.Minotaur
+namespace SwampAttack.Model.AI.Enemies
 {
     public sealed class EnemyStateMachineSetup : IEnemyStateMachineSetup
     {

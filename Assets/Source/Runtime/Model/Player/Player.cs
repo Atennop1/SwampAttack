@@ -1,10 +1,9 @@
 using System;
-using SwampAttack.Runtime.Model.Input;
-using SwampAttack.Runtime.Model.Weapons;
-using SwampAttack.Runtime.Model.Weapons.Data;
-using SwampAttack.Runtime.Root.SystemUpdates;
+using SwampAttack.Model.Input;
+using SwampAttack.Model.Weapons;
+using SwampAttack.Root;
 
-namespace SwampAttack.Runtime.Model.Player
+namespace SwampAttack.Model.Player
 {
     public sealed class Player : IUpdatable
     {

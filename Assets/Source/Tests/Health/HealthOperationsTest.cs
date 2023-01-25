@@ -1,6 +1,6 @@
 using NUnit.Framework;
-using SwampAttack.Runtime.Model.HealthSystem;
-using SwampAttack.Runtime.View.Health;
+using SwampAttack.Model.HealthSystem;
+using SwampAttack.View.Health;
 
 namespace SwampAttack.Tests.Health
 {
@@ -10,7 +10,7 @@ namespace SwampAttack.Tests.Health
 
         [SetUp]
         public void Setup()
-            => _health = new Runtime.Model.HealthSystem.Health(10, new NullHealthView());
+            => _health = new Model.HealthSystem.Health(10, new NullHealthView());
 
         [Test]
         public void IsTakeDamageWorksCorrectly()

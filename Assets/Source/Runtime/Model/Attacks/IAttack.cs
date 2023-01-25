@@ -1,7 +1,7 @@
-using SwampAttack.Runtime.View.Health;
+using SwampAttack.View.Health;
 using UnityEngine;
 
-namespace SwampAttack.Runtime.Model.Attacks
+namespace SwampAttack.Model.Attacks
 {
     public interface IAttack
     {

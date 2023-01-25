@@ -1,6 +1,6 @@
 using Sirenix.OdinInspector;
 
-namespace SwampAttack.Runtime.Root.Interfaces
+namespace SwampAttack.Root
 {
     public abstract class CompositeRoot : SerializedMonoBehaviour
     {

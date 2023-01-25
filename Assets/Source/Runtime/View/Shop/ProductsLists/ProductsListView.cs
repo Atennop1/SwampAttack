@@ -1,13 +1,10 @@
 using System;
 using Sirenix.OdinInspector;
-using SwampAttack.Runtime.Model.Shop;
-using SwampAttack.Runtime.Model.Shop.Clients;
-using SwampAttack.Runtime.Model.Shop.ProductsLists;
-using SwampAttack.Runtime.View.Shop.Products;
+using SwampAttack.Model.Shop;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace SwampAttack.Runtime.View.Shop.ProductsLists
+namespace SwampAttack.View.Shop
 {
     public class ProductsListView<T> : SerializedMonoBehaviour, IProductsListView<T>
     {

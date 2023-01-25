@@ -1,8 +1,7 @@
-using SwampAttack.Runtime.Model.Shop.Products;
-using SwampAttack.Runtime.Model.Weapons;
-using SwampAttack.Runtime.Model.Weapons.Data;
+using SwampAttack.Model.Shop;
+using SwampAttack.Model.Weapons;
 
-namespace SwampAttack.Runtime.Factories.WeaponFactories
+namespace SwampAttack.Factories
 {
     public interface IWeaponProductProductsFactory
     {

@@ -1,10 +1,9 @@
 using System;
-using SwampAttack.Runtime.Factories;
-using SwampAttack.Runtime.Model.Weapons.Bullets;
-using SwampAttack.Runtime.View.Weapons;
+using SwampAttack.Factories;
+using SwampAttack.View.Weapons;
 using UnityEngine;
 
-namespace SwampAttack.Runtime.Model.Weapons
+namespace SwampAttack.Model.Weapons
 {
     public class Weapon : IWeapon
     {

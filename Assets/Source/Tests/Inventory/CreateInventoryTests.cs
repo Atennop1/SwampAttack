@@ -1,6 +1,6 @@
 using NUnit.Framework;
-using SwampAttack.Runtime.Model.InventorySystem;
-using SwampAttack.Runtime.Model.Weapons;
+using SwampAttack.Model.InventorySystem;
+using SwampAttack.Model.Weapons;
 
 namespace SwampAttack.Tests.Inventory
 {

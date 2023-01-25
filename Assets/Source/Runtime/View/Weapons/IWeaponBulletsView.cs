@@ -1,4 +1,4 @@
-namespace SwampAttack.Runtime.View.Weapons
+namespace SwampAttack.View.Weapons
 {
     public interface IWeaponBulletsView
     {

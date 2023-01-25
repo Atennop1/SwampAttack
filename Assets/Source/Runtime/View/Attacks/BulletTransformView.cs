@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace SwampAttack.Runtime.View.Attacks
+namespace SwampAttack.View.Attacks
 {
     [RequireComponent(typeof(Rigidbody2D))]
     public sealed class BulletTransformView : AttackTransformView

@@ -1,8 +1,8 @@
-using SwampAttack.Runtime.Model.Attacks;
-using SwampAttack.Runtime.View.Health;
+using SwampAttack.Model.Attacks;
+using SwampAttack.View.Health;
 using UnityEngine;
 
-namespace SwampAttack.Runtime.Model.Weapons.Bullets
+namespace SwampAttack.Model.Weapons
 {
     public sealed class Bullet : IBullet
     {

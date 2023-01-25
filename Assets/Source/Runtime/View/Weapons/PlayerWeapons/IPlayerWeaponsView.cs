@@ -1,9 +1,9 @@
-using SwampAttack.Runtime.Model.InventorySystem;
-using SwampAttack.Runtime.Model.Player;
-using SwampAttack.Runtime.Model.Shop.Products;
-using SwampAttack.Runtime.Model.Weapons;
+using SwampAttack.Model.InventorySystem;
+using SwampAttack.Model.Player;
+using SwampAttack.Model.Shop;
+using SwampAttack.Model.Weapons;
 
-namespace SwampAttack.Runtime.View.Weapons.PlayerWeapons
+namespace SwampAttack.View.Weapons
 {
     public interface IPlayerWeaponsView
     {

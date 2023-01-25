@@ -1,11 +1,8 @@
 using System;
-using SwampAttack.Runtime.Model.InventorySystem;
-using SwampAttack.Runtime.Model.Shop.Products;
-using SwampAttack.Runtime.Model.Shop.ProductsLists;
-using SwampAttack.Runtime.Model.Wallet;
-using UnityEngine;
+using SwampAttack.Model.InventorySystem;
+using SwampAttack.Model.Wallet;
 
-namespace SwampAttack.Runtime.Model.Shop.Clients
+namespace SwampAttack.Model.Shop
 {
     public class Client<T> : IClient<T>
     {

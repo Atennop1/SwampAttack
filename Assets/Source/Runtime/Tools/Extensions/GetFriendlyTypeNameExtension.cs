@@ -1,6 +1,6 @@
 using System;
 
-namespace SwampAttack.Runtime.Tools.Extensions
+namespace SwampAttack.Tools
 {
     public static class GetFriendlyTypeNameExtension
     {

@@ -1,7 +1,7 @@
 using System;
-using SwampAttack.Runtime.View.Health;
+using SwampAttack.View.Health;
 
-namespace SwampAttack.Runtime.Model.HealthSystem
+namespace SwampAttack.Model.HealthSystem
 {
     public sealed class Health : IHealth
     {

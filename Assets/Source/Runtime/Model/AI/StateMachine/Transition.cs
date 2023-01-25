@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace SwampAttack.Runtime.Model.AI.StateMachine
+namespace SwampAttack.Model.AI.StateMachine
 {
     public class Transition
     {

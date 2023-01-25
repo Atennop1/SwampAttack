@@ -1,13 +1,10 @@
 using Sirenix.OdinInspector;
-using SwampAttack.Runtime.Model.Player;
-using SwampAttack.Runtime.Model.Weapons;
-using SwampAttack.Runtime.Model.Weapons.Data;
-using SwampAttack.Runtime.Root.Interfaces;
-using SwampAttack.Runtime.Root.SystemUpdates;
-using SwampAttack.Runtime.View.Weapons.PlayerWeapons;
+using SwampAttack.Model.Player;
+using SwampAttack.Model.Weapons;
+using SwampAttack.View.Weapons;
 using UnityEngine;
 
-namespace SwampAttack.Runtime.Root
+namespace SwampAttack.Root
 {
     public sealed class PlayerRoot : SerializedMonoBehaviour, IPlayerRoot
     {

@@ -1,4 +1,4 @@
-namespace SwampAttack.Runtime.View.Wallet
+namespace SwampAttack.View.Wallet
 {
     public interface IWalletView
     {

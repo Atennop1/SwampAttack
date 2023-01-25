@@ -1,6 +1,6 @@
-using SwampAttack.Runtime.Model.HealthSystem;
+using SwampAttack.Model.HealthSystem;
 
-namespace SwampAttack.Runtime.View.Health
+namespace SwampAttack.View.Health
 {
     public class NullHealthView : IHealthView
     {

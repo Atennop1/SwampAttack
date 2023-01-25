@@ -1,7 +1,7 @@
 using System;
-using SwampAttack.Runtime.Tools.Extensions;
+using SwampAttack.Tools;
 
-namespace SwampAttack.Runtime.Model.Weapons.Data
+namespace SwampAttack.Model.Weapons
 {
     [Serializable]
     public readonly struct WeaponSavingData

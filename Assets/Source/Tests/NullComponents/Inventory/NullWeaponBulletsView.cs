@@ -1,6 +1,6 @@
-using SwampAttack.Runtime.View.Weapons;
+using SwampAttack.View.Weapons;
 
-namespace SwampAttack.Tests.NullComponents.Inventory
+namespace SwampAttack.Tests.NullComponents
 {
     public class NullWeaponBulletsView : IWeaponBulletsView
     {

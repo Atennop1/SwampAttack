@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace SwampAttack.Runtime.View.Enemies
+namespace SwampAttack.View.Enemies
 {
     public interface IEnemyTransformView
     {

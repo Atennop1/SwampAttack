@@ -1,12 +1,9 @@
 using System;
-using SwampAttack.Runtime.Factories.WeaponFactories;
-using SwampAttack.Runtime.Model.Shop.Products;
-using SwampAttack.Runtime.Model.Weapons;
-using SwampAttack.Runtime.Model.Weapons.Data;
-using SwampAttack.Runtime.Model.Weapons.Types;
-using SwampAttack.Tests.NullComponents.Inventory;
+using SwampAttack.Factories;
+using SwampAttack.Model.Shop;
+using SwampAttack.Model.Weapons;
 
-namespace SwampAttack.Tests.NullComponents.Products
+namespace SwampAttack.Tests.NullComponents
 {
     public class NullWeaponProductsFactory : IWeaponProductsFactory
     {

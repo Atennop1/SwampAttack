@@ -1,7 +1,6 @@
-using SwampAttack.Runtime.Model.Shop.Clients;
-using SwampAttack.Runtime.Model.Shop.ProductsLists;
+using SwampAttack.Model.Shop;
 
-namespace SwampAttack.Runtime.View.Shop.ProductsLists
+namespace SwampAttack.View.Shop
 {
     public interface IProductsListView<T>
     {

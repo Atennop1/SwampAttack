@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace SwampAttack.Runtime.Root.SystemUpdates
+namespace SwampAttack.Root
 {
     public sealed class SystemUpdate : ISystemUpdate
     {

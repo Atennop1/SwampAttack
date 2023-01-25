@@ -1,8 +1,7 @@
 using System.Collections.Generic;
-using SwampAttack.Runtime.Root.Interfaces;
 using UnityEngine;
 
-namespace SwampAttack.Runtime.Root
+namespace SwampAttack.Root
 {
     public class EntryPoint : MonoBehaviour
     {

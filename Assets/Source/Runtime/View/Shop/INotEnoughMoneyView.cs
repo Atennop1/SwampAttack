@@ -1,4 +1,4 @@
-namespace SwampAttack.Runtime.View.Shop
+namespace SwampAttack.View.Shop
 {
     public interface INotEnoughMoneyView
     {

@@ -1,12 +1,10 @@
 using System;
 using System.Collections.Generic;
-using SwampAttack.Runtime.Model.AI.Enemies.Interfaces;
-using SwampAttack.Runtime.Model.AI.Enemies.Movement;
-using SwampAttack.Runtime.Model.HealthSystem;
-using SwampAttack.Runtime.Root.SystemUpdates;
-using SwampAttack.Runtime.View.Enemies;
+using SwampAttack.Model.HealthSystem;
+using SwampAttack.Root;
+using SwampAttack.View.Enemies;
 
-namespace SwampAttack.Runtime.Model.AI.Enemies.Minotaur
+namespace SwampAttack.Model.AI.Enemies
 {
     public sealed class MinotaurEnemy : IEnemyWithTarget, IEnemyWithAttacks, IUpdatable
     {

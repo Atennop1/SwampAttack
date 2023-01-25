@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace SwampAttack.Runtime.SO.Products
+namespace SwampAttack.SO
 {
     public interface IProductData
     {

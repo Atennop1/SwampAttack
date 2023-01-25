@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace SwampAttack.Runtime.Model.AI.Enemies.Movement
+namespace SwampAttack.Model.AI.Enemies
 {
     public interface IEnemyMovement
     {

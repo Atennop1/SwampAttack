@@ -1,8 +1,7 @@
-using SwampAttack.Runtime.Model.Shop.Clients;
-using SwampAttack.Runtime.Model.Shop.ProductsLists;
-using SwampAttack.Runtime.View.Shop.ProductsLists;
+using SwampAttack.Model.Shop;
+using SwampAttack.View.Shop;
 
-namespace SwampAttack.Tests.NullComponents.Products
+namespace SwampAttack.Tests.NullComponents
 {
     public class NullProductsListView<T> : IProductsListView<T>
     {
