@@ -11,14 +11,8 @@ namespace SwampAttack.Model.Weapons
 
         public WeaponSavingData(IWeapon weapon)
         {
-            if (weapon.Bullets < 0)
-                throw new ArgumentException("Bullets can't be negative number");
-            
-            if (weapon.Bullets == 0)
-                throw new ArgumentException("Bullets can't be zero");
-
             Type = weapon.GetWeaponType();
-            Bullets = weapon.Bullets;
+            Bullets = weapon.Bullets.TryThrowIfLessOrEqualsZero();
         }
     }
 }

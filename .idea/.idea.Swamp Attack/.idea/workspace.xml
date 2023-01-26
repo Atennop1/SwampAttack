@@ -1,31 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8f65dff0-dc7f-4b3e-b613-fed6e8445b84" name="Changes" comment="Returned &quot;Tests&quot; namespace">
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Core.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Core/RewardData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/IReward.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/NullReward.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Randomizer.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Randomizer/Chance.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Randomizer/Chance/FiftyFiftyChance.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Randomizer/Chance/FiftyFiftyChance.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Randomizer/Chance/IChance.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Randomizer/Chance/IChance.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Randomizer/IRewardRandomizer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Randomizer/IRewardRandomizer.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Randomizer/RewardRandomizer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Randomizer/RewardRandomizer.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Reward.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/RewardData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Reward.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Reward/IRewardView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Reward/IRewardView.cs.meta" afterDir="false" />
+    <list default="true" id="8f65dff0-dc7f-4b3e-b613-fed6e8445b84" name="Changes" comment="Added rewards model">
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/Extensions/FloatExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/Extensions/FloatExtensions.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/Extensions/IntExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/Extensions/IntExtensions.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Swamp Attack/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Swamp Attack/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Storages/NullStorage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Storages/NullStorage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Runtime.csproj.DotSettings" beforeDir="false" afterPath="$PROJECT_DIR$/Runtime.csproj.DotSettings" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests.csproj.DotSettings" beforeDir="false" afterPath="$PROJECT_DIR$/Tests.csproj.DotSettings" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/Attacks/DefaultAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/Attacks/DefaultAttack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/MinotaurTargetData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/MinotaurTargetData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Movement/DefaultEnemyMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Movement/DefaultEnemyMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Attacks/Attack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Attacks/Attack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/EnemyWavesSystem/Waves/WaveInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/EnemyWavesSystem/Waves/WaveInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/HealthSystem/Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/HealthSystem/Health.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/InventorySystem/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/InventorySystem/Inventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Core/RewardData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Core/RewardData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Shop/Cells/ProductCell.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Shop/Cells/ProductCell.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Shop/ProductsLists/ProductsList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Shop/ProductsLists/ProductsList.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Shop/ProductsLists/WeaponProductCellSavingData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Shop/ProductsLists/WeaponProductCellSavingData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Wallet/Wallet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Wallet/Wallet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/Bullets/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/Bullets/Bullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/Data/WeaponSavingData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/Data/WeaponSavingData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/Weapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/Weapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/View/EnemyWavesSystem/DefaultWavesCycleProgressView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/EnemyWavesSystem/DefaultWavesCycleProgressView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/View/Health/HealthTransformView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Health/HealthTransformView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/View/SliderValueChangers/SmoothSliderValueChanger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/SliderValueChangers/SmoothSliderValueChanger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/View/SliderValueChangers/ViewWithSmoothSliderValueChanger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/SliderValueChangers/ViewWithSmoothSliderValueChanger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/View/Wallet/DefaultWalletView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Wallet/DefaultWalletView.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +171,7 @@
       <workItem from="1674582751383" duration="1660000" />
       <workItem from="1674585023381" duration="1369000" />
       <workItem from="1674671747697" duration="2268000" />
-      <workItem from="1674750639363" duration="2321000" />
+      <workItem from="1674750639363" duration="3768000" />
     </task>
     <task id="LOCAL-00001" summary="Added enemy StateMachine and IAttack interface">
       <created>1668113832992</created>
@@ -417,7 +418,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674750694052</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Added rewards model">
+      <created>1674753387323</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1674753387323</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -449,7 +457,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Very small fix of AttackTransformView" />
     <MESSAGE value="Added Wallet, Storages and tests for their" />
     <MESSAGE value="Added prototype of shop, BinaryStorage and tests for all that stuff" />
     <MESSAGE value="Added full model of shop, clients and products!" />
@@ -474,7 +481,8 @@
     <MESSAGE value="Namespaces changes" />
     <MESSAGE value="More namespaces changes" />
     <MESSAGE value="Returned &quot;Tests&quot; namespace" />
-    <option name="LAST_COMMIT_MESSAGE" value="Returned &quot;Tests&quot; namespace" />
+    <MESSAGE value="Added rewards model" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added rewards model" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

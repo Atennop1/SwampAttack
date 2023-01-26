@@ -21,27 +21,21 @@ namespace SwampAttack.Model.Wallet
         
         public void Put(int count)
         {
-            if (count <= 0)
-                throw new ArgumentException("Can't put negative numbers in wallet");
-
-            Money += count;
+            Money += count.TryThrowIfLessOrEqualsZero();
             VisualizeAndSave();
         }
 
         public void Take(int count)
         {
-            if (count > Money)
+            if (count.TryThrowIfLessThanZero() > Money)
                 throw new ArgumentException($"Can't take {count} money from wallet where only {Money} money");
-
-            if (count < 0)
-                throw new ArgumentException("Can't take negative number from wallet");
 
             Money -= count;
             VisualizeAndSave();
         }
 
         public bool CanTake(int count) 
-            => count < Money && count > 0;
+            => count.TryThrowIfLessOrEqualsZero() < Money;
 
         private void VisualizeAndSave()
         {

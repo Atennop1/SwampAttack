@@ -1,6 +1,7 @@
 using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
+using SwampAttack.Tools;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,6 +17,8 @@ namespace SwampAttack.View.SliderValueChangers
         
         public void ChangeValue(float newValue)
         {
+            newValue.TryThrowIfLessThanZero();
+            
             if (_changingTask.Status == UniTaskStatus.Pending)
             {
                 _cancellationTokenSource.Cancel();
@@ -43,10 +46,7 @@ namespace SwampAttack.View.SliderValueChangers
 
         public SmoothSliderValueChanger(Slider slider, float timeOfChanging)
         {
-            if (timeOfChanging < 0)
-                throw new ArgumentException("TimeOfChanging can't be negative number");
-            
-            _timeOfChanging = timeOfChanging;
+            _timeOfChanging = timeOfChanging.TryThrowIfLessThanZero();
             _slider = slider ? slider : throw new ArgumentException("Slider can't be null");
             _cancellationTokenSource = new CancellationTokenSource();
         }

@@ -1,4 +1,5 @@
 using System;
+using SwampAttack.Tools;
 using SwampAttack.View.Health;
 
 namespace SwampAttack.Model.HealthSystem
@@ -14,10 +15,7 @@ namespace SwampAttack.Model.HealthSystem
 
         public Health(int value, IHealthView healthView)
         {
-            if (value <= 0)
-                throw new ArgumentException($"Can't create health with {value} hp");
-
-            MaxValue = Value = value;
+            MaxValue = Value = value.TryThrowIfLessThanZero();
             _healthView = healthView ?? throw new ArgumentException("Health view can't be null");
         }
 
@@ -25,21 +23,15 @@ namespace SwampAttack.Model.HealthSystem
         {
             if (IsDead)
                 throw new Exception("Can't take damage to dead health");
-
-            if (count < 0)
-                throw new ArgumentException("Damage can't be a negative number");
-
-            Value -= count;
+            
+            Value -= count.TryThrowIfLessOrEqualsZero();
             _healthView.Visualize(this);
             
         }
 
         public void Heal(int count)
         {
-            if (count < 0)
-                throw new ArgumentException("Healing number can't be a negative number");
-            
-            if (!CanHeal(count))
+            if (!CanHeal(count.TryThrowIfLessOrEqualsZero()))
                 throw new InvalidOperationException($"Can't heal {count} hp. This is too much");
             
             if (IsDead)
@@ -50,6 +42,6 @@ namespace SwampAttack.Model.HealthSystem
         }
         
         public bool CanHeal(int count) 
-            => count + Value <= MaxValue;
+            => count.TryThrowIfLessOrEqualsZero() + Value <= MaxValue;
     }
 }

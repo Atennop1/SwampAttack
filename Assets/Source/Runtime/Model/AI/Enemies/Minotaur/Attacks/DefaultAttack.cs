@@ -1,5 +1,6 @@
 using System;
 using SwampAttack.Root;
+using SwampAttack.Tools;
 using SwampAttack.View.Enemies;
 using UnityEngine;
 
@@ -16,11 +17,7 @@ namespace SwampAttack.Model.AI.Enemies
         public DefaultAttack(IEnemyTransformView enemyTransformView, float cooldown)
         {
             _enemyTransformView = enemyTransformView ?? throw new ArgumentException("EnemyView can't be null");
-
-            if (cooldown < 0)
-                throw new ArgumentException("Cooldown can't be negative number");
-            
-            _cooldown = cooldown;
+            _cooldown = cooldown.TryThrowIfLessThanZero();
         }
 
         public void Use()

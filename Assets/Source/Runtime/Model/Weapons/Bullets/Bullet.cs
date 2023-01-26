@@ -1,4 +1,6 @@
+using System;
 using SwampAttack.Model.Attacks;
+using SwampAttack.Tools;
 using SwampAttack.View.Health;
 using UnityEngine;
 
@@ -14,9 +16,9 @@ namespace SwampAttack.Model.Weapons
         
         public Bullet(IAttack attack, Rigidbody2D rigidbody, int throwForce)
         {
-            _rigidbody = rigidbody;
-            _throwForce = throwForce;
-            _attack = attack;
+            _rigidbody = rigidbody ?? throw new ArgumentNullException(nameof(rigidbody));
+            _throwForce = throwForce.TryThrowIfLessOrEqualsZero();
+            _attack = attack ?? throw new ArgumentNullException(nameof(attack));
         }
 
         public void Launch(Vector2 direction)

@@ -1,4 +1,4 @@
-using System;
+using SwampAttack.Tools;
 
 namespace SwampAttack.Model.EnemyWavesSystem
 {
@@ -9,14 +9,8 @@ namespace SwampAttack.Model.EnemyWavesSystem
         
         public WaveInfo(int enemyCount, float delayBetweenEnemies)
         {
-            if (enemyCount < 0)
-                throw new ArgumentException("EnemyCount can't be null");
-
-            if (delayBetweenEnemies < 0)
-                throw new ArgumentException("DelayBetweenEnemies can't be negative number");
-            
-            EnemyCount = enemyCount;
-            DelayBetweenEnemies = delayBetweenEnemies;
+            EnemyCount = enemyCount.TryThrowIfLessOrEqualsZero();
+            DelayBetweenEnemies = delayBetweenEnemies.TryThrowIfLessOrEqualsZero();
         }
     }
 }

@@ -15,6 +15,7 @@ namespace SwampAttack.View.Health
         public void TakeDamage(int damage)
         {
             _health.TakeDamage(damage);
+            
             if (!_health.IsDead) 
                 return;
             

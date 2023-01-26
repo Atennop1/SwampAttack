@@ -1,5 +1,6 @@
 using System;
 using SwampAttack.Factories;
+using SwampAttack.Tools;
 using SwampAttack.View.Weapons;
 using UnityEngine;
 
@@ -18,13 +19,10 @@ namespace SwampAttack.Model.Weapons
 
         public Weapon(IFactory<IBullet> factory, IWeaponBulletsView bulletsView, int bullets)
         {
-            if (bullets <= 0)
-                throw new ArgumentException("BulletsCount can't be negative number");
-
             _bulletsView = bulletsView ?? throw new ArgumentException("BulletsView can't be null");
             _factory = factory ?? throw new ArgumentException("Factory can't be null");
 
-            Bullets = MaxBullets = bullets;
+            Bullets = MaxBullets = bullets.TryThrowIfLessOrEqualsZero();
             bulletsView.Visualize(Bullets, MaxBullets);
         }
 
@@ -40,10 +38,7 @@ namespace SwampAttack.Model.Weapons
 
         public void AddBullets(int count)
         {
-            if (count < 0)
-                throw new ArgumentException("BulletsCount can't be negative number");
-
-            if (Bullets + count > MaxBullets)
+            if (Bullets + count.TryThrowIfLessThanZero() > MaxBullets)
                 throw new ArgumentException("BulletsCount too big");
 
             Bullets += count;

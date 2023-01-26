@@ -1,4 +1,5 @@
 using System;
+using SwampAttack.Tools;
 using UnityEngine;
 
 namespace SwampAttack.Model.AI.Enemies
@@ -10,8 +11,8 @@ namespace SwampAttack.Model.AI.Enemies
 
         public DefaultEnemyMovement(Rigidbody2D rigidbody, float speed)
         {
-            _rigidbody = rigidbody;
-            _speed = speed;
+            _rigidbody = rigidbody ?? throw new ArgumentNullException(nameof(rigidbody));
+            _speed = speed.TryThrowIfLessOrEqualsZero();
         }
 
         public void Move(Transform target)
@@ -21,16 +22,9 @@ namespace SwampAttack.Model.AI.Enemies
         }
 
         public void StopMovement()
-        {
-            _rigidbody.velocity = Vector2.zero;
-        }
+            =>_rigidbody.velocity = Vector2.zero;
 
         public void ChangeSpeed(float speed)
-        {
-            if (speed < 0)
-                throw new ArgumentException("Can't change speed to negative number");
-
-            _speed = speed;
-        }
+            => _speed = speed.TryThrowIfLessOrEqualsZero();
     }
 }

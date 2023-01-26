@@ -1,5 +1,6 @@
 using System;
 using SwampAttack.Model.Weapons;
+using SwampAttack.Tools;
 
 namespace SwampAttack.Model.Shop
 {
@@ -11,14 +12,8 @@ namespace SwampAttack.Model.Shop
 
         public WeaponProductCellSavingData(WeaponSavingData weaponSavingData, int countInCell)
         {
-            if (countInCell < 0)
-                throw new ArgumentException("CountInCell can't be negative number");
-            
-            if (countInCell == 0)
-                throw new ArgumentException("CountInCell can't be zero");
-            
             WeaponSavingData = weaponSavingData;
-            CountInCell = countInCell;
+            CountInCell = countInCell.TryThrowIfLessOrEqualsZero();
         }
     }
 }

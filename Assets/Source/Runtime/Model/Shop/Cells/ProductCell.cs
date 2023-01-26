@@ -1,4 +1,5 @@
 using System;
+using SwampAttack.Tools;
 
 namespace SwampAttack.Model.Shop
 {
@@ -9,11 +10,8 @@ namespace SwampAttack.Model.Shop
 
         public ProductCell(IProduct<T> product, int count = 1)
         {
-            if (count < 1)
-                throw new ArgumentException("Count can't be negative number");
-            
             Product = product ?? throw new ArgumentException("Product can't be null");
-            Count = count;
+            Count = count.TryThrowIfLessOrEqualsZero();
         }
 
         public void Merge(IProductCell<T> anotherCell)
@@ -26,16 +24,13 @@ namespace SwampAttack.Model.Shop
 
         public void Take(int count)
         {
-            if (count < 1)
-                throw new ArgumentException("Count can't be negative number");
-            
             if (Count < count)
                 throw new ArgumentException("Requested count it too big");
 
-            Count -= count;
+            Count -= count.TryThrowIfLessOrEqualsZero();
         }
         
         public bool CanTake(int count) 
-            => Count >= count;
+            => Count >= count.TryThrowIfLessOrEqualsZero();
     }
 }

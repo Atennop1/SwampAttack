@@ -1,3 +1,4 @@
+using SwampAttack.Tools;
 using TMPro;
 using UnityEngine;
 
@@ -8,6 +9,6 @@ namespace SwampAttack.View.Wallet
         [SerializeField] private TextMeshProUGUI _moneyText;
         
         public void Visualize(int money)
-            => _moneyText.text = money.ToString();
+            => _moneyText.text = money.TryThrowIfLessThanZero().ToString();
     }
 }

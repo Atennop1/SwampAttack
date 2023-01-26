@@ -1,4 +1,5 @@
 using System;
+using SwampAttack.Tools;
 using UnityEngine;
 
 namespace SwampAttack.Model.Rewards
@@ -11,7 +12,7 @@ namespace SwampAttack.Model.Rewards
         public RewardData(Sprite sprite, int coinsCount)
         {
             Sprite = sprite ?? throw new ArgumentNullException(nameof(sprite));
-            CoinsCount = coinsCount;
+            CoinsCount = coinsCount.TryThrowIfLessOrEqualsZero();
         }
     }
 }

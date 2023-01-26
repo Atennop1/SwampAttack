@@ -1,4 +1,5 @@
 using Sirenix.OdinInspector;
+using SwampAttack.Tools;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,10 +14,10 @@ namespace SwampAttack.View.SliderValueChangers
         protected void ChangeSliderValue(int newValue, int maxValue)
         {
             var previousMaxValue = Slider.maxValue;
-            Slider.maxValue = maxValue;
+            Slider.maxValue = maxValue.TryThrowIfLessThanZero();
             
             Slider.value *= Slider.maxValue / previousMaxValue;
-            _sliderValueChanger.ChangeValue(newValue);
+            _sliderValueChanger.ChangeValue(newValue.TryThrowIfLessThanZero());
         }
         
         private void Awake() 

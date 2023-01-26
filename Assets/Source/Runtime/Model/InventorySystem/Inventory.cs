@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using SwampAttack.Tools;
 
 namespace SwampAttack.Model.InventorySystem
 {
@@ -13,10 +14,7 @@ namespace SwampAttack.Model.InventorySystem
 
         public Inventory(int capacity)
         {
-            if (capacity <= 0)
-                throw new ArgumentException($"Can't create inventory with capacity {capacity}");
-
-            _capacity = capacity;
+            _capacity = capacity.TryThrowIfLessThanZero();
             _items = new List<T>();
         }
 
@@ -25,7 +23,7 @@ namespace SwampAttack.Model.InventorySystem
             if (IsFull)
                 throw new ArgumentException("Inventory is full");
             
-            if (count + Items.Count > _capacity)
+            if (count.TryThrowIfLessOrEqualsZero() + Items.Count > _capacity)
                 throw new ArgumentException($"{count} items won't fit in inventory");
 
             for (var i = 0; i < count; i++)

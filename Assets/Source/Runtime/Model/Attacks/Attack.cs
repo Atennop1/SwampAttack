@@ -1,4 +1,5 @@
 using System;
+using SwampAttack.Tools;
 using SwampAttack.View.Health;
 using UnityEngine;
 
@@ -9,13 +10,8 @@ namespace SwampAttack.Model.Attacks
         public int Damage { get; }
         
         public Attack(int damage)
-        {
-            if (damage <= 0)
-                throw new ArgumentException("Damage can't be less or equals zero");
-            
-            Damage = damage;
-        }
-        
+            => Damage = damage.TryThrowIfLessOrEqualsZero();
+
         public void Collide(Collider2D coll)
         {
             if (!IsCollisionWithHealth(coll, out var healthTransformView))

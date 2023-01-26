@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using SwampAttack.Tools;
 
 namespace SwampAttack.Model.Shop
 {
@@ -19,8 +20,7 @@ namespace SwampAttack.Model.Shop
 
         public void Add(IProduct<T> addingProduct, int count = 1)
         {
-            if (count < 1)
-                throw new ArgumentException("Count can't be negative number");
+            count.TryThrowIfLessOrEqualsZero();
             
             if (addingProduct == null)
                 throw new ArgumentException("Can't add null product");
