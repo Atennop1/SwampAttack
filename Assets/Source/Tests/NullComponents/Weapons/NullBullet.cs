@@ -2,7 +2,7 @@ using SwampAttack.Model.Weapons;
 using SwampAttack.View.Health;
 using UnityEngine;
 
-namespace SwampAttack.NullComponents
+namespace SwampAttack.Tests.NullComponents
 {
     public class NullBullet : IBullet
     {

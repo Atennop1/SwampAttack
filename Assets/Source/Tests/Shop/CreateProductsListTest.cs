@@ -3,7 +3,7 @@ using NUnit.Framework;
 using SwampAttack.Model.Shop;
 using SwampAttack.Model.Weapons;
 
-namespace SwampAttack.Shop
+namespace SwampAttack.Tests.Shop
 {
     public class CreateProductsListTest
     {

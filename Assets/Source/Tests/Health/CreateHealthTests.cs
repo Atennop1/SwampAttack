@@ -1,7 +1,7 @@
 using NUnit.Framework;
 using SwampAttack.View.Health;
 
-namespace SwampAttack.Health
+namespace SwampAttack.Tests.Health
 {
     public class CreateHealthTests
     {

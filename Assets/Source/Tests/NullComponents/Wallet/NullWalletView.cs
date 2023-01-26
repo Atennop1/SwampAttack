@@ -1,6 +1,6 @@
 using SwampAttack.View.Wallet;
 
-namespace SwampAttack.NullComponents
+namespace SwampAttack.Tests.NullComponents
 {
     public class NullWalletView : IWalletView
     {

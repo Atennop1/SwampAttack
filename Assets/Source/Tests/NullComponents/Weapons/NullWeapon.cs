@@ -1,7 +1,7 @@
 using SwampAttack.Model.Weapons;
 using UnityEngine;
 
-namespace SwampAttack.NullComponents
+namespace SwampAttack.Tests.NullComponents
 {
     public class NullWeapon : IWeapon
     {

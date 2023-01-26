@@ -2,7 +2,7 @@ using NUnit.Framework;
 using SwampAttack.Model.HealthSystem;
 using SwampAttack.View.Health;
 
-namespace SwampAttack.Health
+namespace SwampAttack.Tests.Health
 {
     public class HealthOperationsTest
     {

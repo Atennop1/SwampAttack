@@ -1,9 +1,9 @@
 using NUnit.Framework;
 using NUnit.Framework.Internal;
 using SwampAttack.Model.InventorySystem;
-using SwampAttack.NullComponents;
+using SwampAttack.Tests.NullComponents;
 
-namespace SwampAttack.Inventory.WeaponProductsInventoryTests
+namespace SwampAttack.Tests.Inventory.WeaponProductsInventoryTests
 {
     public class CreateInventoryTest
     {

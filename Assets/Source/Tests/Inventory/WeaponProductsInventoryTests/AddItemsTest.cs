@@ -3,9 +3,9 @@ using NUnit.Framework.Internal;
 using SwampAttack.Model.InventorySystem;
 using SwampAttack.Model.Shop;
 using SwampAttack.Model.Weapons;
-using SwampAttack.NullComponents;
+using SwampAttack.Tests.NullComponents;
 
-namespace SwampAttack.Inventory.WeaponProductsInventoryTests
+namespace SwampAttack.Tests.Inventory.WeaponProductsInventoryTests
 {
     public class AddItemsTest
     {

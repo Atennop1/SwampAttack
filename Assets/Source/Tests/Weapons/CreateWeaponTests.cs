@@ -1,8 +1,8 @@
 using NUnit.Framework;
 using SwampAttack.Model.Weapons;
-using SwampAttack.NullComponents;
+using SwampAttack.Tests.NullComponents;
 
-namespace SwampAttack.Weapons
+namespace SwampAttack.Tests.Weapons
 {
     public class CreateWeaponTests
     {

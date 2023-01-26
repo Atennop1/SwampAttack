@@ -2,7 +2,7 @@ using System;
 using SwampAttack.SO;
 using UnityEngine;
 
-namespace SwampAttack.NullComponents
+namespace SwampAttack.Tests.NullComponents
 {
     [Serializable]
     public class NullProductData : IProductData

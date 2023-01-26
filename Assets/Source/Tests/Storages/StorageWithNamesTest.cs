@@ -1,8 +1,8 @@
 using NUnit.Framework;
-using SwampAttack.NullComponents;
+using SwampAttack.Tests.NullComponents;
 using SwampAttack.Tools;
 
-namespace SwampAttack.Storages
+namespace SwampAttack.Tests.Storages
 {
     public class StorageWithNamesTest
     {

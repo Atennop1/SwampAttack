@@ -1,7 +1,7 @@
 using NUnit.Framework;
 using SwampAttack.Model.Wallet;
 
-namespace SwampAttack.Wallet
+namespace SwampAttack.Tests.Wallet
 {
     public class CreateWalletTest
     {
