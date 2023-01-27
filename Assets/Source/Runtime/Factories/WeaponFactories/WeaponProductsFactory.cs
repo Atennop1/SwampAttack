@@ -2,7 +2,6 @@ using System;
 using Sirenix.OdinInspector;
 using SwampAttack.Model.Shop;
 using SwampAttack.Model.Weapons;
-using SwampAttack.SO;
 using UnityEngine;
 
 namespace SwampAttack.Factories

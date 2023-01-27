@@ -5,7 +5,6 @@ using SwampAttack.Model.Shop;
 using SwampAttack.Model.Weapons;
 using SwampAttack.View.Health;
 using SwampAttack.View.Weapons;
-using SwampAttack.SO;
 using SwampAttack.Tools;
 using SwampAttack.Factories;
 using System.Linq;

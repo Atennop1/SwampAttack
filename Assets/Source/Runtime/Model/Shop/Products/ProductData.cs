@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace SwampAttack.SO
+namespace SwampAttack.Model.Shop
 {
     [CreateAssetMenu(menuName = "Product Data", fileName = "Product Data")]
     public class ProductData : ScriptableObject, IProductData

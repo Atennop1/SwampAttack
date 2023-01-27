@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace SwampAttack.SO
+namespace SwampAttack.Model.Shop
 {
     public interface IProductData
     {

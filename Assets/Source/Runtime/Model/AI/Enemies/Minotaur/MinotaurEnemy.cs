@@ -23,13 +23,13 @@ namespace SwampAttack.Model.AI.Enemies
             Movement = movement ?? throw new ArgumentException("Movement can't be null");
         }
 
-        public void Init(IEnemyStateMachineSetup stateMachineSetup, IEnemyAttacksSetup attacksSetup)
+        public void Init(IEnemyStateMachineFactory stateMachineSetup, IEnemyAttacksSetup attacksSetup)
         {
             if (stateMachineSetup == null)
                 throw new ArgumentException("StateMachineSetup can't be null");
             
             Attacks = attacksSetup.BuildEnemyAttacks();
-            StateMachine = stateMachineSetup.BuildStateMachine();
+            StateMachine = stateMachineSetup.Create();
         }
 
         public void Update() 

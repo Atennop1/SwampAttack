@@ -1,5 +1,4 @@
 using System;
-using SwampAttack.SO;
 
 namespace SwampAttack.Model.Shop
 {

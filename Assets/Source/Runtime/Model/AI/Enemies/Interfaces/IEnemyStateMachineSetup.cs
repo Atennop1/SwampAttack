@@ -1,7 +1,7 @@
 namespace SwampAttack.Model.AI.Enemies
 {
-    public interface IEnemyStateMachineSetup
+    public interface IEnemyStateMachineFactory
     {
-        Model.AI.StateMachine.StateMachine BuildStateMachine();
+        Model.AI.StateMachine.StateMachine Create();
     }
 }

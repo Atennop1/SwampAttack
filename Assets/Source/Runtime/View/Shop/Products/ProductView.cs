@@ -1,4 +1,4 @@
-using SwampAttack.SO;
+using SwampAttack.Model.Shop;
 using UnityEngine;
 using UnityEngine.UI;
 

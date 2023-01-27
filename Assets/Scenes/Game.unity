@@ -1908,6 +1908,7 @@ Transform:
   - {fileID: 1560323456}
   - {fileID: 1090299423}
   - {fileID: 1480613920}
+  - {fileID: 1881660082}
   m_Father: {fileID: 1016163985}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2707,6 +2708,7 @@ MonoBehaviour:
     - Name: _weaponProductProductsFactory
       Entry: 10
       Data: 3
+  _physicsRewardsFactory: {fileID: 1881660083}
 --- !u!1 &808106943
 GameObject:
   m_ObjectHideFlags: 0
@@ -4810,7 +4812,10 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
+    SerializationNodes:
+    - Name: _physicsRewardsFactory
+      Entry: 6
+      Data: 
   _enemyPrefab: {fileID: 3382093434021742449, guid: ad688331952697445a68b08c8ff89776, type: 3}
   _spawnPoint: {fileID: 241216850}
   _target: {fileID: 1225503335}
@@ -6043,6 +6048,61 @@ MonoBehaviour:
   _screen: {fileID: 474564878}
   _scrollViewContent: {fileID: 1956295275}
   _noItemsText: {fileID: 1859410666}
+--- !u!1 &1881660081
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1881660082}
+  - component: {fileID: 1881660083}
+  m_Layer: 0
+  m_Name: PhysicsRewardsFactory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1881660082
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881660081}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 657999643}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1881660083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881660081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 490872f7c5234429bf0682c6df14c233, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  _physicsRewardPrefab: {fileID: 8102066385841963838, guid: d87731ffcf1394d4da675040dacf9b8e, type: 3}
+  _rewardDataSO: {fileID: 11400000, guid: ae0e2507b725a0647a61ee8ae73d85ca, type: 2}
 --- !u!1 &1956295274
 GameObject:
   m_ObjectHideFlags: 0
@@ -6648,7 +6708,7 @@ MonoBehaviour:
     SerializationNodes:
     - Name: _productData
       Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[SwampAttack.Runtime.SO.Products.IProductData,
+      Data: 0|System.Collections.Generic.List`1[[SwampAttack.Model.Shop.IProductData,
         Runtime]], mscorlib
     - Name: 
       Entry: 12

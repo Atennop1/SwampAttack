@@ -1,5 +1,5 @@
 using System;
-using SwampAttack.SO;
+using SwampAttack.Model.Shop;
 using UnityEngine;
 
 namespace SwampAttack.Tests.NullComponents
