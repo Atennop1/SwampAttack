@@ -35,6 +35,7 @@ namespace SwampAttack.Model.AI.Enemies
             
             stateMachine.AddAnyTransition(new DeathState(_enemyTransformView, _physicsRewardsFactory), () => _enemyWithTarget.Health.IsDead);
             stateMachine.SwitchState(playerTooFarState);
+            
             return stateMachine;
         }
 

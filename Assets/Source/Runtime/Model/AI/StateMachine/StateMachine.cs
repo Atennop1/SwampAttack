@@ -17,6 +17,7 @@ namespace SwampAttack.Model.AI.StateMachine
         public void Tick()
         {
             var transition = GetTransition();
+            
             if (transition != null)
                 SwitchState(transition.To);
       
@@ -26,7 +27,7 @@ namespace SwampAttack.Model.AI.StateMachine
         public void SwitchState(IState state)
         {
             if (StateBannedInCurrentContext(state))
-                throw new ArgumentException( $"Can't set {state} because it's banned in the given context");
+                throw new ArgumentException( $"Can't set {state} because it's banned in the current context");
             
             if (StateAlreadySet(state))
                 throw new ArgumentException( $"Can't set {state} because it's already set");

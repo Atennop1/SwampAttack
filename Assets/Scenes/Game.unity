@@ -4807,15 +4807,16 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 1881660083}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
     - Name: _physicsRewardsFactory
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
   _enemyPrefab: {fileID: 3382093434021742449, guid: ad688331952697445a68b08c8ff89776, type: 3}
   _spawnPoint: {fileID: 241216850}
   _target: {fileID: 1225503335}

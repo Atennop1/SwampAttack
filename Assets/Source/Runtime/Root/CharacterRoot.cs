@@ -1,13 +1,13 @@
+using System.Linq;
+using SwampAttack.Factories;
 using SwampAttack.Model.HealthSystem;
 using SwampAttack.Model.InventorySystem;
 using SwampAttack.Model.Player;
 using SwampAttack.Model.Shop;
 using SwampAttack.Model.Weapons;
+using SwampAttack.Tools;
 using SwampAttack.View.Health;
 using SwampAttack.View.Weapons;
-using SwampAttack.Tools;
-using SwampAttack.Factories;
-using System.Linq;
 using UnityEngine;
 
 namespace SwampAttack.Root

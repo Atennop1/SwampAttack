@@ -1,4 +1,5 @@
 using System;
+using Cysharp.Threading.Tasks;
 using SwampAttack.Model.HealthSystem;
 using UnityEngine;
 
@@ -12,9 +13,10 @@ namespace SwampAttack.View.Health
         public void Init(IHealth health)
             => _health = health ?? throw new ArgumentException("Can't init null health");
 
-        public void TakeDamage(int damage)
+        public async void TakeDamage(int damage)
         {
             _health.TakeDamage(damage);
+            await UniTask.WaitForFixedUpdate();
             
             if (!_health.IsDead) 
                 return;

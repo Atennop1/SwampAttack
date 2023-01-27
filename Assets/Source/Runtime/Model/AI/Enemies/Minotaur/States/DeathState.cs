@@ -2,6 +2,7 @@ using System;
 using SwampAttack.Factories;
 using SwampAttack.Model.AI.StateMachine;
 using SwampAttack.View.Enemies;
+using UnityEngine;
 
 namespace SwampAttack.Model.AI.Enemies
 {
@@ -17,7 +18,10 @@ namespace SwampAttack.Model.AI.Enemies
         }
 
         public void OnEnter()
-            => _rewardsFactory.Create(_enemyTransformView.Transform.position);
+        {
+            Debug.Log("death");
+            _rewardsFactory.Create(_enemyTransformView.Transform.position);
+        }
 
         public void Tick() { }
         public void OnExit() { }
