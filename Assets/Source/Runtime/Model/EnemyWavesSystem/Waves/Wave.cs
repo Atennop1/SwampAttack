@@ -38,7 +38,7 @@ namespace SwampAttack.Model.EnemyWavesSystem
                 if (!Application.isPlaying)
                     return;
                 
-                _spawnedEnemies.Add(_enemyFactory.Create().Enemy);
+                _spawnedEnemies.Add(_enemyFactory.Create());
                 await Task.Delay((int)(_waveInfo.DelayBetweenEnemies * 1000));
             }
         }

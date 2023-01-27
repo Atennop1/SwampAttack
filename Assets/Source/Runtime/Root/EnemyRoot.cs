@@ -1,3 +1,4 @@
+using Sirenix.OdinInspector;
 using SwampAttack.Model.AI.Enemies;
 using SwampAttack.Model.Attacks;
 using SwampAttack.Model.HealthSystem;
@@ -8,10 +9,8 @@ using UnityEngine;
 
 namespace SwampAttack.Root
 {
-    public sealed class EnemyRoot : CompositeRoot
+    public sealed class EnemyRoot : SerializedMonoBehaviour
     {
-        public IEnemy Enemy { get; private set; }
-        
         [SerializeField] private IHealthTransformView _healthTransformView;
         [SerializeField] private IEnemyTransformView _enemyTransformView;
         [SerializeField] private Rigidbody2D _rigidbody;
@@ -23,7 +22,7 @@ namespace SwampAttack.Root
         public void Init(Transform target)
             => _target = target;
 
-        public override void Compose()
+        public IEnemy Compose()
         {
             _systemUpdate = new SystemUpdate();
 
@@ -37,9 +36,10 @@ namespace SwampAttack.Root
             var attacksSetup = new EnemyAttacksSetup(_enemyTransformView);
             enemy.Init(new EnemyStateMachineSetup(enemy, enemy, _enemyTransformView), attacksSetup);
             
-            Enemy = enemy;
             _systemUpdate.Add(enemy);
             _systemUpdate.Add(attacksSetup);
+
+            return enemy;
         }
 
         private void Update() 

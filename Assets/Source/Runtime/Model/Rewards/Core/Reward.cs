@@ -1,5 +1,5 @@
 using System;
-using SwampAttack.View.Reward;
+using SwampAttack.Model.Wallet;
 
 namespace SwampAttack.Model.Rewards
 {
@@ -8,11 +8,11 @@ namespace SwampAttack.Model.Rewards
         public RewardData Data { get; }
         public bool IsApplied { get; private set; }
 
-        private readonly IRewardView _rewardView;
-        
-        public Reward(IRewardView rewardView, RewardData data)
+        private readonly IWallet _wallet;
+
+        public Reward(IWallet wallet, RewardData data)
         {
-            _rewardView = rewardView ?? throw new ArgumentNullException(nameof(rewardView));
+            _wallet = wallet ?? throw new ArgumentNullException(nameof(wallet));
             Data = data;
         }
 
@@ -21,7 +21,7 @@ namespace SwampAttack.Model.Rewards
             if (IsApplied)
                 throw new InvalidOperationException("Can't apply applied reward");
             
-            _rewardView.DisplayApplied(Data);
+            _wallet.Put(Data.CoinsCount);
             IsApplied = true;
         }
     }
