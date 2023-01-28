@@ -1,15 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8f65dff0-dc7f-4b3e-b613-fed6e8445b84" name="Changes" comment="Added physics view and factory for rewards, some refactoring of enemies">
+    <list default="true" id="8f65dff0-dc7f-4b3e-b613-fed6e8445b84" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/Random.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/Random/IRandomizer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/Random/IRandomizer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/Random/Randomizer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/Random/Randomizer.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Swamp Attack/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Swamp Attack/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Factories/PhysicsRewardsFactories/PhysicsRewardsFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Factories/PhysicsRewardsFactories/PhysicsRewardsFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/EnemyStateMachineFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/EnemyStateMachineFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/States/DeathState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/States/DeathState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/StateMachine/StateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/StateMachine/StateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Root/CharacterRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Root/CharacterRoot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/View/Health/HealthTransformView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Health/HealthTransformView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Randomizer.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Randomizers.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Randomizer/Chance.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/Random/Chance.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Randomizer/Chance/FiftyFiftyChance.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/Random/Chance/FiftyFiftyChance.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Randomizer/Chance/FiftyFiftyChance.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/Random/Chance/FiftyFiftyChance.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Randomizer/Chance/HundredPercentChance.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/Random/Chance/HundredPercentChance.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Randomizer/Chance/HundredPercentChance.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/Random/Chance/HundredPercentChance.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Randomizer/Chance/IChance.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/Random/Chance/IChance.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Randomizer/Chance/IChance.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/Random/Chance/IChance.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Randomizer/IRewardRandomizer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Randomizers/IRewardRandomizer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Randomizer/IRewardRandomizer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Randomizers/IRewardRandomizer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Randomizer/RewardRandomizer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Randomizers/NullRewardRandomizer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Randomizer/RewardRandomizer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Randomizers/NullRewardRandomizer.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Runtime.csproj.DotSettings" beforeDir="false" afterPath="$PROJECT_DIR$/Runtime.csproj.DotSettings" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +30,6 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/App.config" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Unity/Swamp Attack/Assets/Source/Runtime/Factories/EnemyFactory.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Unity/Swamp Attack/Assets/Source/Runtime/Root/CharacterRoot.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Runtime/View/Enemies/DefaultEnemyTransformView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Runtime/View/Reward/PhysicsReward.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Runtime/View/Shop/NotEnoughMoneyView.cs" root0="FORCE_HIGHLIGHTING" />
@@ -158,7 +167,8 @@
       <workItem from="1674585023381" duration="1369000" />
       <workItem from="1674671747697" duration="2268000" />
       <workItem from="1674750639363" duration="4053000" />
-      <workItem from="1674837408419" duration="5687000" />
+      <workItem from="1674837408419" duration="5794000" />
+      <workItem from="1674911283367" duration="1155000" />
     </task>
     <task id="LOCAL-00001" summary="Added enemy StateMachine and IAttack interface">
       <created>1668113832992</created>
@@ -433,7 +443,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674842519458</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Fixed some bugs">
+      <created>1674843700276</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1674843700276</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -465,7 +482,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Small redesign" />
     <MESSAGE value="More redesign, fixed shop tests and new tests added" />
     <MESSAGE value="Added saving of products in ProductsList" />
     <MESSAGE value="Added first prototype of shop view" />
@@ -490,7 +506,8 @@
     <MESSAGE value="Added int and float extensions" />
     <MESSAGE value="Some basic changes of reward and EnemyRoot structure" />
     <MESSAGE value="Added physics view and factory for rewards, some refactoring of enemies" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added physics view and factory for rewards, some refactoring of enemies" />
+    <MESSAGE value="Fixed some bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed some bugs" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
