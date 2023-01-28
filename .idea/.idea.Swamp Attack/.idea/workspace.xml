@@ -1,26 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8f65dff0-dc7f-4b3e-b613-fed6e8445b84" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/Random.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/Random/IRandomizer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/Random/IRandomizer.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/Random/Randomizer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/Random/Randomizer.cs.meta" afterDir="false" />
+    <list default="true" id="8f65dff0-dc7f-4b3e-b613-fed6e8445b84" name="Changes" comment="Extracted IRandomizer logic from IRewardRandomizer">
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Input/Raycast.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Input/Raycast/IRaycastHittable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Input/Raycast/IRaycastHittable.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Input/Raycast/IRaycastThrower.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Input/Raycast/IRaycastThrower.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Input/Raycast/RaycastThrower.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Input/Raycast/RaycastThrower.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Swamp Attack/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Swamp Attack/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Coin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Coin.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Factories/PhysicsRewardsFactories/PhysicsRewardsFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Factories/PhysicsRewardsFactories/PhysicsRewardsFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Randomizer.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Randomizers.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Randomizer/Chance.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/Random/Chance.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Randomizer/Chance/FiftyFiftyChance.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/Random/Chance/FiftyFiftyChance.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Randomizer/Chance/FiftyFiftyChance.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/Random/Chance/FiftyFiftyChance.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Randomizer/Chance/HundredPercentChance.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/Random/Chance/HundredPercentChance.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Randomizer/Chance/HundredPercentChance.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/Random/Chance/HundredPercentChance.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Randomizer/Chance/IChance.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/Random/Chance/IChance.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Randomizer/Chance/IChance.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/Random/Chance/IChance.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Randomizer/IRewardRandomizer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Randomizers/IRewardRandomizer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Randomizer/IRewardRandomizer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Randomizers/IRewardRandomizer.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Randomizer/RewardRandomizer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Randomizers/NullRewardRandomizer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Randomizer/RewardRandomizer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Randomizers/NullRewardRandomizer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/States/DeathState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/AI/Enemies/Minotaur/States/DeathState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/View/Reward/IPhysicsReward.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Reward/IPhysicsReward.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/View/Reward/PhysicsReward.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Reward/PhysicsReward.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Runtime.csproj.DotSettings" beforeDir="false" afterPath="$PROJECT_DIR$/Runtime.csproj.DotSettings" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,6 +34,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/RawImage.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Slider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5747309d01554f1a88437e220c6495b95c600/02/1da2d7ba/SerializedMonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5c9faa02f24e43c5938c649e7653bb6d1f800/de/e61fa15b/Physics2D.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b7f3f927b2fb45af9f06b7b94f1a7fc07400/6c/8983e05a/Input.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/edef46c9b2db4b878c98495bfdc516fa568ba8/7f/9d11cd9b/ArgumentException.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/edef46c9b2db4b878c98495bfdc516fa568ba8/8a/2d2e8e45/CancellationTokenSource.cs" root0="SKIP_HIGHLIGHTING" />
@@ -168,7 +165,7 @@
       <workItem from="1674671747697" duration="2268000" />
       <workItem from="1674750639363" duration="4053000" />
       <workItem from="1674837408419" duration="5794000" />
-      <workItem from="1674911283367" duration="1155000" />
+      <workItem from="1674911283367" duration="4441000" />
     </task>
     <task id="LOCAL-00001" summary="Added enemy StateMachine and IAttack interface">
       <created>1668113832992</created>
@@ -450,7 +447,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674843700276</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Extracted IRandomizer logic from IRewardRandomizer">
+      <created>1674912575126</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1674912575126</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -482,7 +486,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="More redesign, fixed shop tests and new tests added" />
     <MESSAGE value="Added saving of products in ProductsList" />
     <MESSAGE value="Added first prototype of shop view" />
     <MESSAGE value="Added popup &quot;Not Enough Money!&quot;, when you try buy too expensive product" />
@@ -507,7 +510,8 @@
     <MESSAGE value="Some basic changes of reward and EnemyRoot structure" />
     <MESSAGE value="Added physics view and factory for rewards, some refactoring of enemies" />
     <MESSAGE value="Fixed some bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed some bugs" />
+    <MESSAGE value="Extracted IRandomizer logic from IRewardRandomizer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Extracted IRandomizer logic from IRewardRandomizer" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

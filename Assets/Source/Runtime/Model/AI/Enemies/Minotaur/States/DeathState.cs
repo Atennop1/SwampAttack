@@ -18,10 +18,7 @@ namespace SwampAttack.Model.AI.Enemies
         }
 
         public void OnEnter()
-        {
-            Debug.Log("death");
-            _rewardsFactory.Create(_enemyTransformView.Transform.position);
-        }
+            => _rewardsFactory.Create(_enemyTransformView.Transform.position);
 
         public void Tick() { }
         public void OnExit() { }

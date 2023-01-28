@@ -1,5 +1,6 @@
 using System;
 using Sirenix.OdinInspector;
+using SwampAttack.Model.Input;
 using SwampAttack.Model.Rewards;
 using SwampAttack.Model.Wallet;
 using SwampAttack.Tools;
@@ -10,9 +11,10 @@ namespace SwampAttack.Factories
 {
     public class PhysicsRewardsFactory : SerializedMonoBehaviour, IPhysicsRewardsFactory
     {
-        [SerializeField] private GameObject _physicsRewardPrefab;
         [SerializeField] private RewardDataSO _rewardDataSO;
-        
+        [SerializeField] private GameObject _physicsRewardPrefab;
+        [SerializeField] private IRaycastThrower _raycastThrower;
+
         private readonly NullRewardRandomizer _nullRewardRandomizer = new(new Randomizer(new HundredPercentChance()));
         private IWallet _wallet;
 
@@ -25,6 +27,7 @@ namespace SwampAttack.Factories
             var physicsReward = physicsRewardGameObject.GetComponent<IPhysicsReward>();
             
             physicsReward.Init(reward);
+            _raycastThrower.AddHittable(physicsReward);
             return physicsReward;
         }
 
