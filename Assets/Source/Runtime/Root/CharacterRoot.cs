@@ -38,7 +38,9 @@ namespace SwampAttack.Root
 
             if (weaponProductsInventory.Items.Count(slot => slot.Item.Item.GetWeaponType() == weapon.GetWeaponType()) == 0)
             {
-                weaponProductsInventory.Add(new InventorySlot<IProduct<IWeapon>>(new Product<IWeapon>(weapon, _pistolProductData)));
+                var addingSlot = new InventorySlot<IProduct<IWeapon>>(new Product<IWeapon>(weapon, _pistolProductData));
+                weaponProductsInventory.Add(addingSlot);
+                weaponProductsInventory.Select(addingSlot.Item);
             }
             else
             {

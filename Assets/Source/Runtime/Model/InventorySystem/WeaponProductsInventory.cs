@@ -36,6 +36,10 @@ namespace SwampAttack.Model.InventorySystem
 
             SelectedProduct = product;
             productSlot.Select();
+            
+            _savedData.Remove(_savedData.Find(data => data.WeaponSavingData.Type == productSlot.Item.Item.GetWeaponType()));
+            _savedData.Add(new WeaponProductSlotSavingData(new WeaponSavingData(productSlot.Item.Item), productSlot.ItemCount, productSlot.IsSelected));
+            _weaponSavingDataStorage.Save(_savedData);
         }
 
         public WeaponProductsInventory(IPlayerWeaponsView weaponsView, IWeaponProductsFactory weaponProductsFactory, int capacity = 1)
