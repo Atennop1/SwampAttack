@@ -26,7 +26,7 @@ namespace SwampAttack.Tests.Inventory
         [Test]
         public void CantAddMoreItemsThanInventoryCapacity()
         {
-            try { _inventory.Add(new Weapon(new NullBulletsFactory(), new NullWeaponBulletsView(), 1), 2); }
+            try { _inventory.Add(new Weapon(new NullBulletsFactory(), new NullWeaponBulletsView(), 1)); }
             catch { Assert.Pass(); }
         }
 
@@ -34,8 +34,8 @@ namespace SwampAttack.Tests.Inventory
         public void IsAddingCorrect()
         {
             var countBefore = _inventory.Items.Count;
-            _inventory.Add(new NullWeapon(), 4);
-            Assert.That(countBefore + 4 == _inventory.Items.Count);
+            _inventory.Add(new NullWeapon());
+            Assert.That(countBefore + 1 == _inventory.Items.Count);
         }
     }
 }

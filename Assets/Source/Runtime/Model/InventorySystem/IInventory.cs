@@ -7,7 +7,7 @@ namespace SwampAttack.Model.InventorySystem
         bool IsFull { get; }
         IReadOnlyList<T> Items {get; }
         
-        void Add(T item, int count = 1);
-        void Clear();
+        void Add(T addingSlot);
+        void Remove(T decreasingSlot);
     }
 }

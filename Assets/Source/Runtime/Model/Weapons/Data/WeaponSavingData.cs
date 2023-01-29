@@ -12,7 +12,7 @@ namespace SwampAttack.Model.Weapons
         public WeaponSavingData(IWeapon weapon)
         {
             Type = weapon.GetWeaponType();
-            Bullets = weapon.Bullets.TryThrowIfLessOrEqualsZero();
+            Bullets = weapon.Bullets.TryThrowIfLessThanZero();
         }
     }
 }

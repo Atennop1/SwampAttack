@@ -1,23 +1,42 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using SwampAttack.Factories;
 using SwampAttack.Model.Shop;
 using SwampAttack.Model.Weapons;
 using SwampAttack.Tools;
 using SwampAttack.View.Weapons;
+using UnityEngine;
 
 namespace SwampAttack.Model.InventorySystem
 {
-    public class WeaponProductsInventory<TUser> : IInventory<IProduct<IWeapon>>
+    public class WeaponProductsInventory<TUser> : IWeaponProductsInventory
     {
-        private readonly IInventory<IProduct<IWeapon>> _inventory;
+        private readonly IInventory<IInventorySlot<IProduct<IWeapon>>> _inventory;
         private readonly IPlayerWeaponsView _weaponsView;
         
-        private readonly StorageWithNames<TUser, WeaponSavingData> _weaponSavingDataStorage;
-        private readonly List<WeaponSavingData> _savedData = new();
+        private readonly StorageWithNames<TUser, List<WeaponProductSlotSavingData>> _weaponSavingDataStorage = new();
+        private readonly List<WeaponProductSlotSavingData> _savedData = new();
 
         public bool IsFull => _inventory.IsFull;
-        public IReadOnlyList<IProduct<IWeapon>> Items => _inventory.Items;
+        public IReadOnlyList<IInventorySlot<IProduct<IWeapon>>> Items => _inventory.Items;
+        public IProduct<IWeapon> SelectedProduct { get; private set; }
+        
+        public void Select(IProduct<IWeapon> product)
+        {
+            if (product == null)
+                throw new ArgumentNullException(nameof(product));
+            
+            var productSlot = Items.ToList().Find(slot => slot.Item == product);
+            if (productSlot == null)
+                throw new ArgumentException("Requested product doesn't contains in inventory");
+            
+            foreach (var slot in Items)
+                slot.Unselect();
+
+            SelectedProduct = product;
+            productSlot.Select();
+        }
 
         public WeaponProductsInventory(IPlayerWeaponsView weaponsView, IWeaponProductsFactory weaponProductsFactory, int capacity = 1)
         {
@@ -25,26 +44,43 @@ namespace SwampAttack.Model.InventorySystem
                 throw new ArgumentException("WeaponProductsFactory can't be null");
                 
             _weaponsView = weaponsView ?? throw new ArgumentException("WeaponsView can't be null");
-            _inventory = new Inventory<IProduct<IWeapon>>(capacity);
-            
-            _weaponSavingDataStorage = new StorageWithNames<TUser, WeaponSavingData>();
+            _inventory = new Inventory<IInventorySlot<IProduct<IWeapon>>>(capacity);
+
             Load(weaponProductsFactory);
-            _weaponsView.Display(_inventory);
+            _weaponsView.Display(this);
         }
 
-        public void Add(IProduct<IWeapon> item, int count = 1)
+        public void Add(IInventorySlot<IProduct<IWeapon>> addingSlot)
         {
-            _inventory.Add(item, count);
-            _weaponsView.Display(_inventory);
-            
-            _savedData.Add(new WeaponSavingData(item.Item));
+            var existingSlot = Items.ToList().Find(slot => slot.Item.Item.GetWeaponType() == addingSlot.Item.Item.GetWeaponType());
+
+            if (existingSlot == null)
+            {
+                _inventory.Add(addingSlot);
+                _savedData.Add(new WeaponProductSlotSavingData(new WeaponSavingData(addingSlot.Item.Item), addingSlot.ItemCount, addingSlot.IsSelected));
+            }
+            else
+            {
+                Debug.Log("exist"); ;
+                existingSlot.IncreaseCount(addingSlot.ItemCount);
+                _savedData.Remove(_savedData.Find(data => data.WeaponSavingData.Type == addingSlot.Item.Item.GetWeaponType()));
+                _savedData.Add(new WeaponProductSlotSavingData(new WeaponSavingData(existingSlot.Item.Item), existingSlot.ItemCount, existingSlot.IsSelected));
+            }
+
+            _weaponsView.Display(this);
             _weaponSavingDataStorage.Save(_savedData);
         }
 
-        public void Clear()
+        public void Remove(IInventorySlot<IProduct<IWeapon>> decreasingSlot)
         {
-            _savedData.Clear();
-            _inventory.Clear();
+            var existingSlot = Items.ToList().Find(slot => slot == decreasingSlot);
+            if (existingSlot == null)
+                throw new ArgumentException("Item in slot doesn't contains in this inventory");
+            
+            _inventory.Remove(existingSlot);
+            _weaponsView.Display(this);
+            
+            _savedData.Remove(_savedData.Find(data => data.WeaponSavingData.Type == existingSlot.Item.Item.GetWeaponType()));
             _weaponSavingDataStorage.Save(_savedData);
         }
 
@@ -52,13 +88,27 @@ namespace SwampAttack.Model.InventorySystem
         {
             if (!_weaponSavingDataStorage.Exist()) 
                 return;
-            
-            _inventory.Clear();
-            foreach (var data in _weaponSavingDataStorage.Load<List<WeaponSavingData>>())
+
+            ClearItems();
+            foreach (var data in _weaponSavingDataStorage.Load<List<WeaponProductSlotSavingData>>())
             {
                 _savedData.Add(data);
-                _inventory.Add(weaponProductsFactory.Create(data));
+                var newSlot = new InventorySlot<IProduct<IWeapon>>(weaponProductsFactory.Create(data.WeaponSavingData), data.ItemCount);
+
+                if (data.IsSelected)
+                {
+                    SelectedProduct = newSlot.Item;
+                    newSlot.Select();
+                }
+
+                _inventory.Add(newSlot);
             }
+        }
+
+        private void ClearItems()
+        {
+            foreach (var slot in _inventory.Items)
+                _inventory.Remove(slot);
         }
     }
 }

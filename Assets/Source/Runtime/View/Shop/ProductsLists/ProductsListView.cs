@@ -56,9 +56,7 @@ namespace SwampAttack.View.Shop
             => _screen.SetActive(true);
 
         private void DisplayNoItemsText(IProductsList<T> productsList)
-        {
-            _noItemsText.gameObject.SetActive(productsList.Cells.Count == 0);
-        }
+            => _noItemsText.gameObject.SetActive(productsList.Cells.Count == 0);
 
         private void ClearContent()
         {

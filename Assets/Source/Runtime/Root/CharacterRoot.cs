@@ -34,11 +34,16 @@ namespace SwampAttack.Root
         {
             var weapon = new Pistol(_bulletsFactory, _weaponBulletsView, 18);
             _playerRoot.Compose(new WeaponUsingInfo(_inputRoot.Compose(), weapon));
-
             var weaponProductsInventory = new WeaponProductsInventory<Player>(_weaponsView, _weaponProductsFactory, 10);
-            
-            if (weaponProductsInventory.Items.Count(item => item.Item.GetWeaponType() == weapon.GetWeaponType()) == 0)
-                weaponProductsInventory.Add(new Product<IWeapon>(weapon, _pistolProductData));
+
+            if (weaponProductsInventory.Items.Count(slot => slot.Item.Item.GetWeaponType() == weapon.GetWeaponType()) == 0)
+            {
+                weaponProductsInventory.Add(new InventorySlot<IProduct<IWeapon>>(new Product<IWeapon>(weapon, _pistolProductData)));
+            }
+            else
+            {
+                _playerRoot.Compose(new WeaponUsingInfo(_inputRoot.Compose(), weaponProductsInventory.SelectedProduct.Item));
+            }
 
             _shopRoot.Compose(weaponProductsInventory, _productsRoot.Compose());
             _healthTransformView.Init(new Health(5, _playerHealthView));

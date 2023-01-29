@@ -1,9 +1,12 @@
+using System.Linq;
 using NUnit.Framework;
 using NUnit.Framework.Internal;
 using SwampAttack.Model.InventorySystem;
 using SwampAttack.Model.Shop;
 using SwampAttack.Model.Weapons;
 using SwampAttack.Tests.NullComponents;
+using SwampAttack.Tools;
+using UnityEngine;
 
 namespace SwampAttack.Tests.Inventory.WeaponProductsInventoryTests
 {
@@ -22,16 +25,22 @@ namespace SwampAttack.Tests.Inventory.WeaponProductsInventoryTests
         [Test]
         public void IsAddingCorrect()
         {
-            var countBefore = _inventory.Items.Count;
-            _inventory.Add(new Product<IWeapon>(new Pistol(new NullBulletsFactory(), new NullWeaponBulletsView(), 1), new NullProductData()), 4);
-            Assert.That(countBefore + 4 == _inventory.Items.Count);
+            var pistol = new Pistol(new NullBulletsFactory(), new NullWeaponBulletsView(), 1);
+            var existingSlot =_inventory.Items.ToList().Find(slot => slot.Item.Item.GetWeaponType() == WeaponType.Pistol);
+            var countBefore = existingSlot == null ? 0 : existingSlot.ItemCount;
+            Debug.Log("before: " + countBefore);
+            
+            _inventory.Add(new InventorySlot<IProduct<IWeapon>>(new Product<IWeapon>(pistol, new NullProductData()), 4));
+            Debug.Log("after: " + _inventory.Items.ToList().Find(slot => slot.Item.Item.GetWeaponType() == WeaponType.Pistol).ItemCount);
+            Assert.That(countBefore + 4 == _inventory.Items.ToList().Find(slot => slot.Item.Item.GetWeaponType() == WeaponType.Pistol).ItemCount);
         }
 
         [Test]
         public void IsVisualizingCorrect()
         {
             if (!_inventory.IsFull)
-                _inventory.Add(new Product<IWeapon>(new Pistol(new NullBulletsFactory(), new NullWeaponBulletsView(), 1), new NullProductData()));
+                _inventory.Add(new InventorySlot<IProduct<IWeapon>>(new Product<IWeapon>(new Pistol(new NullBulletsFactory(),
+                    new NullWeaponBulletsView(), 1), new NullProductData())));
             
             Assert.That(_view.IsVisualized);
         }
@@ -39,10 +48,11 @@ namespace SwampAttack.Tests.Inventory.WeaponProductsInventoryTests
         [Test]
         public void IsSavingValid()
         {
-            _inventory.Clear();
-            
-            _inventory.Add(new Product<IWeapon>(new Shotgun(new NullBulletsFactory(), new NullWeaponBulletsView(), 1), new NullProductData()));
-            _inventory.Add(new Product<IWeapon>(new Pistol(new NullBulletsFactory(), new NullWeaponBulletsView(), 1), new NullProductData()));
+            foreach (var slot in _inventory.Items.ToList())
+                _inventory.Remove(slot);
+
+            _inventory.Add(new InventorySlot<IProduct<IWeapon>>(new Product<IWeapon>(new Shotgun(new NullBulletsFactory(), new NullWeaponBulletsView(), 1), new NullProductData())));
+            _inventory.Add(new InventorySlot<IProduct<IWeapon>>(new Product<IWeapon>(new Pistol(new NullBulletsFactory(), new NullWeaponBulletsView(), 1), new NullProductData())));
 
             var newInventory = new WeaponProductsInventory<Test>(_view, new NullWeaponProductsFactory(), int.MaxValue);
             Assert.That(_inventory.Items.Count == newInventory.Items.Count &&

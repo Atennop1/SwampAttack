@@ -2,7 +2,6 @@ using System;
 using Sirenix.OdinInspector;
 using SwampAttack.Model.InventorySystem;
 using SwampAttack.Model.Player;
-using SwampAttack.Model.Shop;
 using SwampAttack.Model.Weapons;
 using UnityEngine;
 
@@ -16,7 +15,7 @@ namespace SwampAttack.View.Weapons
 
         private Player _player;
         
-        public void Display(IInventory<IProduct<IWeapon>> inventory)
+        public void Display(IWeaponProductsInventory inventory)
         {
             if (_player == null)
                 throw new InvalidOperationException("You need to init player first");
@@ -33,11 +32,12 @@ namespace SwampAttack.View.Weapons
 
                 slot.UsingButton.onClick.AddListener(() =>
                 {
-                    _player.SwitchWeapon(new WeaponUsingInfo(_player.WeaponInput, product.Item));
-                    _weaponBulletsView.Visualize(product.Item.Bullets, product.Item.MaxBullets);
+                    _player.SwitchWeapon(new WeaponUsingInfo(_player.WeaponInput, product.Item.Item));
+                    inventory.Select(product.Item);
+                    _weaponBulletsView.Visualize(product.Item.Item.Bullets, product.Item.Item.MaxBullets);
                 });
                 
-                slot.Init(product);
+                slot.Init(product.Item);
             }
         }
 

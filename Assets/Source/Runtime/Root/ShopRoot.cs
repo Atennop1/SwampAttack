@@ -17,18 +17,18 @@ namespace SwampAttack.Root
     {
         [SerializeField] private IWeaponBulletsView _weaponBulletsView;
         [SerializeField] private IWalletView _walletView;
-        [SerializeField] private IProductsListView<IProduct<IWeapon>> _productsListView;
+        [SerializeField] private IProductsListView<IInventorySlot<IProduct<IWeapon>>> _productsListView;
         [SerializeField] private IWeaponProductProductsFactory _weaponProductProductsFactory;
         [SerializeField] private PhysicsRewardsFactory _physicsRewardsFactory;
 
-        public void Compose(IInventory<IProduct<IWeapon>> weaponsInventory, IEnumerable<IProductCell<IProduct<IWeapon>>> cells)
+        public void Compose(IInventory<IInventorySlot<IProduct<IWeapon>>> weaponsInventory, IEnumerable<IProductCell<IInventorySlot<IProduct<IWeapon>>>> cells)
         {
             var wallet = new Wallet<IMoney>(_walletView);
-            var client = new Client<IProduct<IWeapon>>(wallet, weaponsInventory);
+            var client = new Client<IInventorySlot<IProduct<IWeapon>>>(wallet, weaponsInventory);
             _physicsRewardsFactory.Init(wallet);
             
             _productsListView.Init(client);
-            var productsList = new WeaponProductsList<Player>(new ProductsList<IProduct<IWeapon>>(cells), _weaponProductProductsFactory, _productsListView);
+            var productsList = new WeaponProductsList<Player>(new ProductsList<IInventorySlot<IProduct<IWeapon>>>(cells), _weaponProductProductsFactory, _productsListView);
         }
     }
 }

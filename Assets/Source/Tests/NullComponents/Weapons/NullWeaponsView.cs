@@ -12,7 +12,7 @@ namespace SwampAttack.Tests.NullComponents
         
         public void Init(Player player) { }
         
-        public void Display(IInventory<IProduct<IWeapon>> inventory) 
+        public void Display(IWeaponProductsInventory inventory) 
             => IsVisualized = true;
     }
 }

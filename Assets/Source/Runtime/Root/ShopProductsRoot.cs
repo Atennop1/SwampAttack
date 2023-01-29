@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
+using SwampAttack.Model.InventorySystem;
 using SwampAttack.Model.Shop;
 using SwampAttack.Model.Weapons;
 using UnityEngine;
@@ -12,9 +13,9 @@ namespace SwampAttack.Root
         [SerializeField] private List<WeaponData> _weaponData;
         [SerializeField] private List<IProductData> _productData;
         
-        public IEnumerable<IProductCell<IProduct<IWeapon>>> Compose()
+        public IEnumerable<IProductCell<IInventorySlot<IProduct<IWeapon>>>> Compose()
         {
-            var result = new List<IProductCell<IProduct<IWeapon>>>();
+            var result = new List<IProductCell<IInventorySlot<IProduct<IWeapon>>>>();
 
             for (var i = 0; i < _weaponData.Count; i++)
             {
@@ -29,8 +30,10 @@ namespace SwampAttack.Root
                     _ => throw new ArgumentException("Invalid WeaponType")
                 };
 
-                result.Add(new ProductCell<IProduct<IWeapon>>(
-                    new Product<IProduct<IWeapon>>(new Product<IWeapon>(weapon, _productData[i]), _productData[i])));
+                result.Add(new ProductCell<IInventorySlot<IProduct<IWeapon>>>(
+                    new Product<IInventorySlot<IProduct<IWeapon>>>(
+                        new InventorySlot<IProduct<IWeapon>>(new Product<IWeapon>(weapon, _productData[i])),
+                        _productData[i])));
             }
             
             return result;

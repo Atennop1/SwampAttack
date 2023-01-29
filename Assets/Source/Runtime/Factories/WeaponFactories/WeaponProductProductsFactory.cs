@@ -1,5 +1,6 @@
 using System;
 using Sirenix.OdinInspector;
+using SwampAttack.Model.InventorySystem;
 using SwampAttack.Model.Shop;
 using SwampAttack.Model.Weapons;
 using UnityEngine;
@@ -14,12 +15,12 @@ namespace SwampAttack.Factories
         [SerializeField] private IProductData _pistolProductsData;
         [SerializeField] private IProductData _shotgunProductData;
         
-        public IProduct<IProduct<IWeapon>> Create(WeaponSavingData weaponSavingData)
+        public IProduct<IInventorySlot<IProduct<IWeapon>>> Create(WeaponSavingData weaponSavingData)
         {
             return weaponSavingData.Type switch
             {
-                WeaponType.Pistol => new Product<IProduct<IWeapon>>(_weaponProductsFactory.Create(weaponSavingData), _pistolProductsData),
-                WeaponType.Shotgun => new Product<IProduct<IWeapon>>(_weaponProductsFactory.Create(weaponSavingData), _shotgunProductData),
+                WeaponType.Pistol => new Product<IInventorySlot<IProduct<IWeapon>>>(new InventorySlot<IProduct<IWeapon>>(_weaponProductsFactory.Create(weaponSavingData)), _pistolProductsData),
+                WeaponType.Shotgun => new Product<IInventorySlot<IProduct<IWeapon>>>(new InventorySlot<IProduct<IWeapon>>(_weaponProductsFactory.Create(weaponSavingData)), _shotgunProductData),
                 _ => throw new Exception("Invalid WeaponType")
             };
         }

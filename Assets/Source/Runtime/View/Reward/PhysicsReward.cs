@@ -16,7 +16,8 @@ namespace SwampAttack.View.Reward
         
         public void Hit()
         {
-            Debug.Log("Collected!");
+            _reward.Apply();
+            Destroy(gameObject);
         }
     }
 }

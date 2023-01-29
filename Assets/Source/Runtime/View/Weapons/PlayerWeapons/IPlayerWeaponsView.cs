@@ -8,6 +8,6 @@ namespace SwampAttack.View.Weapons
     public interface IPlayerWeaponsView
     {
         void Init(Player player);
-        void Display(IInventory<IProduct<IWeapon>> inventory);
+        void Display(IWeaponProductsInventory inventory);
     }
 }

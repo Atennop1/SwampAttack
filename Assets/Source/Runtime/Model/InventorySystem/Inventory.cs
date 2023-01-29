@@ -18,19 +18,23 @@ namespace SwampAttack.Model.InventorySystem
             _items = new List<T>();
         }
 
-        public void Add(T item, int count = 1)
+        public void Add(T addingItem)
         {
+            if (addingItem == null)
+                throw new ArgumentNullException(nameof(addingItem));
+            
             if (IsFull)
                 throw new ArgumentException("Inventory is full");
-            
-            if (count.TryThrowIfLessOrEqualsZero() + Items.Count > _capacity)
-                throw new ArgumentException($"{count} items won't fit in inventory");
 
-            for (var i = 0; i < count; i++)
-                _items.Add(item);
+            _items.Add(addingItem);
         }
 
-        public void Clear() 
-            => _items.Clear();
+        public void Remove(T decreasingSlot)
+        {
+            if (decreasingSlot == null)
+                throw new ArgumentNullException(nameof(decreasingSlot));
+
+            _items.Remove(decreasingSlot);
+        }
     }
 }
