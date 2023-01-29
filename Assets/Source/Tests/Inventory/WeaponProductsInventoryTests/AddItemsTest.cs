@@ -28,10 +28,8 @@ namespace SwampAttack.Tests.Inventory.WeaponProductsInventoryTests
             var pistol = new Pistol(new NullBulletsFactory(), new NullWeaponBulletsView(), 1);
             var existingSlot =_inventory.Items.ToList().Find(slot => slot.Item.Item.GetWeaponType() == WeaponType.Pistol);
             var countBefore = existingSlot == null ? 0 : existingSlot.ItemCount;
-            Debug.Log("before: " + countBefore);
-            
+
             _inventory.Add(new InventorySlot<IProduct<IWeapon>>(new Product<IWeapon>(pistol, new NullProductData()), 4));
-            Debug.Log("after: " + _inventory.Items.ToList().Find(slot => slot.Item.Item.GetWeaponType() == WeaponType.Pistol).ItemCount);
             Assert.That(countBefore + 4 == _inventory.Items.ToList().Find(slot => slot.Item.Item.GetWeaponType() == WeaponType.Pistol).ItemCount);
         }
 

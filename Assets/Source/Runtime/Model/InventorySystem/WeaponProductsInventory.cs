@@ -61,7 +61,6 @@ namespace SwampAttack.Model.InventorySystem
             }
             else
             {
-                Debug.Log("exist"); ;
                 existingSlot.IncreaseCount(addingSlot.ItemCount);
                 _savedData.Remove(_savedData.Find(data => data.WeaponSavingData.Type == addingSlot.Item.Item.GetWeaponType()));
                 _savedData.Add(new WeaponProductSlotSavingData(new WeaponSavingData(existingSlot.Item.Item), existingSlot.ItemCount, existingSlot.IsSelected));

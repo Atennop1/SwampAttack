@@ -1,42 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8f65dff0-dc7f-4b3e-b613-fed6e8445b84" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/InventorySystem/IWeaponProductsInventory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/InventorySystem/IWeaponProductsInventory.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/InventorySystem/Slots.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/InventorySystem/Slots/IInventorySlot.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/InventorySystem/Slots/IInventorySlot.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/InventorySystem/Slots/InventorySlot.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/InventorySystem/Slots/InventorySlot.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/InventorySystem/Slots/WeaponProductSlotSavingData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/InventorySystem/Slots/WeaponProductSlotSavingData.cs.meta" afterDir="false" />
+    <list default="true" id="8f65dff0-dc7f-4b3e-b613-fed6e8445b84" name="Changes" comment="Bug fixes and rework of inventory system">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Swamp Attack/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Swamp Attack/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PressStart2P-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PressStart2P-Regular SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Factories/WeaponFactories/IWeaponProductProductsFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Factories/WeaponFactories/IWeaponProductProductsFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Factories/WeaponFactories/WeaponProductProductsFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Factories/WeaponFactories/WeaponProductProductsFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/InventorySystem/IInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/InventorySystem/IInventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/InventorySystem/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/InventorySystem/Inventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/InventorySystem/Slots/InventorySlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/InventorySystem/Slots/InventorySlot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/InventorySystem/WeaponProductsInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/InventorySystem/WeaponProductsInventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Shop/ProductsLists/WeaponProductsList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Shop/ProductsLists/WeaponProductsList.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/Data/WeaponSavingData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Weapons/Data/WeaponSavingData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Root/CharacterRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Root/CharacterRoot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Root/ShopProductsRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Root/ShopProductsRoot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Root/ShopRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Root/ShopRoot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/View/Reward/PhysicsReward.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Reward/PhysicsReward.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/View/Shop/ProductsLists/ProductsListView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Shop/ProductsLists/ProductsListView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/View/Wallet/DefaultWalletView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Wallet/DefaultWalletView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/View/Weapons/PlayerWeapons/DefaultPlayerWeaponsView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Weapons/PlayerWeapons/DefaultPlayerWeaponsView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/View/Weapons/PlayerWeapons/IPlayerWeaponsView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Weapons/PlayerWeapons/IPlayerWeaponsView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Tests/Inventory/AddItemsTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Tests/Inventory/AddItemsTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Tests/Inventory/WeaponProductsInventoryTests/AddItemsTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Tests/Inventory/WeaponProductsInventoryTests/AddItemsTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Products/NullWeaponProductProductsFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Products/NullWeaponProductProductsFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Weapons/NullWeaponsView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Weapons/NullWeaponsView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Tests/Shop/WeaponProductsListTests/CreateProductsListTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Tests/Shop/WeaponProductsListTests/CreateProductsListTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Tests/Shop/WeaponProductsListTests/ProductsListOperationsTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Tests/Shop/WeaponProductsListTests/ProductsListOperationsTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Runtime.csproj.DotSettings" beforeDir="false" afterPath="$PROJECT_DIR$/Runtime.csproj.DotSettings" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +17,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Source/Runtime/View/Enemies/DefaultEnemyTransformView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Runtime/View/Reward/PhysicsReward.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Runtime/View/Shop/NotEnoughMoneyView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Unity/Swamp Attack/Assets/Source/Tests/Inventory/WeaponProductsInventoryTests/AddItemsTest.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Tests/NullComponents/Products/NullProductData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Editor/UI/MenuOptions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/RawImage.cs" root0="SKIP_HIGHLIGHTING" />
@@ -185,7 +155,7 @@
       <workItem from="1674750639363" duration="4053000" />
       <workItem from="1674837408419" duration="5794000" />
       <workItem from="1674911283367" duration="9672000" />
-      <workItem from="1674994972701" duration="7262000" />
+      <workItem from="1674994972701" duration="7561000" />
     </task>
     <task id="LOCAL-00001" summary="Added enemy StateMachine and IAttack interface">
       <created>1668113832992</created>
@@ -481,7 +451,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674917434445</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Bug fixes and rework of inventory system">
+      <created>1675005446151</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1675005446151</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -513,7 +490,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Added first prototype of shop view" />
     <MESSAGE value="Added popup &quot;Not Enough Money!&quot;, when you try buy too expensive product" />
     <MESSAGE value="The shop view has been improved, buttons for entering and exiting it have been added. Added root for shop" />
     <MESSAGE value="PlayerWeaponsView is added in the code, but not on the scene" />
@@ -538,7 +514,8 @@
     <MESSAGE value="Fixed some bugs" />
     <MESSAGE value="Extracted IRandomizer logic from IRewardRandomizer" />
     <MESSAGE value="Added raycast input" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added raycast input" />
+    <MESSAGE value="Bug fixes and rework of inventory system" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug fixes and rework of inventory system" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

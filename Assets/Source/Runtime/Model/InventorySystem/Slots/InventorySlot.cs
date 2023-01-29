@@ -17,13 +17,9 @@ namespace SwampAttack.Model.InventorySystem
         }
 
         public void IncreaseCount(int count)
-        {
-            Debug.Log("slot before: " + ItemCount);
-            ItemCount += count.TryThrowIfLessOrEqualsZero();
-            Debug.Log("slot after: " + ItemCount);
-        }
+            => ItemCount += count.TryThrowIfLessOrEqualsZero();
 
-        public void DecreaseCount(int count)
+            public void DecreaseCount(int count)
         {
             if (ItemCount < count.TryThrowIfLessOrEqualsZero())
                 throw new ArgumentException("Can't take too much items");
