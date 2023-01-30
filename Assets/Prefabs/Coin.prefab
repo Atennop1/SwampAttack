@@ -102,6 +102,7 @@ MonoBehaviour:
   _throwingForce: 150
   _spread: 150
   <Collider>k__BackingField: {fileID: 1196144384637997190}
+  _rewardSpriteRenderer: {fileID: 8102066385841963811}
 --- !u!61 &1196144384637997190
 BoxCollider2D:
   m_ObjectHideFlags: 0

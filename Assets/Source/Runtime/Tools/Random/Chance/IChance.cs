@@ -1,4 +1,4 @@
-namespace SwampAttack.Model.Rewards
+namespace SwampAttack.Tools
 {
     public interface IChance
     {

@@ -12,7 +12,7 @@ namespace SwampAttack.Model.Rewards
         public RewardData(Sprite icon, int coinsCount)
         {
             Icon = icon ?? throw new ArgumentNullException(nameof(icon));
-            CoinsCount = coinsCount.TryThrowIfLessOrEqualsZero();
+            CoinsCount = coinsCount.TryThrowIfLessThanZero();
         }
     }
 }

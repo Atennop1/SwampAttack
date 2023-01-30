@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace SwampAttack.Model.Rewards
+namespace SwampAttack.Tools
 {
     public class FiftyFiftyChance : IChance
     {

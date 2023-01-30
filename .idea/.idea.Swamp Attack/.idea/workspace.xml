@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8f65dff0-dc7f-4b3e-b613-fed6e8445b84" name="Changes" comment="">
+    <list default="true" id="8f65dff0-dc7f-4b3e-b613-fed6e8445b84" name="Changes" comment="Improved PhysicsReward via some effects">
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/Rewards.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/Rewards/RewardDataTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/Rewards/RewardDataTests.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/Rewards/RewardTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Source/Tests/Rewards/RewardTests.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Swamp Attack/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Swamp Attack/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Coin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Coin.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Factories/PhysicsRewardsFactories/PhysicsRewardsFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Factories/PhysicsRewardsFactories/PhysicsRewardsFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Factories/WeaponFactories/WeaponsFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Factories/WeaponFactories/WeaponsFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Root/EnemyRoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Root/EnemyRoot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Core/Data/RewardData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Model/Rewards/Core/Data/RewardData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/Random/Chance/FiftyFiftyChance.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/Random/Chance/FiftyFiftyChance.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/Random/Chance/HundredPercentChance.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/Random/Chance/HundredPercentChance.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/Random/Chance/IChance.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/Tools/Random/Chance/IChance.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Source/Runtime/View/Reward/PhysicsReward.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Source/Runtime/View/Reward/PhysicsReward.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +23,9 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/App.config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Unity/Swamp Attack/Assets/Prefabs/Coin.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Unity/Swamp Attack/Assets/Scenes/Game.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Unity/Swamp Attack/Assets/Scenes/Game.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Runtime/View/Enemies/DefaultEnemyTransformView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Runtime/View/Reward/PhysicsReward.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Source/Runtime/View/Shop/NotEnoughMoneyView.cs" root0="FORCE_HIGHLIGHTING" />
@@ -158,7 +167,7 @@
       <workItem from="1674837408419" duration="5794000" />
       <workItem from="1674911283367" duration="9672000" />
       <workItem from="1674994972701" duration="8103000" />
-      <workItem from="1675094259797" duration="2450000" />
+      <workItem from="1675094259797" duration="3621000" />
     </task>
     <task id="LOCAL-00001" summary="Added enemy StateMachine and IAttack interface">
       <created>1668113832992</created>
@@ -475,7 +484,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675005991721</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Improved PhysicsReward via some effects">
+      <created>1675097817264</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1675097817264</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -507,7 +523,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="PlayerWeaponsView is added in the code, but not on the scene" />
     <MESSAGE value="Added PlayerWeaponsView on scene and now player buying WeaponProducts, not weapons" />
     <MESSAGE value="Fixed some tests" />
     <MESSAGE value="Added WeaponProductsInventory with saves and tests for it" />
@@ -532,7 +547,8 @@
     <MESSAGE value="Bug fixes and rework of inventory system" />
     <MESSAGE value="Deleted useless logs" />
     <MESSAGE value="Final bug fixes and tests on the scene" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final bug fixes and tests on the scene" />
+    <MESSAGE value="Improved PhysicsReward via some effects" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improved PhysicsReward via some effects" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

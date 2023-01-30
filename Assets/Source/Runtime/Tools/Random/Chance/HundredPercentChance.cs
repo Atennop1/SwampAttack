@@ -1,4 +1,4 @@
-namespace SwampAttack.Model.Rewards
+namespace SwampAttack.Tools
 {
     public class HundredPercentChance : IChance
     {

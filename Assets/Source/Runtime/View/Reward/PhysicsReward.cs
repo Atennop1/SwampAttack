@@ -10,13 +10,18 @@ namespace SwampAttack.View.Reward
     {
         [SerializeField, Range(50, 200)] private float _throwingForce;
         [SerializeField, Range(50, 200)] private float _spread;
-        [field: SerializeField] public Collider2D Collider { get; private set; }
+        
+        [field: SerializeField, Space] public Collider2D Collider { get; private set; }
+        [SerializeField] private SpriteRenderer _rewardSpriteRenderer;
 
         private Rigidbody2D _rigidbody;
         private IReward _reward;
 
         public void Init(IReward reward)
-            => _reward = reward ?? throw new ArgumentNullException(nameof(reward));
+        {
+            _reward = reward ?? throw new ArgumentNullException(nameof(reward));
+            _rewardSpriteRenderer.sprite = reward.Data.Icon;
+        }
 
         private void Awake()
         {
