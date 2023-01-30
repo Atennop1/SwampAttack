@@ -14,8 +14,8 @@ namespace SwampAttack.Factories
         {
             return savingData.Type switch
             {
-                WeaponType.Pistol => new Pistol(_pistolData.BulletsFactory, _pistolData.BulletsView, savingData.Bullets),
-                WeaponType.Shotgun => new Shotgun(_shotgunData.BulletsFactory, _shotgunData.BulletsView, savingData.Bullets),
+                WeaponType.Pistol => new Pistol(_pistolData.BulletsFactory, _pistolData.BulletsView,  18/*savingData.Bullets*/),
+                WeaponType.Shotgun => new Shotgun(_shotgunData.BulletsFactory, _shotgunData.BulletsView, 18/*savingData.Bullets*/),
                 _ => throw new Exception("Invalid WeaponType")
             };
         }

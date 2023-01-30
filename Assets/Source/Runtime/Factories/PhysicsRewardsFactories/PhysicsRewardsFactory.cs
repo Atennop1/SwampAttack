@@ -23,7 +23,7 @@ namespace SwampAttack.Factories
             IReward reward = new Reward(_wallet, new RewardData(_rewardDataSO.Icon, _rewardDataSO.CoinsCount));
             reward = _nullRewardRandomizer.Randomize(reward);
             
-            var physicsRewardGameObject = Instantiate(_physicsRewardPrefab, position, Quaternion.identity, transform);
+            var physicsRewardGameObject = Instantiate(_physicsRewardPrefab, position + Vector3.up, Quaternion.identity, transform);
             var physicsReward = physicsRewardGameObject.GetComponent<IPhysicsReward>();
             
             physicsReward.Init(reward);

@@ -36,7 +36,7 @@ namespace SwampAttack.Root
             _healthTransformView.Init(health);
             _attackTransformView.Init(new Attack(1));
             
-            var enemy = new MinotaurEnemy(health, new DefaultEnemyMovement(_rigidbody, 10),
+            var enemy = new MinotaurEnemy(health, new DefaultEnemyMovement(_rigidbody, 20),
                 new MinotaurTargetData(_target, 1.7f, 0.05f));
 
             var attacksSetup = new EnemyAttacksSetup(_enemyTransformView);
