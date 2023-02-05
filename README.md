@@ -23,6 +23,6 @@ In this game, you need to reflect the waves of minotaurs! You can buy new weapon
  - UniTask
  - Odin Inspector
  
- ## Result
+ ## Conclusion
  
 This project helped me understand how much I did not understand OOP before, taught me how to make a flexible architecture, model the subject area, write tests, and much more. During development, I began to understand much more things than before, and this was my first step towards a real understanding of the great and powerful OOP. Thanks to my friend and colleague [Farid](https://github.com/Farid357) for help in some moments :heart:
